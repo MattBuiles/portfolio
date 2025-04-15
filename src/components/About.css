@@ -1,0 +1,150 @@
+.about-section {
+  padding-top: 8rem;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.about-image-container {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.about-image {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  filter: grayscale(0.2);
+  transition: all 0.5s ease;
+}
+
+.about-image:hover {
+  filter: grayscale(0);
+  transform: scale(1.02);
+}
+
+.about-text {
+  padding: 1rem 0;
+}
+
+.about-greeting {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--dark);
+}
+
+.highlight {
+  color: var(--primary);
+}
+
+.about-profession {
+  font-size: 1.4rem;
+  color: var(--secondary);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.about-description {
+  margin-bottom: 2rem;
+  color: var(--secondary);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.about-detail {
+  display: flex;
+  align-items: center;
+}
+
+.detail-label {
+  font-weight: 600;
+  color: var(--dark);
+  margin-right: 0.5rem;
+}
+
+.detail-value {
+  color: var(--secondary);
+}
+
+.available {
+  color: #2ecc71;
+  font-weight: 500;
+}
+
+.about-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.skills-container {
+  margin-top: 3rem;
+}
+
+.skills-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--dark);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+.skill-item {
+  background-color: var(--white);
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.skill-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.skill-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 992px) {
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .about-image-container {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-details {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

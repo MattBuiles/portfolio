@@ -1,0 +1,32 @@
+[
+    {
+        "jobTitle": "Frontend Developer",
+        "company": "Tech Solutions Inc.",
+        "duration": "June 2021 - Present",
+        "responsibilities": [
+            "Developing user-friendly web applications using React.",
+            "Collaborating with designers to implement responsive designs.",
+            "Optimizing applications for maximum speed and scalability."
+        ]
+    },
+    {
+        "jobTitle": "Web Developer Intern",
+        "company": "Creative Agency",
+        "duration": "January 2021 - May 2021",
+        "responsibilities": [
+            "Assisted in the development of client websites.",
+            "Participated in code reviews and team meetings.",
+            "Learned best practices in web development and design."
+        ]
+    },
+    {
+        "jobTitle": "Software Engineer",
+        "company": "Innovative Tech Co.",
+        "duration": "August 2020 - December 2020",
+        "responsibilities": [
+            "Worked on backend services using Node.js.",
+            "Implemented RESTful APIs for mobile applications.",
+            "Conducted testing and debugging of applications."
+        ]
+    }
+]

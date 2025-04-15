@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Certified Web Developer",
+        "issuing_organization": "Web Development Institute",
+        "date_issued": "2022-05-15"
+    },
+    {
+        "title": "JavaScript Specialist",
+        "issuing_organization": "JavaScript Academy",
+        "date_issued": "2021-11-20"
+    },
+    {
+        "title": "React Developer Certification",
+        "issuing_organization": "React Training",
+        "date_issued": "2023-01-10"
+    },
+    {
+        "title": "Full Stack Developer",
+        "issuing_organization": "Tech Skills Academy",
+        "date_issued": "2022-08-30"
+    },
+    {
+        "title": "UX/UI Design Certification",
+        "issuing_organization": "Design Institute",
+        "date_issued": "2023-03-05"
+    }
+]

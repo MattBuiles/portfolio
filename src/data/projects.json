@@ -1,0 +1,37 @@
+[
+    {
+        "title": "Personal Portfolio Website",
+        "description": "A responsive personal portfolio website to showcase my skills, projects, and experience.",
+        "url": "https://github.com/username/personal-portfolio",
+        "technologies": ["HTML", "CSS", "JavaScript", "React"],
+        "image": "assets/images/portfolio.png"
+    },
+    {
+        "title": "E-commerce Platform",
+        "description": "An e-commerce platform built with React and Node.js, featuring user authentication and payment processing.",
+        "url": "https://github.com/username/ecommerce-platform",
+        "technologies": ["React", "Node.js", "MongoDB"],
+        "image": "assets/images/ecommerce.png"
+    },
+    {
+        "title": "Weather App",
+        "description": "A weather application that provides real-time weather updates using a third-party API.",
+        "url": "https://github.com/username/weather-app",
+        "technologies": ["HTML", "CSS", "JavaScript", "API"],
+        "image": "assets/images/weather-app.png"
+    },
+    {
+        "title": "Task Management Tool",
+        "description": "A task management tool that allows users to create, update, and delete tasks, built with React.",
+        "url": "https://github.com/username/task-manager",
+        "technologies": ["React", "Firebase"],
+        "image": "assets/images/task-manager.png"
+    },
+    {
+        "title": "Blog Platform",
+        "description": "A blogging platform where users can create and share their articles, built with Django.",
+        "url": "https://github.com/username/blog-platform",
+        "technologies": ["Django", "Python", "HTML", "CSS"],
+        "image": "assets/images/blog-platform.png"
+    }
+]
