@@ -1,27 +1,74 @@
 [
     {
-        "title": "Certified Web Developer",
-        "issuing_organization": "Web Development Institute",
-        "date_issued": "2022-05-15"
+        "title": "Machine Learning Specialization",
+        "issuing_organization": "Stanford University - Coursera",
+        "date_issued": "2023-08-15",
+        "credential_id": "ML2023-001",
+        "skills": ["Machine Learning", "Python", "Supervised Learning", "Neural Networks"],
+        "icon": "brain",
+        "category": "AI/ML"
     },
     {
-        "title": "JavaScript Specialist",
-        "issuing_organization": "JavaScript Academy",
-        "date_issued": "2021-11-20"
+        "title": "Data Science Professional Certificate",
+        "issuing_organization": "IBM - Coursera",
+        "date_issued": "2023-06-20",
+        "credential_id": "DS2023-IBM-456",
+        "skills": ["Data Analysis", "Python", "SQL", "Data Visualization"],
+        "icon": "chart-bar",
+        "category": "Data Science"
     },
     {
-        "title": "React Developer Certification",
-        "issuing_organization": "React Training",
-        "date_issued": "2023-01-10"
+        "title": "Deep Learning Fundamentals",
+        "issuing_organization": "NVIDIA Deep Learning Institute",
+        "date_issued": "2023-04-10",
+        "credential_id": "DLI-2023-789",
+        "skills": ["Deep Learning", "TensorFlow", "PyTorch", "Computer Vision"],
+        "icon": "project-diagram",
+        "category": "AI/ML"
     },
     {
-        "title": "Full Stack Developer",
-        "issuing_organization": "Tech Skills Academy",
-        "date_issued": "2022-08-30"
+        "title": "AWS Machine Learning - Specialty",
+        "issuing_organization": "Amazon Web Services",
+        "date_issued": "2023-09-25",
+        "credential_id": "AWS-MLS-2023",
+        "skills": ["AWS", "MLOps", "SageMaker", "Cloud Computing"],
+        "icon": "cloud",
+        "category": "Cloud/DevOps"
     },
     {
-        "title": "UX/UI Design Certification",
-        "issuing_organization": "Design Institute",
-        "date_issued": "2023-03-05"
+        "title": "Python for Data Science and AI",
+        "issuing_organization": "IBM - edX",
+        "date_issued": "2022-11-30",
+        "credential_id": "IBM-PY-2022",
+        "skills": ["Python", "Pandas", "NumPy", "Matplotlib"],
+        "icon": "python",
+        "category": "Programming"
+    },
+    {
+        "title": "Full Stack Web Development",
+        "issuing_organization": "freeCodeCamp",
+        "date_issued": "2022-07-15",
+        "credential_id": "FCC-FSWD-2022",
+        "skills": ["React", "Node.js", "MongoDB", "JavaScript"],
+        "icon": "code",
+        "category": "Web Development"
+    },
+    {
+        "title": "Google Analytics Individual Qualification",
+        "issuing_organization": "Google",
+        "date_issued": "2023-01-20",
+        "credential_id": "GA-IQ-2023",
+        "skills": ["Analytics", "Data Analysis", "Web Analytics"],
+        "icon": "google",
+        "category": "Analytics"
+    },
+    {
+        "title": "Scrum Master Certified",
+        "issuing_organization": "Scrum Alliance",
+        "date_issued": "2023-03-12",
+        "credential_id": "CSM-2023-567",
+        "skills": ["Agile", "Scrum", "Project Management"],
+        "icon": "users-cog",
+        "category": "Management"
     }
 ]

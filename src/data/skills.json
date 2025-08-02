@@ -1,0 +1,56 @@
+{
+  "technical": [
+    {
+      "category": "Inteligencia Artificial & Machine Learning",
+      "skills": [
+        { "name": "Python", "level": 90, "icon": "python" },
+        { "name": "TensorFlow", "level": 85, "icon": "brain" },
+        { "name": "PyTorch", "level": 80, "icon": "fire" },
+        { "name": "Scikit-learn", "level": 88, "icon": "chart-line" },
+        { "name": "OpenCV", "level": 75, "icon": "eye" },
+        { "name": "NLTK/spaCy", "level": 82, "icon": "language" }
+      ]
+    },
+    {
+      "category": "Data Science & Analytics",
+      "skills": [
+        { "name": "Pandas", "level": 92, "icon": "table" },
+        { "name": "NumPy", "level": 90, "icon": "calculator" },
+        { "name": "Matplotlib/Seaborn", "level": 85, "icon": "chart-bar" },
+        { "name": "Plotly", "level": 80, "icon": "chart-pie" },
+        { "name": "Jupyter", "level": 88, "icon": "book-open" },
+        { "name": "SQL", "level": 85, "icon": "database" }
+      ]
+    },
+    {
+      "category": "Desarrollo Web",
+      "skills": [
+        { "name": "React", "level": 88, "icon": "react" },
+        { "name": "Node.js", "level": 85, "icon": "node-js" },
+        { "name": "JavaScript", "level": 90, "icon": "js-square" },
+        { "name": "HTML/CSS", "level": 92, "icon": "code" },
+        { "name": "FastAPI", "level": 83, "icon": "rocket" },
+        { "name": "MongoDB", "level": 80, "icon": "leaf" }
+      ]
+    },
+    {
+      "category": "Herramientas & DevOps",
+      "skills": [
+        { "name": "Git", "level": 88, "icon": "git-alt" },
+        { "name": "Docker", "level": 75, "icon": "docker" },
+        { "name": "AWS", "level": 70, "icon": "aws" },
+        { "name": "Linux", "level": 82, "icon": "linux" },
+        { "name": "Streamlit", "level": 85, "icon": "stream" },
+        { "name": "Postman", "level": 80, "icon": "satellite-dish" }
+      ]
+    }
+  ],
+  "soft": [
+    { "name": "Liderazgo", "level": 85 },
+    { "name": "Trabajo en Equipo", "level": 92 },
+    { "name": "Comunicación", "level": 88 },
+    { "name": "Resolución de Problemas", "level": 90 },
+    { "name": "Pensamiento Crítico", "level": 87 },
+    { "name": "Adaptabilidad", "level": 89 }
+  ]
+}

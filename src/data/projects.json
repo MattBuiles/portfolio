@@ -1,37 +1,68 @@
 [
     {
-        "title": "Personal Portfolio Website",
-        "description": "A responsive personal portfolio website to showcase my skills, projects, and experience.",
-        "url": "https://github.com/username/personal-portfolio",
-        "technologies": ["HTML", "CSS", "JavaScript", "React"],
-        "image": "assets/images/portfolio.png"
+        "title": "Sistema de Predicción de Enfermedades con ML",
+        "description": "Aplicación web que utiliza modelos de Machine Learning para predecir enfermedades basándose en síntomas. Implementa algoritmos de clasificación y una interfaz intuitiva para profesionales de la salud.",
+        "demoUrl": "https://health-prediction-demo.vercel.app",
+        "githubUrl": "https://github.com/username/health-prediction-ml",
+        "technologies": ["Python", "TensorFlow", "FastAPI", "React", "PostgreSQL"],
+        "image": "assets/images/health-ml.png",
+        "category": "AI/ML",
+        "featured": true,
+        "status": "completed"
     },
     {
-        "title": "E-commerce Platform",
-        "description": "An e-commerce platform built with React and Node.js, featuring user authentication and payment processing.",
-        "url": "https://github.com/username/ecommerce-platform",
-        "technologies": ["React", "Node.js", "MongoDB"],
-        "image": "assets/images/ecommerce.png"
+        "title": "Dashboard de Análisis de Datos Biológicos",
+        "description": "Plataforma desarrollada para el grupo de investigación en Biología Funcional. Permite visualizar y analizar datos experimentales con gráficos interactivos y estadísticas avanzadas.",
+        "demoUrl": "https://bio-analytics-dashboard.netlify.app",
+        "githubUrl": "https://github.com/username/bio-analytics-dashboard",
+        "technologies": ["React", "D3.js", "Python", "Flask", "MongoDB"],
+        "image": "assets/images/bio-dashboard.png",
+        "category": "Data Science",
+        "featured": true,
+        "status": "completed"
     },
     {
-        "title": "Weather App",
-        "description": "A weather application that provides real-time weather updates using a third-party API.",
-        "url": "https://github.com/username/weather-app",
-        "technologies": ["HTML", "CSS", "JavaScript", "API"],
-        "image": "assets/images/weather-app.png"
+        "title": "Simulador de Sistemas Complejos",
+        "description": "Herramienta educativa para la materia de Simulación de Sistemas. Permite modelar y simular sistemas complejos con visualizaciones en tiempo real y análisis estadístico.",
+        "demoUrl": "https://systems-simulator.vercel.app",
+        "githubUrl": "https://github.com/username/systems-simulator",
+        "technologies": ["Python", "Streamlit", "NumPy", "Matplotlib", "Plotly"],
+        "image": "assets/images/simulator.png",
+        "category": "Education",
+        "featured": true,
+        "status": "completed"
     },
     {
-        "title": "Task Management Tool",
-        "description": "A task management tool that allows users to create, update, and delete tasks, built with React.",
-        "url": "https://github.com/username/task-manager",
-        "technologies": ["React", "Firebase"],
-        "image": "assets/images/task-manager.png"
+        "title": "API de Análisis de Sentimientos",
+        "description": "API REST que analiza sentimientos en texto utilizando modelos de NLP. Incluye procesamiento en múltiples idiomas y métricas de confianza detalladas.",
+        "demoUrl": "https://sentiment-api-docs.vercel.app",
+        "githubUrl": "https://github.com/username/sentiment-analysis-api",
+        "technologies": ["Python", "NLTK", "spaCy", "FastAPI", "Docker"],
+        "image": "assets/images/sentiment-api.png",
+        "category": "AI/ML",
+        "featured": false,
+        "status": "completed"
     },
     {
-        "title": "Blog Platform",
-        "description": "A blogging platform where users can create and share their articles, built with Django.",
-        "url": "https://github.com/username/blog-platform",
-        "technologies": ["Django", "Python", "HTML", "CSS"],
-        "image": "assets/images/blog-platform.png"
+        "title": "Portfolio Personal Inteligente",
+        "description": "Portafolio web con funciones de IA para recomendación de contenido personalizado y chatbot integrado. Diseño responsivo y optimizado para SEO.",
+        "demoUrl": "https://smart-portfolio.vercel.app",
+        "githubUrl": "https://github.com/username/smart-portfolio",
+        "technologies": ["React", "Next.js", "OpenAI API", "Tailwind CSS", "Framer Motion"],
+        "image": "assets/images/smart-portfolio.png",
+        "category": "Web Development",
+        "featured": false,
+        "status": "completed"
+    },
+    {
+        "title": "Plataforma de Aprendizaje Adaptativo",
+        "description": "Sistema de e-learning que utiliza IA para adaptar el contenido según el progreso del estudiante. Incluye analytics avanzados y gamificación.",
+        "demoUrl": "https://adaptive-learning-demo.vercel.app",
+        "githubUrl": "https://github.com/username/adaptive-learning-platform",
+        "technologies": ["React", "Node.js", "TensorFlow.js", "MongoDB", "Socket.io"],
+        "image": "assets/images/adaptive-learning.png",
+        "category": "Education",
+        "featured": false,
+        "status": "in-progress"
     }
 ]

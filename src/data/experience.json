@@ -1,32 +1,50 @@
 [
     {
-        "jobTitle": "Frontend Developer",
-        "company": "Tech Solutions Inc.",
-        "duration": "June 2021 - Present",
+        "jobTitle": "Estudiante de Ingeniería de Sistemas",
+        "company": "Universidad Nacional de Colombia",
+        "duration": "2020 - Presente",
         "responsibilities": [
-            "Developing user-friendly web applications using React.",
-            "Collaborating with designers to implement responsive designs.",
-            "Optimizing applications for maximum speed and scalability."
-        ]
+            "Enfoque en Inteligencia Artificial, Machine Learning y Data Science.",
+            "Desarrollo de proyectos académicos utilizando Python, R y frameworks de ML.",
+            "Participación en proyectos de investigación y desarrollo tecnológico."
+        ],
+        "type": "education",
+        "icon": "graduation-cap"
     },
     {
-        "jobTitle": "Web Developer Intern",
-        "company": "Creative Agency",
-        "duration": "January 2021 - May 2021",
+        "jobTitle": "Investigador en Biología Funcional",
+        "company": "Universidad Nacional de Colombia",
+        "duration": "2022 - Presente",
         "responsibilities": [
-            "Assisted in the development of client websites.",
-            "Participated in code reviews and team meetings.",
-            "Learned best practices in web development and design."
-        ]
+            "Colaboración en el desarrollo de aplicativos para investigación biológica.",
+            "Implementación de soluciones tecnológicas para análisis de datos biológicos.",
+            "Trabajo interdisciplinario combinando biología y tecnología."
+        ],
+        "type": "research",
+        "icon": "flask"
     },
     {
-        "jobTitle": "Software Engineer",
-        "company": "Innovative Tech Co.",
-        "duration": "August 2020 - December 2020",
+        "jobTitle": "Monitor Académico - Simulación de Sistemas",
+        "company": "Universidad Nacional de Colombia",
+        "duration": "2023 - 2024",
         "responsibilities": [
-            "Worked on backend services using Node.js.",
-            "Implemented RESTful APIs for mobile applications.",
-            "Conducted testing and debugging of applications."
-        ]
+            "Apoyo académico a estudiantes en conceptos de simulación y modelado.",
+            "Desarrollo de materiales didácticos y ejercicios prácticos.",
+            "Facilitación de sesiones de tutoría y resolución de problemas."
+        ],
+        "type": "teaching",
+        "icon": "chalkboard-teacher"
+    },
+    {
+        "jobTitle": "Desarrollador Full Stack",
+        "company": "Proyectos Independientes",
+        "duration": "2021 - Presente",
+        "responsibilities": [
+            "Desarrollo de aplicaciones web utilizando React, Node.js y Python.",
+            "Implementación de modelos de Machine Learning en aplicaciones web.",
+            "Creación de dashboards interactivos para visualización de datos."
+        ],
+        "type": "development",
+        "icon": "code"
     }
 ]
