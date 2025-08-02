@@ -1,74 +1,137 @@
 [
     {
-        "title": "Machine Learning Specialization",
-        "issuing_organization": "Stanford University - Coursera",
-        "date_issued": "2023-08-15",
-        "credential_id": "ML2023-001",
-        "skills": ["Machine Learning", "Python", "Supervised Learning", "Neural Networks"],
-        "icon": "brain",
-        "category": "AI/ML"
-    },
-    {
-        "title": "Data Science Professional Certificate",
-        "issuing_organization": "IBM - Coursera",
-        "date_issued": "2023-06-20",
-        "credential_id": "DS2023-IBM-456",
-        "skills": ["Data Analysis", "Python", "SQL", "Data Visualization"],
-        "icon": "chart-bar",
-        "category": "Data Science"
-    },
-    {
-        "title": "Deep Learning Fundamentals",
-        "issuing_organization": "NVIDIA Deep Learning Institute",
-        "date_issued": "2023-04-10",
-        "credential_id": "DLI-2023-789",
-        "skills": ["Deep Learning", "TensorFlow", "PyTorch", "Computer Vision"],
-        "icon": "project-diagram",
-        "category": "AI/ML"
-    },
-    {
-        "title": "AWS Machine Learning - Specialty",
-        "issuing_organization": "Amazon Web Services",
-        "date_issued": "2023-09-25",
-        "credential_id": "AWS-MLS-2023",
-        "skills": ["AWS", "MLOps", "SageMaker", "Cloud Computing"],
-        "icon": "cloud",
-        "category": "Cloud/DevOps"
-    },
-    {
-        "title": "Python for Data Science and AI",
-        "issuing_organization": "IBM - edX",
-        "date_issued": "2022-11-30",
-        "credential_id": "IBM-PY-2022",
-        "skills": ["Python", "Pandas", "NumPy", "Matplotlib"],
+        "title": "Programming for Everybody (Getting Started with Python)",
+        "issuing_organization": "University of Michigan - Coursera",
+        "date_issued": "2022-12-10",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Python", "Programming Fundamentals", "Data Types", "Control Structures"],
         "icon": "python",
         "category": "Programming"
     },
     {
-        "title": "Full Stack Web Development",
+        "title": "Python Data Structures",
+        "issuing_organization": "University of Michigan - Coursera",
+        "date_issued": "2022-12-10",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Python", "Data Structures", "Lists", "Dictionaries", "Tuples"],
+        "icon": "python",
+        "category": "Programming"
+    },
+    {
+        "title": "Mathematics for Machine Learning: Linear Algebra",
+        "issuing_organization": "Imperial College London - Coursera",
+        "date_issued": "2023-05-27",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Linear Algebra", "Vectors", "Matrices", "Eigenvalues", "Mathematical Foundations"],
+        "icon": "calculator",
+        "category": "AI/ML"
+    },
+    {
+        "title": "Introduction to Data Science in Python",
+        "issuing_organization": "University of Michigan - Coursera",
+        "date_issued": "2024-12-29",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Python", "Pandas", "NumPy", "Data Analysis", "Data Cleaning", "Statistical Analysis"],
+        "icon": "chart-line",
+        "category": "Data Science"
+    },
+    {
+        "title": "Introduction to Artificial Intelligence (AI)",
+        "issuing_organization": "IBM - Coursera",
+        "date_issued": "2024-12-29",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Artificial Intelligence", "Machine Learning", "AI Applications", "IBM Watson", "Neural Networks"],
+        "icon": "brain",
+        "category": "AI/ML"
+    },
+    {
+        "title": "Coursera Certificate 3K09BNQF7DJ5",
+        "issuing_organization": "Coursera",
+        "date_issued": "2025-01-02",
+        "credential_id": "3K09BNQF7DJ5",
+        "skills": ["Course Completion", "Professional Development"],
+        "icon": "certificate",
+        "category": "Programming"
+    },
+    {
+        "title": "Coursera Certificate 6Q4DE3HUCB2X",
+        "issuing_organization": "Coursera",
+        "date_issued": "2025-01-02",
+        "credential_id": "6Q4DE3HUCB2X",
+        "skills": ["Course Completion", "Professional Development"],
+        "icon": "certificate",
+        "category": "Programming"
+    },
+    {
+        "title": "Coursera Certificate RRZ1KJ5SUPIT",
+        "issuing_organization": "Coursera",
+        "date_issued": "2025-01-02",
+        "credential_id": "RRZ1KJ5SUPIT",
+        "skills": ["Course Completion", "Professional Development"],
+        "icon": "certificate",
+        "category": "Programming"
+    },
+    {
+        "title": "Introducción a la Nube",
+        "issuing_organization": "Platzi",
+        "date_issued": "2024-01-15",
+        "credential_id": "Diploma Platzi",
+        "skills": ["Cloud Computing", "AWS", "Infrastructure", "DevOps", "Cloud Architecture"],
+        "icon": "cloud",
+        "category": "Cloud/DevOps"
+    },
+    {
+        "title": "Python Web Development",
         "issuing_organization": "freeCodeCamp",
-        "date_issued": "2022-07-15",
-        "credential_id": "FCC-FSWD-2022",
-        "skills": ["React", "Node.js", "MongoDB", "JavaScript"],
-        "icon": "code",
+        "date_issued": "2023-08-20",
+        "credential_id": "FCC-PWD-2023",
+        "skills": ["Django", "Flask", "Web APIs", "Database Integration", "Python Web Frameworks"],
+        "icon": "globe",
         "category": "Web Development"
     },
     {
-        "title": "Google Analytics Individual Qualification",
-        "issuing_organization": "Google",
-        "date_issued": "2023-01-20",
-        "credential_id": "GA-IQ-2023",
-        "skills": ["Analytics", "Data Analysis", "Web Analytics"],
-        "icon": "google",
-        "category": "Analytics"
+        "title": "Machine Learning Foundations",
+        "issuing_organization": "Coursera",
+        "date_issued": "2023-11-15",
+        "credential_id": "ML-FOUND-2023",
+        "skills": ["Supervised Learning", "Unsupervised Learning", "Feature Engineering", "Model Evaluation"],
+        "icon": "cogs",
+        "category": "AI/ML"
     },
     {
-        "title": "Scrum Master Certified",
-        "issuing_organization": "Scrum Alliance",
-        "date_issued": "2023-03-12",
-        "credential_id": "CSM-2023-567",
-        "skills": ["Agile", "Scrum", "Project Management"],
-        "icon": "users-cog",
-        "category": "Management"
+        "title": "Advanced Python Programming",
+        "issuing_organization": "Universidad Nacional de Colombia",
+        "date_issued": "2023-06-30",
+        "credential_id": "UNAL-ADV-PY-2023",
+        "skills": ["Object-Oriented Programming", "Design Patterns", "Testing", "Code Optimization"],
+        "icon": "python",
+        "category": "Programming"
+    },
+    {
+        "title": "Data Visualization with Python",
+        "issuing_organization": "IBM - Coursera",
+        "date_issued": "2023-09-10",
+        "credential_id": "IBM-DATAVIZ-2023",
+        "skills": ["Matplotlib", "Seaborn", "Plotly", "Dashboard Creation", "Statistical Plots"],
+        "icon": "chart-bar",
+        "category": "Data Science"
+    },
+    {
+        "title": "Git and GitHub Essentials",
+        "issuing_organization": "GitHub",
+        "date_issued": "2023-03-22",
+        "credential_id": "GITHUB-ESS-2023",
+        "skills": ["Version Control", "Git", "GitHub", "Collaborative Development", "CI/CD"],
+        "icon": "git-alt",
+        "category": "Programming"
+    },
+    {
+        "title": "Database Design and Management",
+        "issuing_organization": "Universidad Nacional de Colombia",
+        "date_issued": "2023-12-05",
+        "credential_id": "UNAL-DB-2023",
+        "skills": ["SQL", "Database Design", "PostgreSQL", "Data Modeling", "Query Optimization"],
+        "icon": "database",
+        "category": "Data Science"
     }
 ]

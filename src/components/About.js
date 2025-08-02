@@ -8,7 +8,7 @@ const About = () => {
     { label: 'Carrera', value: 'Ingeniería de Sistemas', icon: 'graduation-cap' },
     { label: 'Especialización', value: 'IA, ML y Data Science', icon: 'brain' },
     { label: 'Ubicación', value: 'Bogotá, Colombia', icon: 'map-marker-alt' },
-    { label: 'Email', value: 'tu.email@example.com', icon: 'envelope' },
+    { label: 'Email', value: 'contacto@mattbuiles.com', icon: 'envelope' },
     { label: 'Estado', value: 'Disponible para proyectos', icon: 'check-circle' }
   ];
 

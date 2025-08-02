@@ -17,15 +17,15 @@ const Contact = () => {
     {
       icon: 'envelope',
       label: 'Email',
-      value: 'tu.email@ejemplo.com',
-      link: 'mailto:tu.email@ejemplo.com',
+      value: 'contacto@mattbuiles.com',
+      link: 'mailto:contacto@mattbuiles.com',
       color: '#ea4335'
     },
     {
       icon: 'phone',
       label: 'Teléfono',
-      value: '+57 300 123 4567',
-      link: 'tel:+573001234567',
+      value: '+57 310 456 7890',
+      link: 'tel:+573104567890',
       color: '#34a853'
     },
     {
@@ -38,8 +38,8 @@ const Contact = () => {
     {
       icon: 'linkedin',
       label: 'LinkedIn',
-      value: '/in/tu-perfil',
-      link: 'https://linkedin.com/in/tu-perfil',
+      value: '/in/mattbuiles',
+      link: 'https://linkedin.com/in/mattbuiles',
       color: '#0077b5'
     }
   ];
@@ -48,25 +48,25 @@ const Contact = () => {
     {
       icon: 'github',
       name: 'GitHub',
-      url: 'https://github.com/tu-usuario',
+      url: 'https://github.com/MattBuiles',
       color: '#333'
     },
     {
       icon: 'linkedin',
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/tu-perfil',
+      url: 'https://linkedin.com/in/mattbuiles',
       color: '#0077b5'
     },
     {
       icon: 'twitter',
       name: 'Twitter',
-      url: 'https://twitter.com/tu-usuario',
+      url: 'https://twitter.com/mattbuiles',
       color: '#1da1f2'
     },
     {
       icon: 'instagram',
       name: 'Instagram',
-      url: 'https://instagram.com/tu-usuario',
+      url: 'https://instagram.com/mattbuiles',
       color: '#e4405f'
     }
   ];
