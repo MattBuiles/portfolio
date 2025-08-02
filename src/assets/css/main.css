@@ -16,6 +16,16 @@
   --warning: #f59e0b;
   --error: #ef4444;
   
+  /* Colores específicos para componentes */
+  --color-primary: #667eea;
+  --color-secondary: #f093fb;
+  --color-background: #ffffff;
+  --color-background-secondary: #f8fafc;
+  --color-card-background: #ffffff;
+  --color-text-primary: #1e293b;
+  --color-text-secondary: #64748b;
+  --color-border: #e2e8f0;
+  
   /* Esquema de colores claro */
   --bg-primary: #ffffff;
   --bg-secondary: #f8fafc;
@@ -74,6 +84,13 @@
 
 /* Tema oscuro */
 [data-theme="dark"] {
+  --color-background: #0f172a;
+  --color-background-secondary: #1e293b;
+  --color-card-background: #1e293b;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #cbd5e1;
+  --color-border: #334155;
+  
   --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
