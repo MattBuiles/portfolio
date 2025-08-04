@@ -92,16 +92,16 @@ const Hero = () => {
             </div>
             
             <div className="hero-social animate-fade-in-up">
-              <a href="https://github.com/username" className="social-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://github.com/MattBuiles" className="social-link" target="_blank" rel="noopener noreferrer">
                 <Icon name="github" />
               </a>
-              <a href="https://linkedin.com/in/username" className="social-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://linkedin.com/in/mateo-builes-73453531b" className="social-link" target="_blank" rel="noopener noreferrer">
                 <Icon name="linkedin" />
               </a>
-              <a href="mailto:email@example.com" className="social-link">
+              <a href="mailto:matebuilesd@gmail.com" className="social-link">
                 <Icon name="envelope" />
               </a>
-              <a href="https://twitter.com/username" className="social-link" target="_blank" rel="noopener noreferrer">
+              <a href="https://x.com/MateB53" className="social-link" target="_blank" rel="noopener noreferrer">
                 <Icon name="twitter" />
               </a>
             </div>
