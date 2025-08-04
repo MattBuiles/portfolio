@@ -1,8 +1,8 @@
 [
     {
-        "jobTitle": "Estudiante de Ingeniería de Sistemas",
-        "company": "Universidad Nacional de Colombia",
-        "duration": "2020 - Presente",
+        "jobTitle": "Estudiante de Ingeniería de Sistemas e Informática",
+        "company": "Universidad Nacional de Colombia - Medellín",
+        "duration": "2022 - Presente",
         "responsibilities": [
             "Enfoque en Inteligencia Artificial, Machine Learning y Data Science.",
             "Desarrollo de proyectos académicos utilizando Python, R y frameworks de ML.",
@@ -12,11 +12,11 @@
         "icon": "graduation-cap"
     },
     {
-        "jobTitle": "Investigador en Biología Funcional",
-        "company": "Universidad Nacional de Colombia",
-        "duration": "2022 - Presente",
+        "jobTitle": "Colaborador en Desarrollo de Aplicaciones",
+        "company": "Laboratorio de Prospección y Desarrollo de Biomoléculas - Grupo de Investigación de Biología Funcional",
+        "duration": "2024 - Presente",
         "responsibilities": [
-            "Colaboración en el desarrollo de aplicativos para investigación biológica.",
+            "Apoyo en el desarrollo y refactor de aplicaciones para investigación biológica.",
             "Implementación de soluciones tecnológicas para análisis de datos biológicos.",
             "Trabajo interdisciplinario combinando biología y tecnología."
         ],
@@ -25,8 +25,8 @@
     },
     {
         "jobTitle": "Monitor Académico - Simulación de Sistemas",
-        "company": "Universidad Nacional de Colombia",
-        "duration": "2023 - 2024",
+        "company": "Universidad Nacional de Colombia - Medellín",
+        "duration": "2025 - Presente",
         "responsibilities": [
             "Apoyo académico a estudiantes en conceptos de simulación y modelado.",
             "Desarrollo de materiales didácticos y ejercicios prácticos.",

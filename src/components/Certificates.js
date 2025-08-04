@@ -13,7 +13,7 @@ const Certificates = () => {
     { value: 'Data Science', label: 'Data Science', icon: 'chart-line', count: certificatesData.filter(cert => cert.category === 'Data Science').length },
     { value: 'Cloud/DevOps', label: 'Cloud & DevOps', icon: 'cloud', count: certificatesData.filter(cert => cert.category === 'Cloud/DevOps').length },
     { value: 'Programming', label: 'Programación', icon: 'code', count: certificatesData.filter(cert => cert.category === 'Programming').length },
-    { value: 'Web Development', label: 'Web Dev', icon: 'globe', count: certificatesData.filter(cert => cert.category === 'Web Development').length }
+    { value: 'Soft Skills', label: 'Habilidades Blandas', icon: 'users', count: certificatesData.filter(cert => cert.category === 'Soft Skills').length }
   ];
 
   const filteredCertificates = selectedCategory === 'all' 
@@ -151,10 +151,10 @@ const Certificates = () => {
               </div>
               
               <div className="certificate-skills">
-                {certificate.skills.slice(0, 3).map((skill, skillIndex) => (
+                {certificate.skills && certificate.skills.slice(0, 3).map((skill, skillIndex) => (
                   <span key={skillIndex} className="skill-badge">{skill}</span>
                 ))}
-                {certificate.skills.length > 3 && (
+                {certificate.skills && certificate.skills.length > 3 && (
                   <span className="skills-more">+{certificate.skills.length - 3}</span>
                 )}
               </div>
@@ -235,7 +235,7 @@ const Certificates = () => {
                 <div className="modal-skills">
                   <h4>Habilidades Validadas</h4>
                   <div className="skills-grid">
-                    {selectedCertificate.skills.map((skill, index) => (
+                    {selectedCertificate.skills && selectedCertificate.skills.map((skill, index) => (
                       <span 
                         key={index} 
                         className="skill-tag"

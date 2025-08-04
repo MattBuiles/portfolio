@@ -1,12 +1,103 @@
 [
     {
+        "title": "Introduction to Shell",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-04-21",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["Shell", "Command Line", "Terminal", "Linux"],
+        "icon": "terminal",
+        "category": "Programming",
+        "duration": "4 horas"
+    },
+    {
+        "title": "MLOps Concepts",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-04-20",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["MLOps", "Machine Learning Operations", "DevOps", "Model Deployment"],
+        "icon": "cogs",
+        "category": "AI/ML",
+        "duration": "2 horas"
+    },
+    {
+        "title": "MLOps Deployment and Life Cycling",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-05-28",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["MLOps", "Model Deployment", "Life Cycle Management", "Production ML"],
+        "icon": "sync-alt",
+        "category": "AI/ML",
+        "duration": "4 horas"
+    },
+    {
+        "title": "Supervised Learning with scikit-learn",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-04-19",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["Scikit-learn", "Supervised Learning", "Python", "Machine Learning"],
+        "icon": "brain",
+        "category": "AI/ML",
+        "duration": "4 horas"
+    },
+    {
+        "title": "Cómo resolver problemas y tomar decisiones con eficacia",
+        "issuing_organization": "University of California, Irvine - Coursera",
+        "date_issued": "2025-01-02",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Problem Solving", "Decision Making", "Critical Thinking", "Leadership"],
+        "icon": "lightbulb",
+        "category": "Soft Skills",
+        "instructor": "Rob Stone, PMP, M.Ed."
+    },
+    {
+        "title": "Generative AI: Introduction and Applications",
+        "issuing_organization": "IBM - Coursera",
+        "date_issued": "2024-12-30",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Generative AI", "Artificial Intelligence", "AI Applications", "IBM Watson"],
+        "icon": "robot",
+        "category": "AI/ML",
+        "instructor": "Gabal, Skills Network"
+    },
+    {
+        "title": "Introduction to Artificial Intelligence (AI)",
+        "issuing_organization": "IBM - Coursera",
+        "date_issued": "2024-12-29",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Artificial Intelligence", "Machine Learning", "AI Fundamentals", "IBM Watson"],
+        "icon": "brain",
+        "category": "AI/ML",
+        "instructor": "Rav Ahuja, Global Program Director, Skills Network"
+    },
+    {
+        "title": "Introduction to Data Science in Python",
+        "issuing_organization": "University of Michigan - Coursera",
+        "date_issued": "2023-09-27",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Python", "Data Science", "Pandas", "NumPy", "Data Analysis"],
+        "icon": "chart-line",
+        "category": "Data Science",
+        "instructor": "Christopher Brooks, Associate Professor of Information"
+    },
+    {
+        "title": "Mathematics for Machine Learning: Linear Algebra",
+        "issuing_organization": "Imperial College London - Coursera",
+        "date_issued": "2023-05-27",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Linear Algebra", "Mathematics", "Machine Learning", "Vectors", "Matrices"],
+        "icon": "calculator",
+        "category": "AI/ML",
+        "instructor": "David Dye, Samuel J Cooper, A. Freddie Page"
+    },
+    {
         "title": "Programming for Everybody (Getting Started with Python)",
         "issuing_organization": "University of Michigan - Coursera",
-        "date_issued": "2022-12-10",
+        "date_issued": "2022-10-10",
         "credential_id": "Coursera Certificate",
         "skills": ["Python", "Programming Fundamentals", "Data Types", "Control Structures"],
         "icon": "python",
-        "category": "Programming"
+        "category": "Programming",
+        "instructor": "Charles Severance, Clinical Professor"
     },
     {
         "title": "Python Data Structures",
@@ -15,123 +106,67 @@
         "credential_id": "Coursera Certificate",
         "skills": ["Python", "Data Structures", "Lists", "Dictionaries", "Tuples"],
         "icon": "python",
-        "category": "Programming"
+        "category": "Programming",
+        "instructor": "Charles Severance, Clinical Professor"
     },
     {
-        "title": "Mathematics for Machine Learning: Linear Algebra",
-        "issuing_organization": "Imperial College London - Coursera",
-        "date_issued": "2023-05-27",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Linear Algebra", "Vectors", "Matrices", "Eigenvalues", "Mathematical Foundations"],
-        "icon": "calculator",
-        "category": "AI/ML"
-    },
-    {
-        "title": "Introduction to Data Science in Python",
-        "issuing_organization": "University of Michigan - Coursera",
-        "date_issued": "2024-12-29",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Python", "Pandas", "NumPy", "Data Analysis", "Data Cleaning", "Statistical Analysis"],
-        "icon": "chart-line",
-        "category": "Data Science"
-    },
-    {
-        "title": "Introduction to Artificial Intelligence (AI)",
+        "title": "Generative AI: Prompt Engineering Basics",
         "issuing_organization": "IBM - Coursera",
-        "date_issued": "2024-12-29",
+        "date_issued": "2024-12-31",
         "credential_id": "Coursera Certificate",
-        "skills": ["Artificial Intelligence", "Machine Learning", "AI Applications", "IBM Watson", "Neural Networks"],
-        "icon": "brain",
-        "category": "AI/ML"
-    },
-    {
-        "title": "Coursera Certificate 3K09BNQF7DJ5",
-        "issuing_organization": "Coursera",
-        "date_issued": "2025-01-02",
-        "credential_id": "3K09BNQF7DJ5",
-        "skills": ["Course Completion", "Professional Development"],
-        "icon": "certificate",
-        "category": "Programming"
-    },
-    {
-        "title": "Coursera Certificate 6Q4DE3HUCB2X",
-        "issuing_organization": "Coursera",
-        "date_issued": "2025-01-02",
-        "credential_id": "6Q4DE3HUCB2X",
-        "skills": ["Course Completion", "Professional Development"],
-        "icon": "certificate",
-        "category": "Programming"
-    },
-    {
-        "title": "Coursera Certificate RRZ1KJ5SUPIT",
-        "issuing_organization": "Coursera",
-        "date_issued": "2025-01-02",
-        "credential_id": "RRZ1KJ5SUPIT",
-        "skills": ["Course Completion", "Professional Development"],
-        "icon": "certificate",
-        "category": "Programming"
+        "skills": ["Prompt Engineering", "Generative AI", "AI Prompting", "ChatGPT"],
+        "icon": "comments",
+        "category": "AI/ML",
+        "instructor": "Antonio Cangiano, Rav Ahuja"
     },
     {
         "title": "Introducción a la Nube",
         "issuing_organization": "Platzi",
-        "date_issued": "2024-01-15",
-        "credential_id": "Diploma Platzi",
-        "skills": ["Cloud Computing", "AWS", "Infrastructure", "DevOps", "Cloud Architecture"],
+        "date_issued": "2025-04-12",
+        "credential_id": "Platzi Certificate",
+        "skills": ["Cloud Computing", "AWS", "Azure", "Google Cloud", "Infraestructura"],
         "icon": "cloud",
-        "category": "Cloud/DevOps"
+        "category": "Cloud/DevOps",
+        "duration": "20 horas"
     },
     {
-        "title": "Python Web Development",
-        "issuing_organization": "freeCodeCamp",
-        "date_issued": "2023-08-20",
-        "credential_id": "FCC-PWD-2023",
-        "skills": ["Django", "Flask", "Web APIs", "Database Integration", "Python Web Frameworks"],
-        "icon": "globe",
-        "category": "Web Development"
-    },
-    {
-        "title": "Machine Learning Foundations",
-        "issuing_organization": "Coursera",
-        "date_issued": "2023-11-15",
-        "credential_id": "ML-FOUND-2023",
-        "skills": ["Supervised Learning", "Unsupervised Learning", "Feature Engineering", "Model Evaluation"],
-        "icon": "cogs",
+        "title": "Artificial Intelligence Essentials V2",
+        "issuing_organization": "IBM - Coursera",
+        "date_issued": "2024-12-29",
+        "credential_id": "Coursera Certificate",
+        "skills": ["Artificial Intelligence", "AI Fundamentals", "Machine Learning", "Deep Learning"],
+        "icon": "brain",
         "category": "AI/ML"
     },
     {
-        "title": "Advanced Python Programming",
-        "issuing_organization": "Universidad Nacional de Colombia",
-        "date_issued": "2023-06-30",
-        "credential_id": "UNAL-ADV-PY-2023",
-        "skills": ["Object-Oriented Programming", "Design Patterns", "Testing", "Code Optimization"],
-        "icon": "python",
-        "category": "Programming"
+        "title": "Bootcamp de Inteligencia Artificial Nivel Intermedio",
+        "issuing_organization": "Ministerio TIC Colombia - IU Training",
+        "date_issued": "2025-08-01",
+        "credential_id": "MinTIC Certificate",
+        "skills": ["Inteligencia Artificial", "Machine Learning", "Deep Learning", "Python", "TensorFlow"],
+        "icon": "graduation-cap",
+        "category": "AI/ML",
+        "duration": "159 horas",
+        "document_id": "1017922057"
     },
     {
-        "title": "Data Visualization with Python",
-        "issuing_organization": "IBM - Coursera",
-        "date_issued": "2023-09-10",
-        "credential_id": "IBM-DATAVIZ-2023",
-        "skills": ["Matplotlib", "Seaborn", "Plotly", "Dashboard Creation", "Statistical Plots"],
+        "title": "ETL and ELT in Python",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-06-20",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["ETL", "ELT", "Python", "Data Pipeline", "Data Engineering"],
+        "icon": "exchange-alt",
+        "category": "Data Science",
+        "duration": "4 horas"
+    },
+    {
+        "title": "Introduction to MLflow",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-06-08",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["MLflow", "Machine Learning", "Model Tracking", "Experiment Management"],
         "icon": "chart-bar",
-        "category": "Data Science"
-    },
-    {
-        "title": "Git and GitHub Essentials",
-        "issuing_organization": "GitHub",
-        "date_issued": "2023-03-22",
-        "credential_id": "GITHUB-ESS-2023",
-        "skills": ["Version Control", "Git", "GitHub", "Collaborative Development", "CI/CD"],
-        "icon": "git-alt",
-        "category": "Programming"
-    },
-    {
-        "title": "Database Design and Management",
-        "issuing_organization": "Universidad Nacional de Colombia",
-        "date_issued": "2023-12-05",
-        "credential_id": "UNAL-DB-2023",
-        "skills": ["SQL", "Database Design", "PostgreSQL", "Data Modeling", "Query Optimization"],
-        "icon": "database",
-        "category": "Data Science"
+        "category": "AI/ML",
+        "duration": "4 horas"
     }
 ]

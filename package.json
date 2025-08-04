@@ -14,7 +14,7 @@
     "projects",
     "certificates"
   ],
-  "author": "Your Name",
+  "author": "Mateo Builes Duque",
   "license": "MIT",
   "dependencies": {
     "react": "^17.0.2",

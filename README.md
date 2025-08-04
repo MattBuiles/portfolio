@@ -1,6 +1,19 @@
-# Portfolio Website
+# Portfolio de Mateo Builes Duque
 
-This is a portfolio website designed to showcase personal information, experience, projects, and certifications in an elegant and attractive manner.
+## 🎯 Sobre Mí
+
+Soy **Mateo Builes Duque**, estudiante de **Ingeniería de Sistemas e Informática** en la **Universidad Nacional de Colombia - Sede Medellín** desde 2022. Me especializo en **Inteligencia Artificial**, **Machine Learning** y **Data Science**.
+
+### 🏢 Experiencia Profesional
+- **Colaborador en Desarrollo de Aplicaciones** - Laboratorio de Prospección y Desarrollo de Biomoléculas (2024 - Presente)
+- **Monitor Académico** - Simulación de Sistemas, Universidad Nacional de Colombia (2025 - Presente)
+- **Desarrollador Full Stack** - Proyectos Independientes (2021 - Presente)
+
+### 📫 Contacto
+- **Email:** matebuilesd@gmail.com
+- **Teléfono:** +57 312 239 0597
+- **Ubicación:** Medellín, Colombia
+- **LinkedIn:** [linkedin.com/in/mateo-builes-73453531b](https://linkedin.com/in/mateo-builes-73453531b)
 
 ## Project Structure
 
@@ -58,7 +71,7 @@ portfolio-website
    npm start
    ```
 
-5. Open your browser and go to `http://localhost:3000` to view the portfolio website.
+5. Open your browser and go to `http://localhost:8080` to view the portfolio website.
 
 ## Features
 

@@ -6,9 +6,9 @@ const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
   
   const roles = [
-    "Estudiante de Ingeniería de Sistemas",
+    "Estudiante de Ingeniería de Sistemas e Informática",
     "Especialista en IA y Machine Learning",
-    "Investigador en Biología Funcional",
+    "Colaborador en Investigación Biológica",
     "Desarrollador Full Stack",
     "Data Scientist"
   ];
@@ -43,7 +43,7 @@ const Hero = () => {
             </div>
             
             <h1 className="hero-name animate-fade-in-up">
-              <span className="name-highlight">Tu Nombre</span>
+              <span className="name-highlight">Mateo Builes Duque</span>
             </h1>
             
             <div className="hero-role animate-fade-in-up">

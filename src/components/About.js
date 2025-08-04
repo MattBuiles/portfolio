@@ -4,11 +4,11 @@ import './About-new.css';
 
 const About = () => {
   const personalInfo = [
-    { label: 'Universidad', value: 'Universidad Nacional de Colombia', icon: 'university' },
-    { label: 'Carrera', value: 'Ingeniería de Sistemas', icon: 'graduation-cap' },
+    { label: 'Universidad', value: 'Universidad Nacional de Colombia - Medellín', icon: 'university' },
+    { label: 'Carrera', value: 'Ingeniería de Sistemas e Informática', icon: 'graduation-cap' },
     { label: 'Especialización', value: 'IA, ML y Data Science', icon: 'brain' },
-    { label: 'Ubicación', value: 'Bogotá, Colombia', icon: 'map-marker-alt' },
-    { label: 'Email', value: 'contacto@mattbuiles.com', icon: 'envelope' },
+    { label: 'Ubicación', value: 'Medellín, Colombia', icon: 'map-marker-alt' },
+    { label: 'Email', value: 'matebuilesd@gmail.com', icon: 'envelope' },
     { label: 'Estado', value: 'Disponible para proyectos', icon: 'check-circle' }
   ];
 

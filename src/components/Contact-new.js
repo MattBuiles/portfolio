@@ -17,29 +17,29 @@ const Contact = () => {
     {
       icon: 'envelope',
       label: 'Email',
-      value: 'matebuilesd@gmail.com',
-      link: 'mailto:matebuilesd@gmail.com',
+      value: 'tu.email@ejemplo.com',
+      link: 'mailto:tu.email@ejemplo.com',
       color: '#ea4335'
     },
     {
       icon: 'phone',
       label: 'Teléfono',
-      value: '+57 312 239 0597',
-      link: 'tel:+573122390597',
+      value: '+57 300 123 4567',
+      link: 'tel:+573001234567',
       color: '#34a853'
     },
     {
       icon: 'map-marker-alt',
       label: 'Ubicación',
-      value: 'Medellín, Colombia',
-      link: 'https://maps.google.com/?q=Medellín,Colombia',
+      value: 'Bogotá, Colombia',
+      link: 'https://maps.google.com/?q=Bogotá,Colombia',
       color: '#4285f4'
     },
     {
       icon: 'linkedin',
       label: 'LinkedIn',
-      value: '/in/mateobuiles',
-      link: 'https://linkedin.com/in/mateobuiles',
+      value: '/in/tu-perfil',
+      link: 'https://linkedin.com/in/tu-perfil',
       color: '#0077b5'
     }
   ];
@@ -48,25 +48,25 @@ const Contact = () => {
     {
       icon: 'github',
       name: 'GitHub',
-      url: 'https://github.com/MattBuiles',
+      url: 'https://github.com/tu-usuario',
       color: '#333'
     },
     {
       icon: 'linkedin',
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/mateobuiles',
+      url: 'https://linkedin.com/in/tu-perfil',
       color: '#0077b5'
     },
     {
       icon: 'twitter',
       name: 'Twitter',
-      url: 'https://twitter.com/mateobuiles',
+      url: 'https://twitter.com/tu-usuario',
       color: '#1da1f2'
     },
     {
       icon: 'instagram',
       name: 'Instagram',
-      url: 'https://instagram.com/mateobuiles',
+      url: 'https://instagram.com/tu-usuario',
       color: '#e4405f'
     }
   ];
