@@ -14,14 +14,17 @@
 /* Timeline */
 .experience-timeline {
   position: relative;
-  padding: var(--spacing-xl) var(--spacing-lg);
+  padding: var(--spacing-xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .timeline-line {
   position: absolute;
-  left: 30px;
-  top: 0;
-  bottom: 0;
+  left: 55px;
+  top: 30px;
+  bottom: 30px;
   width: 2px;
   background: linear-gradient(to bottom, var(--border), var(--primary), var(--border));
   z-index: 1;
@@ -29,8 +32,8 @@
 
 .timeline-item {
   position: relative;
-  padding-left: 80px;
-  margin-bottom: var(--spacing-xl);
+  padding-left: 90px;
+  margin-bottom: var(--spacing-2xl);
   cursor: pointer;
   transition: all var(--transition);
 }
@@ -52,7 +55,7 @@
 
 .timeline-dot {
   position: absolute;
-  left: -49px;
+  left: -60px;
   top: 0;
   width: 60px;
   height: 60px;
@@ -75,6 +78,8 @@
   border-radius: var(--radius-lg);
   border: 1px solid var(--border);
   transition: all var(--transition);
+  position: relative;
+  z-index: 3;
 }
 
 .timeline-item:hover .timeline-content,
