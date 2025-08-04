@@ -99,14 +99,14 @@ const Experience = () => {
         {/* Stats Section */}
         <div className="experience-stats animate-fade-in-up">
           <div className="stat-item">
-            <Icon name="calendar-alt" className="stat-icon" />
+            <Icon name="calendar" className="stat-icon" />
             <div className="stat-content">
               <span className="stat-number">3+</span>
               <span className="stat-label">Años de experiencia</span>
             </div>
           </div>
           <div className="stat-item">
-            <Icon name="project-diagram" className="stat-icon" />
+            <Icon name="sitemap" className="stat-icon" />
             <div className="stat-content">
               <span className="stat-number">15+</span>
               <span className="stat-label">Proyectos completados</span>

@@ -1,6 +1,7 @@
 .experience {
   background: var(--bg-primary);
   position: relative;
+  padding: var(--spacing-3xl) 0;
 }
 
 .experience-content {
@@ -13,7 +14,7 @@
 /* Timeline */
 .experience-timeline {
   position: relative;
-  padding: var(--spacing-xl) 0;
+  padding: var(--spacing-xl) var(--spacing-lg);
 }
 
 .timeline-line {
@@ -22,7 +23,7 @@
   top: 0;
   bottom: 0;
   width: 2px;
-  background: var(--border);
+  background: linear-gradient(to bottom, var(--border), var(--primary), var(--border));
   z-index: 1;
 }
 
@@ -55,7 +56,7 @@
   top: 0;
   width: 60px;
   height: 60px;
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
   border: 3px solid var(--border);
   border-radius: 50%;
   display: flex;
@@ -65,6 +66,7 @@
   font-size: var(--text-lg);
   transition: all var(--transition);
   z-index: 2;
+  box-shadow: 0 4px 12px var(--shadow);
 }
 
 .timeline-content {

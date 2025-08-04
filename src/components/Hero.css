@@ -47,6 +47,7 @@
   gap: var(--spacing-3xl);
   align-items: center;
   width: 100%;
+  padding: var(--spacing-lg) 0;
 }
 
 .hero-text {

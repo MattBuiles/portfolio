@@ -92,7 +92,7 @@ const Skills = () => {
         <div className="skills-footer animate-fade-in-up">
           <div className="certification-preview">
             <h3>Certificaciones & Logros</h3>
-            <p>Más de 8 certificaciones en IA, ML y Data Science</p>
+            <p>Certificaciones especializadas en IA, ML y Data Science</p>
             <button 
               className="btn btn-secondary"
               onClick={() => {

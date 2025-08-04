@@ -82,7 +82,7 @@ const Projects = () => {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      <Icon name="external-link-alt" />
+                      <Icon name="external-link" />
                       Demo
                     </a>
                     <a 
@@ -138,7 +138,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                     >
-                      <Icon name="external-link-alt" />
+                      <Icon name="external-link" />
                     </a>
                     <a 
                       href={project.githubUrl} 
@@ -221,7 +221,7 @@ const Projects = () => {
                       target="_blank" 
                       rel="noopener noreferrer"
                     >
-                      <Icon name="external-link-alt" />
+                      <Icon name="external-link" />
                       Ver Demo
                     </a>
                     <a 

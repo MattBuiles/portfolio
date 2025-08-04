@@ -119,11 +119,11 @@ const Hero = () => {
             
             <div className="tech-stack">
               <div className="tech-item animate-pulse">
-                <Icon name="python" />
+                <Icon name="code" />
                 <span>Python</span>
               </div>
               <div className="tech-item animate-pulse">
-                <Icon name="react" />
+                <Icon name="atom" />
                 <span>React</span>
               </div>
               <div className="tech-item animate-pulse">
@@ -140,7 +140,7 @@ const Hero = () => {
         
         <div className="scroll-indicator" onClick={() => scrollToSection('#about')}>
           <div className="scroll-arrow">
-            <Icon name="chevron-down" />
+            <Icon name="arrow-down" />
           </div>
           <span className="scroll-text">Scroll para más</span>
         </div>

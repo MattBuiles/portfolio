@@ -25,7 +25,7 @@
         "date_issued": "2025-05-28",
         "credential_id": "DataCamp Certificate",
         "skills": ["MLOps", "Model Deployment", "Life Cycle Management", "Production ML"],
-        "icon": "sync-alt",
+        "icon": "sync",
         "category": "AI/ML",
         "duration": "4 horas"
     },
@@ -55,7 +55,7 @@
         "date_issued": "2024-12-30",
         "credential_id": "Coursera Certificate",
         "skills": ["Generative AI", "Artificial Intelligence", "AI Applications", "IBM Watson"],
-        "icon": "robot",
+        "icon": "brain",
         "category": "AI/ML",
         "instructor": "Gabal, Skills Network"
     },
@@ -95,7 +95,7 @@
         "date_issued": "2022-10-10",
         "credential_id": "Coursera Certificate",
         "skills": ["Python", "Programming Fundamentals", "Data Types", "Control Structures"],
-        "icon": "python",
+        "icon": "code",
         "category": "Programming",
         "instructor": "Charles Severance, Clinical Professor"
     },
@@ -105,7 +105,7 @@
         "date_issued": "2022-12-10",
         "credential_id": "Coursera Certificate",
         "skills": ["Python", "Data Structures", "Lists", "Dictionaries", "Tuples"],
-        "icon": "python",
+        "icon": "code",
         "category": "Programming",
         "instructor": "Charles Severance, Clinical Professor"
     },
@@ -155,7 +155,7 @@
         "date_issued": "2025-06-20",
         "credential_id": "DataCamp Certificate",
         "skills": ["ETL", "ELT", "Python", "Data Pipeline", "Data Engineering"],
-        "icon": "exchange-alt",
+        "icon": "database",
         "category": "Data Science",
         "duration": "4 horas"
     },

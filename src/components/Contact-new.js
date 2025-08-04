@@ -188,7 +188,7 @@ const Contact = () => {
                     <span className="method-label">{info.label}</span>
                     <span className="method-value">{info.value}</span>
                   </div>
-                  <Icon name="external-link-alt" className="external-icon" />
+                  <Icon name="external-link" className="external-icon" />
                 </div>
               ))}
             </div>
@@ -288,7 +288,7 @@ const Contact = () => {
 
               <div className="form-group">
                 <label htmlFor="message">
-                  <Icon name="comment-alt" />
+                  <Icon name="comment" />
                   Mensaje
                 </label>
                 <textarea

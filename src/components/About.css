@@ -1,12 +1,13 @@
 .about-section {
-  padding-top: 8rem;
+  padding-top: var(--spacing-3xl);
+  padding-bottom: var(--spacing-3xl);
 }
 
 .about-content {
   display: grid;
   grid-template-columns: 40% 60%;
-  gap: 3rem;
-  margin-bottom: 4rem;
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-3xl);
 }
 
 .about-image-container {
@@ -29,13 +30,13 @@
 }
 
 .about-text {
-  padding: 1rem 0;
+  padding: var(--spacing-lg) 0;
 }
 
 .about-greeting {
   font-size: 2.2rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--spacing-sm);
   color: var(--dark);
 }
 
@@ -46,7 +47,7 @@
 .about-profession {
   font-size: 1.4rem;
   color: var(--secondary);
-  margin-bottom: 1.5rem;
+  margin-bottom: var(--spacing-xl);
   font-weight: 500;
 }
 

@@ -72,31 +72,31 @@ const Certificates = () => {
           
           <div className="stat-card">
             <div className="stat-icon">
-              <Icon name="calendar-check" />
+              <Icon name="calendar" />
             </div>
             <div className="stat-content">
-              <span className="stat-number">2024</span>
+              <span className="stat-number">{Math.max(...certificatesData.map(cert => new Date(cert.date_issued).getFullYear()))}</span>
               <span className="stat-label">Última Certificación</span>
             </div>
           </div>
           
           <div className="stat-card">
             <div className="stat-icon">
-              <Icon name="star" />
+              <Icon name="layer-group" />
             </div>
             <div className="stat-content">
-              <span className="stat-number">5</span>
+              <span className="stat-number">{categories.length - 1}</span>
               <span className="stat-label">Categorías Diferentes</span>
             </div>
           </div>
           
           <div className="stat-card">
             <div className="stat-icon">
-              <Icon name="trophy" />
+              <Icon name="chart-line" />
             </div>
             <div className="stat-content">
-              <span className="stat-number">95%</span>
-              <span className="stat-label">Promedio de Calificación</span>
+              <span className="stat-number">{Math.round((certificatesData.filter(cert => cert.date_issued >= '2024-01-01').length / certificatesData.length) * 100)}%</span>
+              <span className="stat-label">Certificaciones Recientes</span>
             </div>
           </div>
         </div>
@@ -165,7 +165,7 @@ const Certificates = () => {
                   <span>Verificado</span>
                 </div>
                 <div className="certificate-expand">
-                  <Icon name="expand-alt" />
+                  <Icon name="expand" />
                 </div>
               </div>
             </div>
@@ -200,7 +200,7 @@ const Certificates = () => {
               <div className="modal-body">
                 <div className="modal-info-grid">
                   <div className="info-item">
-                    <Icon name="calendar-alt" className="info-icon" />
+                    <Icon name="calendar" className="info-icon" />
                     <div>
                       <span className="info-label">Fecha de Emisión</span>
                       <span className="info-value">{formatDate(selectedCertificate.date_issued)}</span>
@@ -248,11 +248,46 @@ const Certificates = () => {
                 </div>
                 
                 <div className="modal-actions">
-                  <button className="btn btn-primary">
-                    <Icon name="external-link-alt" />
+                  <button 
+                    className="btn btn-primary"
+                    onClick={() => {
+                      // Lógica para verificar credenciales según la organización
+                      const org = selectedCertificate.issuing_organization.toLowerCase();
+                      let verifyUrl = '#';
+                      
+                      if (org.includes('datacamp')) {
+                        verifyUrl = 'https://www.datacamp.com/certificate/verify';
+                      } else if (org.includes('coursera')) {
+                        verifyUrl = 'https://www.coursera.org/account/accomplishments/verify';
+                      } else if (org.includes('ibm')) {
+                        verifyUrl = 'https://www.credly.com/users/mateo-builes-duque';
+                      } else if (org.includes('platzi')) {
+                        verifyUrl = 'https://platzi.com/p/mateobui/';
+                      } else {
+                        verifyUrl = selectedCertificate.credential_url || '#';
+                      }
+                      
+                      window.open(verifyUrl, '_blank');
+                    }}
+                  >
+                    <Icon name="external-link" />
                     Verificar Credencial
                   </button>
-                  <button className="btn btn-secondary">
+                  <button 
+                    className="btn btn-secondary"
+                    onClick={() => {
+                      // Simular descarga de certificado
+                      const fileName = `${selectedCertificate.title.replace(/[^a-zA-Z0-9]/g, '_')}_Certificate.pdf`;
+                      
+                      // Crear un enlace temporal para simular descarga
+                      const link = document.createElement('a');
+                      link.href = '#'; // En un escenario real, aquí iría la URL del PDF
+                      link.download = fileName;
+                      
+                      // Mostrar mensaje informativo
+                      alert(`Funcionalidad de descarga disponible próximamente.\nArchivo: ${fileName}`);
+                    }}
+                  >
                     <Icon name="download" />
                     Descargar Certificado
                   </button>
