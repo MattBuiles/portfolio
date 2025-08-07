@@ -582,3 +582,32 @@ body {
 .social-media a:hover {
   color: var(--primary);
 }
+
+/* Estilos para iconos FontAwesome */
+.fas, .fab, .far, .fal, .fat, .fad {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Asegurar que los iconos mantengan su aspecto ratio */
+i[class*="fa-"] {
+  width: auto !important;
+  height: auto !important;
+  aspect-ratio: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Corregir iconos específicos que pueden tener problemas */
+.fa-university::before { content: "\f19c"; }
+.fa-graduation-cap::before { content: "\f19d"; }
+.fa-map-marker-alt::before { content: "\f3c5"; }
+.fa-location-dot::before { content: "\f3c5"; }
+.fa-check-circle::before { content: "\f058"; }
+.fa-circle-check::before { content: "\f058"; }

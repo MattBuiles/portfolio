@@ -3,6 +3,44 @@ import Icon from './Icon';
 import certificatesData from '../data/certificates.json';
 import './Certificates.css';
 
+// Mapeo de títulos de certificados a nombres de archivos PDF
+const getCertificateFilename = (title, organization, date) => {
+  const fileMap = {
+    // DataCamp certificates
+    'Introduction to Shell': 'datacamp_introduction_to_shell_2025.pdf',
+    'MLOps Concepts': 'datacamp_mlops_concepts_2025.pdf',
+    'MLOps Deployment and Life Cycling': 'datacamp_mlops_deployment_2025.pdf',
+    'Supervised Learning with scikit-learn': 'datacamp_supervised_learning_scikit_2025.pdf',
+    'Introduction to MLflow': 'datacamp_introduction_mlflow_2025.pdf',
+    'ETL and ELT in Python': 'datacamp_etl_elt_python_2025.pdf',
+    
+    // Coursera - University of Michigan
+    'Programming for Everybody (Getting Started with Python)': 'coursera_umich_python_getting_started_2022.pdf',
+    'Python Data Structures': 'coursera_umich_python_data_structures_2022.pdf',
+    'Introduction to Data Science in Python': 'coursera_umich_data_science_python_2023.pdf',
+    
+    // Coursera - IBM
+    'Introduction to Artificial Intelligence (AI)': 'coursera_ibm_ai_introduction_2024.pdf',
+    'Generative AI: Introduction and Applications': 'coursera_ibm_generative_ai_intro_2024.pdf',
+    'Prompt Engineering for ChatGPT': 'coursera_ibm_prompt_engineering_2024.pdf',
+    'Artificial Intelligence (AI) Essentials': 'coursera_ibm_ai_essentials_2024.pdf',
+    
+    // Coursera - Imperial College London
+    'Mathematics for Machine Learning: Linear Algebra': 'coursera_imperial_linear_algebra_2023.pdf',
+    
+    // Coursera - University of California, Irvine
+    'Problem Solving Using Computational Thinking': 'coursera_uci_problem_solving_2025.pdf',
+    
+    // MinTIC
+    'IA para todos: Bootcamp intermedio en Inteligencia Artificial': 'mintic_ai_bootcamp_intermedio_2025.pdf',
+    
+    // Platzi
+    'Introducción a la Nube con Azure': 'platzi_introduccion_nube_2025.pdf'
+  };
+  
+  return fileMap[title] || null;
+};
+
 const Certificates = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -276,16 +314,26 @@ const Certificates = () => {
                   <button 
                     className="btn btn-secondary"
                     onClick={() => {
-                      // Simular descarga de certificado
-                      const fileName = `${selectedCertificate.title.replace(/[^a-zA-Z0-9]/g, '_')}_Certificate.pdf`;
+                      const filename = getCertificateFilename(
+                        selectedCertificate.title, 
+                        selectedCertificate.issuing_organization, 
+                        selectedCertificate.date_issued
+                      );
                       
-                      // Crear un enlace temporal para simular descarga
-                      const link = document.createElement('a');
-                      link.href = '#'; // En un escenario real, aquí iría la URL del PDF
-                      link.download = fileName;
-                      
-                      // Mostrar mensaje informativo
-                      alert(`Funcionalidad de descarga disponible próximamente.\nArchivo: ${fileName}`);
+                      if (filename) {
+                        // Crear enlace de descarga real
+                        const link = document.createElement('a');
+                        link.href = `/certificates/${filename}`;
+                        link.download = filename;
+                        link.style.display = 'none';
+                        
+                        // Agregar al DOM, hacer clic, y remover
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                      } else {
+                        alert(`Certificado no disponible para descarga.\nTítulo: ${selectedCertificate.title}`);
+                      }
                     }}
                   >
                     <Icon name="download" />
@@ -313,7 +361,18 @@ const Certificates = () => {
                 <Icon name="envelope" />
                 Contactarme
               </button>
-              <button className="btn btn-secondary">
+              <button 
+                className="btn btn-secondary"
+                onClick={() => {
+                  // Crear elemento de descarga para el CV completo
+                  const link = document.createElement('a');
+                  link.href = '/certificates/CV_Completo.pdf';
+                  link.download = 'CV_Completo.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
                 <Icon name="download" />
                 Descargar CV Completo
               </button>

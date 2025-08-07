@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateo Builes Duque - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #000;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-info {
+            font-size: 12px;
+            line-height: 1.4;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 1px solid #000;
+            padding-bottom: 3px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+
+        .subsection {
+            margin-bottom: 15px;
+        }
+
+        .job-title, .degree-title {
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .company, .institution {
+            font-style: italic;
+            font-size: 13px;
+        }
+
+        .date {
+            float: right;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .description {
+            font-size: 12px;
+            margin-top: 5px;
+            text-align: justify;
+        }
+
+        .responsibilities {
+            font-size: 11px;
+            margin-top: 8px;
+            padding-left: 15px;
+        }
+
+        .responsibilities li {
+            margin-bottom: 3px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            font-size: 11px;
+        }
+
+        .skill-category {
+            margin-bottom: 10px;
+        }
+
+        .skill-category-title {
+            font-weight: bold;
+            font-size: 12px;
+            margin-bottom: 5px;
+            text-decoration: underline;
+        }
+
+        .certificates-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            font-size: 10px;
+        }
+
+        .certificate-item {
+            margin-bottom: 8px;
+            border-left: 2px solid #666;
+            padding-left: 8px;
+        }
+
+        .cert-title {
+            font-weight: bold;
+            font-size: 11px;
+        }
+
+        .cert-org {
+            font-style: italic;
+            font-size: 10px;
+        }
+
+        .cert-date {
+            font-size: 9px;
+            color: #666;
+        }
+
+        .projects-list {
+            font-size: 11px;
+        }
+
+        .project-item {
+            margin-bottom: 12px;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        .project-tech {
+            font-style: italic;
+            font-size: 10px;
+            color: #666;
+        }
+
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        @media print {
+            body {
+                padding: 0.3in;
+                font-size: 11px;
+            }
+            .section {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="name">Mateo Builes Duque</div>
+        <div class="contact-info">
+            Estudiante de Ingeniería de Sistemas e Informática<br>
+            Universidad Nacional de Colombia - Medellín<br>
+            📧 matebuilesd@gmail.com | 📍 Medellín, Colombia<br>
+            🔗 LinkedIn: linkedin.com/in/mateo-builes-73453531b | 💻 GitHub: github.com/MattBuiles
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Perfil Profesional</div>
+        <div class="description">
+            Estudiante de Ingeniería de Sistemas e Informática con especialización en Inteligencia Artificial, Machine Learning y Data Science. Experiencia en desarrollo full stack con enfoque en aplicaciones web que integran modelos de ML. Colaborador activo en investigación biológica aplicando tecnología para análisis de datos. Monitor académico con habilidades de enseñanza y capacidad de trabajo interdisciplinario. Apasionado por la innovación tecnológica y la resolución de problemas complejos.
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Educación</div>
+        <div class="subsection clearfix">
+            <div class="degree-title">Ingeniería de Sistemas e Informática</div>
+            <div class="date">2022 - Presente</div>
+            <div class="institution">Universidad Nacional de Colombia - Medellín</div>
+            <div class="description">
+                Especialización en Inteligencia Artificial, Machine Learning y Data Science. Participación activa en proyectos de investigación y desarrollo tecnológico.
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Experiencia Profesional</div>
+        
+        <div class="subsection clearfix">
+            <div class="job-title">Monitor Académico - Simulación de Sistemas</div>
+            <div class="date">2025 - Presente</div>
+            <div class="company">Universidad Nacional de Colombia - Medellín</div>
+            <ul class="responsibilities">
+                <li>Apoyo académico a estudiantes en conceptos de simulación y modelado de sistemas complejos</li>
+                <li>Desarrollo de materiales didácticos y ejercicios prácticos interactivos</li>
+                <li>Facilitación de sesiones de tutoría y resolución de problemas técnicos</li>
+            </ul>
+        </div>
+
+        <div class="subsection clearfix">
+            <div class="job-title">Colaborador en Desarrollo de Aplicaciones</div>
+            <div class="date">2024 - Presente</div>
+            <div class="company">Laboratorio de Prospección y Desarrollo de Biomoléculas - Grupo de Investigación de Biología Funcional</div>
+            <ul class="responsibilities">
+                <li>Desarrollo y refactorización de aplicaciones para investigación biológica</li>
+                <li>Implementación de soluciones tecnológicas para análisis de datos biológicos</li>
+                <li>Trabajo interdisciplinario combinando conocimientos de biología y tecnología</li>
+            </ul>
+        </div>
+
+        <div class="subsection clearfix">
+            <div class="job-title">Desarrollador Full Stack</div>
+            <div class="date">2021 - Presente</div>
+            <div class="company">Proyectos Independientes</div>
+            <ul class="responsibilities">
+                <li>Desarrollo de aplicaciones web utilizando React, Node.js y Python</li>
+                <li>Implementación de modelos de Machine Learning en aplicaciones web</li>
+                <li>Creación de dashboards interactivos para visualización de datos</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Proyectos Destacados</div>
+        <div class="projects-list">
+            <div class="project-item">
+                <div class="project-title">Sistema de Predicción de Enfermedades con ML</div>
+                <div class="project-tech">Python, TensorFlow, FastAPI, React, PostgreSQL</div>
+                <div class="description">Aplicación web que utiliza modelos de Machine Learning para predecir enfermedades basándose en síntomas, con interfaz intuitiva para profesionales de la salud.</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Dashboard de Análisis de Datos Biológicos</div>
+                <div class="project-tech">React, D3.js, Python, Flask, MongoDB</div>
+                <div class="description">Plataforma desarrollada para el grupo de investigación en Biología Funcional, con visualizaciones interactivas y estadísticas avanzadas.</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Simulador de Sistemas Complejos</div>
+                <div class="project-tech">Python, Streamlit, NumPy, Matplotlib, Plotly</div>
+                <div class="description">Herramienta educativa para modelar y simular sistemas complejos con visualizaciones en tiempo real y análisis estadístico.</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">API de Análisis de Sentimientos</div>
+                <div class="project-tech">Python, NLTK, spaCy, FastAPI, Docker</div>
+                <div class="description">API REST para análisis de sentimientos en texto con procesamiento en múltiples idiomas y métricas de confianza detalladas.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Competencias Técnicas</div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <div class="skill-category-title">Lenguajes de Programación</div>
+                • Python<br>
+                • JavaScript<br>
+                • R<br>
+                • SQL<br>
+                • Shell/Bash
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">Frameworks & Librerías</div>
+                • React, Node.js<br>
+                • TensorFlow, Scikit-learn<br>
+                • FastAPI, Flask<br>
+                • Pandas, NumPy<br>
+                • D3.js, Plotly
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">Tecnologías & Herramientas</div>
+                • Git, Docker<br>
+                • MongoDB, PostgreSQL<br>
+                • AWS, Google Cloud<br>
+                • MLflow, MLOps<br>
+                • Linux, Windows
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Certificaciones Profesionales</div>
+        <div class="certificates-grid">
+            <div class="certificate-item">
+                <div class="cert-title">Bootcamp de IA Nivel Intermedio</div>
+                <div class="cert-org">MinTIC Colombia - IU Training</div>
+                <div class="cert-date">Agosto 2025 (159 horas)</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Supervised Learning with scikit-learn</div>
+                <div class="cert-org">DataCamp</div>
+                <div class="cert-date">Abril 2025</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">MLOps Deployment and Life Cycling</div>
+                <div class="cert-org">DataCamp</div>
+                <div class="cert-date">Mayo 2025</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">ETL and ELT in Python</div>
+                <div class="cert-org">DataCamp</div>
+                <div class="cert-date">Junio 2025</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Introduction to MLflow</div>
+                <div class="cert-org">DataCamp</div>
+                <div class="cert-date">Junio 2025</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Generative AI: Prompt Engineering</div>
+                <div class="cert-org">IBM - Coursera</div>
+                <div class="cert-date">Diciembre 2024</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">AI Essentials</div>
+                <div class="cert-org">IBM - Coursera</div>
+                <div class="cert-date">Diciembre 2024</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Data Science in Python</div>
+                <div class="cert-org">University of Michigan - Coursera</div>
+                <div class="cert-date">Septiembre 2023</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Mathematics for ML: Linear Algebra</div>
+                <div class="cert-org">Imperial College London - Coursera</div>
+                <div class="cert-date">Mayo 2023</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Problem Solving & Decision Making</div>
+                <div class="cert-org">UC Irvine - Coursera</div>
+                <div class="cert-date">Enero 2025</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Áreas de Interés e Investigación</div>
+        <div class="description">
+            <strong>Inteligencia Artificial:</strong> Desarrollo de modelos predictivos y sistemas inteligentes<br>
+            <strong>Machine Learning:</strong> Algoritmos de aprendizaje supervisado y no supervisado<br>
+            <strong>Data Science:</strong> Análisis de datos, visualización y extracción de insights<br>
+            <strong>Computer Vision:</strong> Procesamiento de imágenes y reconocimiento de patrones<br>
+            <strong>NLP:</strong> Procesamiento de lenguaje natural y análisis de sentimientos<br>
+            <strong>Bioinformática:</strong> Aplicación de tecnología en investigación biológica<br>
+            <strong>MLOps:</strong> Despliegue y gestión del ciclo de vida de modelos ML
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Idiomas</div>
+        <div class="description">
+            <strong>Español:</strong> Nativo<br>
+            <strong>Inglés:</strong> Intermedio-Avanzado (Comprensión técnica y académica)
+        </div>
+    </div>
+</body>
+</html>

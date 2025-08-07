@@ -77,8 +77,12 @@
 .info-icon {
   color: var(--primary);
   font-size: var(--text-lg);
-  width: 20px;
+  min-width: 24px;
+  width: auto;
   text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .info-content {
