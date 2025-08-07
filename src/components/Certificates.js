@@ -41,6 +41,37 @@ const getCertificateFilename = (title, organization, date) => {
   return fileMap[title] || null;
 };
 
+// Función para obtener URL de verificación desde los datos del certificado
+const getVerificationUrl = (certificate) => {
+  // Primera prioridad: URL específica en los datos del certificado
+  if (certificate.verification_url) {
+    return certificate.verification_url;
+  }
+  
+  // Segunda prioridad: URL desde credential_url
+  if (certificate.credential_url) {
+    return certificate.credential_url;
+  }
+  
+  // Tercera prioridad: URLs generales por organización como fallback
+  const org = certificate.issuing_organization.toLowerCase();
+  
+  if (org.includes('datacamp')) {
+    return 'https://www.datacamp.com/profile/matebuilesd';
+  } else if (org.includes('coursera')) {
+    return 'https://www.coursera.org/user/matebuilesd';
+  } else if (org.includes('ibm')) {
+    return 'https://www.credly.com/users/mateo-builes-duque/badges';
+  } else if (org.includes('platzi')) {
+    return 'https://platzi.com/p/mateobui/';
+  } else if (org.includes('mintic') || org.includes('ministerio')) {
+    return 'https://www.mintrabajo.gov.co/empleo-y-pensiones/empleo/certificados';
+  }
+  
+  // No hay URL disponible
+  return null;
+};
+
 const Certificates = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -289,24 +320,14 @@ const Certificates = () => {
                   <button 
                     className="btn btn-primary"
                     onClick={() => {
-                      // Lógica para verificar credenciales según la organización
-                      const org = selectedCertificate.issuing_organization.toLowerCase();
-                      let verifyUrl = '#';
-                      
-                      if (org.includes('datacamp')) {
-                        verifyUrl = 'https://www.datacamp.com/certificate/verify';
-                      } else if (org.includes('coursera')) {
-                        verifyUrl = 'https://www.coursera.org/account/accomplishments/verify';
-                      } else if (org.includes('ibm')) {
-                        verifyUrl = 'https://www.credly.com/users/mateo-builes-duque';
-                      } else if (org.includes('platzi')) {
-                        verifyUrl = 'https://platzi.com/p/mateobui/';
+                      const verificationUrl = getVerificationUrl(selectedCertificate);
+                      if (verificationUrl) {
+                        window.open(verificationUrl, '_blank');
                       } else {
-                        verifyUrl = selectedCertificate.credential_url || '#';
+                        alert('URL de verificación no disponible para este certificado. Por favor, contacta directamente con la institución emisora.');
                       }
-                      
-                      window.open(verifyUrl, '_blank');
                     }}
+                    title="Abrir página de verificación en una nueva pestaña"
                   >
                     <Icon name="external-link" />
                     Verificar Credencial

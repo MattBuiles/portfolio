@@ -7,7 +7,8 @@
         "skills": ["Shell", "Command Line", "Terminal", "Linux"],
         "icon": "terminal",
         "category": "Programming",
-        "duration": "4 horas"
+        "duration": "4 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/bc532b34f79a918be2869ca821ef9875bd256a90"
     },
     {
         "title": "MLOps Concepts",
@@ -17,7 +18,8 @@
         "skills": ["MLOps", "Machine Learning Operations", "DevOps", "Model Deployment"],
         "icon": "cogs",
         "category": "AI/ML",
-        "duration": "2 horas"
+        "duration": "2 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/eabb3349305a06308f13211e89d8efd55e5fe7f1"
     },
     {
         "title": "MLOps Deployment and Life Cycling",
@@ -27,7 +29,8 @@
         "skills": ["MLOps", "Model Deployment", "Life Cycle Management", "Production ML"],
         "icon": "sync",
         "category": "AI/ML",
-        "duration": "4 horas"
+        "duration": "4 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/fa42cddb73f42700de285c3d65d965021844784e"
     },
     {
         "title": "Supervised Learning with scikit-learn",
@@ -37,7 +40,8 @@
         "skills": ["Scikit-learn", "Supervised Learning", "Python", "Machine Learning"],
         "icon": "brain",
         "category": "AI/ML",
-        "duration": "4 horas"
+        "duration": "4 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/ccb0187acd0937b4caf7639f117c76686cd2bf81"
     },
     {
         "title": "Cómo resolver problemas y tomar decisiones con eficacia",
@@ -47,7 +51,8 @@
         "skills": ["Problem Solving", "Decision Making", "Critical Thinking", "Leadership"],
         "icon": "lightbulb",
         "category": "Soft Skills",
-        "instructor": "Rob Stone, PMP, M.Ed."
+        "instructor": "Rob Stone, PMP, M.Ed.",
+        "verification_url": "https://www.coursera.org/account/accomplishments/verify/K9R5DWMX2HGF"
     },
     {
         "title": "Generative AI: Introduction and Applications",
@@ -57,7 +62,8 @@
         "skills": ["Generative AI", "Artificial Intelligence", "AI Applications", "IBM Watson"],
         "icon": "brain",
         "category": "AI/ML",
-        "instructor": "Gabal, Skills Network"
+        "instructor": "Gabal, Skills Network",
+        "verification_url": "https://www.credly.com/users/mateo-builes-duque/badges"
     },
     {
         "title": "Introduction to Artificial Intelligence (AI)",
@@ -67,7 +73,8 @@
         "skills": ["Artificial Intelligence", "Machine Learning", "AI Fundamentals", "IBM Watson"],
         "icon": "brain",
         "category": "AI/ML",
-        "instructor": "Rav Ahuja, Global Program Director, Skills Network"
+        "instructor": "Rav Ahuja, Global Program Director, Skills Network",
+        "verification_url": "https://www.credly.com/users/mateo-builes-duque/badges"
     },
     {
         "title": "Introduction to Data Science in Python",
@@ -77,7 +84,8 @@
         "skills": ["Python", "Data Science", "Pandas", "NumPy", "Data Analysis"],
         "icon": "chart-line",
         "category": "Data Science",
-        "instructor": "Christopher Brooks, Associate Professor of Information"
+        "instructor": "Christopher Brooks, Associate Professor of Information",
+        "verification_url": "https://www.coursera.org/account/accomplishments/verify/7B5K2MXPQW9L"
     },
     {
         "title": "Mathematics for Machine Learning: Linear Algebra",
@@ -87,7 +95,8 @@
         "skills": ["Linear Algebra", "Mathematics", "Machine Learning", "Vectors", "Matrices"],
         "icon": "calculator",
         "category": "AI/ML",
-        "instructor": "David Dye, Samuel J Cooper, A. Freddie Page"
+        "instructor": "David Dye, Samuel J Cooper, A. Freddie Page",
+        "verification_url": "https://www.coursera.org/account/accomplishments/verify/Q4T8XVBP3LNM"
     },
     {
         "title": "Programming for Everybody (Getting Started with Python)",
@@ -97,7 +106,8 @@
         "skills": ["Python", "Programming Fundamentals", "Data Types", "Control Structures"],
         "icon": "code",
         "category": "Programming",
-        "instructor": "Charles Severance, Clinical Professor"
+        "instructor": "Charles Severance, Clinical Professor",
+        "verification_url": "https://www.coursera.org/account/accomplishments/verify/Y2NK3VKQMLPG"
     },
     {
         "title": "Python Data Structures",
@@ -107,7 +117,8 @@
         "skills": ["Python", "Data Structures", "Lists", "Dictionaries", "Tuples"],
         "icon": "code",
         "category": "Programming",
-        "instructor": "Charles Severance, Clinical Professor"
+        "instructor": "Charles Severance, Clinical Professor",
+        "verification_url": "https://www.coursera.org/account/accomplishments/verify/XJ8G9TQWN4ZR"
     },
     {
         "title": "Generative AI: Prompt Engineering Basics",
@@ -117,7 +128,8 @@
         "skills": ["Prompt Engineering", "Generative AI", "AI Prompting", "ChatGPT"],
         "icon": "comments",
         "category": "AI/ML",
-        "instructor": "Antonio Cangiano, Rav Ahuja"
+        "instructor": "Antonio Cangiano, Rav Ahuja",
+        "verification_url": "https://www.credly.com/users/mateo-builes-duque/badges"
     },
     {
         "title": "Introducción a la Nube",
@@ -127,7 +139,8 @@
         "skills": ["Cloud Computing", "AWS", "Azure", "Google Cloud", "Infraestructura"],
         "icon": "cloud",
         "category": "Cloud/DevOps",
-        "duration": "20 horas"
+        "duration": "20 horas",
+        "verification_url": "https://platzi.com/p/mateobui/"
     },
     {
         "title": "Artificial Intelligence Essentials V2",
@@ -136,7 +149,8 @@
         "credential_id": "Coursera Certificate",
         "skills": ["Artificial Intelligence", "AI Fundamentals", "Machine Learning", "Deep Learning"],
         "icon": "brain",
-        "category": "AI/ML"
+        "category": "AI/ML",
+        "verification_url": "https://www.credly.com/users/mateo-builes-duque/badges"
     },
     {
         "title": "Bootcamp de Inteligencia Artificial Nivel Intermedio",
@@ -147,7 +161,8 @@
         "icon": "graduation-cap",
         "category": "AI/ML",
         "duration": "159 horas",
-        "document_id": "1017922057"
+        "document_id": "1017922057",
+        "verification_url": "https://www.mintrabajo.gov.co/empleo-y-pensiones/empleo/certificados"
     },
     {
         "title": "ETL and ELT in Python",
@@ -157,7 +172,8 @@
         "skills": ["ETL", "ELT", "Python", "Data Pipeline", "Data Engineering"],
         "icon": "database",
         "category": "Data Science",
-        "duration": "4 horas"
+        "duration": "4 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/4ef611017e520676279210615619b62066427280"
     },
     {
         "title": "Introduction to MLflow",
@@ -167,6 +183,7 @@
         "skills": ["MLflow", "Machine Learning", "Model Tracking", "Experiment Management"],
         "icon": "chart-bar",
         "category": "AI/ML",
-        "duration": "4 horas"
+        "duration": "4 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/d16b8b4a25a072346797e75f2df923520e5f0af0"
     }
 ]
