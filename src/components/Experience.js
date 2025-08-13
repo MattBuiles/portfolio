@@ -95,38 +95,6 @@ const Experience = () => {
             )}
           </div>
         </div>
-
-        {/* Stats Section */}
-        <div className="experience-stats animate-fade-in-up">
-          <div className="stat-item">
-            <Icon name="calendar" className="stat-icon" />
-            <div className="stat-content">
-              <span className="stat-number">3+</span>
-              <span className="stat-label">Años de experiencia</span>
-            </div>
-          </div>
-          <div className="stat-item">
-            <Icon name="sitemap" className="stat-icon" />
-            <div className="stat-content">
-              <span className="stat-number">15+</span>
-              <span className="stat-label">Proyectos completados</span>
-            </div>
-          </div>
-          <div className="stat-item">
-            <Icon name="users" className="stat-icon" />
-            <div className="stat-content">
-              <span className="stat-number">50+</span>
-              <span className="stat-label">Estudiantes mentoreados</span>
-            </div>
-          </div>
-          <div className="stat-item">
-            <Icon name="flask" className="stat-icon" />
-            <div className="stat-content">
-              <span className="stat-number">5+</span>
-              <span className="stat-label">Investigaciones publicadas</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

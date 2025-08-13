@@ -1,0 +1,15 @@
+<!-- Placeholder temporal para la foto de perfil -->
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="150" cy="150" r="150" fill="url(#gradient)"/>
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="150" cy="110" r="40" fill="white" opacity="0.8"/>
+  <path d="M 80 220 Q 150 180 220 220 L 220 280 Q 150 240 80 280 Z" fill="white" opacity="0.8"/>
+  <text x="150" y="260" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+    Mateo Builes
+  </text>
+</svg>

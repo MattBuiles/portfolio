@@ -52,7 +52,7 @@
         "icon": "lightbulb",
         "category": "Soft Skills",
         "instructor": "Rob Stone, PMP, M.Ed.",
-        "verification_url": "https://www.coursera.org/account/accomplishments/verify/K9R5DWMX2HGF"
+        "verification_url": "https://coursera.org/share/2b6443fd1aa45ac96504e4e07a482c58"
     },
     {
         "title": "Generative AI: Introduction and Applications",
@@ -63,7 +63,7 @@
         "icon": "brain",
         "category": "AI/ML",
         "instructor": "Gabal, Skills Network",
-        "verification_url": "https://www.credly.com/users/mateo-builes-duque/badges"
+        "verification_url": "https://coursera.org/share/a5771e5fb137e1a24cbadfdf625a40cb"
     },
     {
         "title": "Introduction to Artificial Intelligence (AI)",
@@ -74,7 +74,7 @@
         "icon": "brain",
         "category": "AI/ML",
         "instructor": "Rav Ahuja, Global Program Director, Skills Network",
-        "verification_url": "https://www.credly.com/users/mateo-builes-duque/badges"
+        "verification_url": "https://coursera.org/share/ae805ea8c44724a07b07b2cb16fa3463"
     },
     {
         "title": "Introduction to Data Science in Python",
@@ -85,7 +85,7 @@
         "icon": "chart-line",
         "category": "Data Science",
         "instructor": "Christopher Brooks, Associate Professor of Information",
-        "verification_url": "https://www.coursera.org/account/accomplishments/verify/7B5K2MXPQW9L"
+        "verification_url": "https://coursera.org/share/39ad918537ac3fff2e7e371f4785dc43"
     },
     {
         "title": "Mathematics for Machine Learning: Linear Algebra",
@@ -96,7 +96,7 @@
         "icon": "calculator",
         "category": "AI/ML",
         "instructor": "David Dye, Samuel J Cooper, A. Freddie Page",
-        "verification_url": "https://www.coursera.org/account/accomplishments/verify/Q4T8XVBP3LNM"
+        "verification_url": "https://coursera.org/share/a6bca58e38296bf77c21cd2c9d955f21"
     },
     {
         "title": "Programming for Everybody (Getting Started with Python)",
@@ -107,7 +107,7 @@
         "icon": "code",
         "category": "Programming",
         "instructor": "Charles Severance, Clinical Professor",
-        "verification_url": "https://www.coursera.org/account/accomplishments/verify/Y2NK3VKQMLPG"
+        "verification_url": "https://coursera.org/share/ddcbc4bae90e41b7d80ae1e3045927f3"
     },
     {
         "title": "Python Data Structures",
@@ -118,7 +118,7 @@
         "icon": "code",
         "category": "Programming",
         "instructor": "Charles Severance, Clinical Professor",
-        "verification_url": "https://www.coursera.org/account/accomplishments/verify/XJ8G9TQWN4ZR"
+        "verification_url": "https://coursera.org/share/9a19e261078e27ebe295ad3cd8ed0942"
     },
     {
         "title": "Generative AI: Prompt Engineering Basics",
@@ -129,7 +129,7 @@
         "icon": "comments",
         "category": "AI/ML",
         "instructor": "Antonio Cangiano, Rav Ahuja",
-        "verification_url": "https://www.credly.com/users/mateo-builes-duque/badges"
+        "verification_url": "https://coursera.org/share/7e2bd8517262a368b44f141c909d176f"
     },
     {
         "title": "Introducción a la Nube",
@@ -150,7 +150,7 @@
         "skills": ["Artificial Intelligence", "AI Fundamentals", "Machine Learning", "Deep Learning"],
         "icon": "brain",
         "category": "AI/ML",
-        "verification_url": "https://www.credly.com/users/mateo-builes-duque/badges"
+        "verification_url": "https://www.credly.com/badges/334b1fe5-740a-459a-9dbf-493063bf2fa2/public_url"
     },
     {
         "title": "Bootcamp de Inteligencia Artificial Nivel Intermedio",
@@ -162,7 +162,7 @@
         "category": "AI/ML",
         "duration": "159 horas",
         "document_id": "1017922057",
-        "verification_url": "https://www.mintrabajo.gov.co/empleo-y-pensiones/empleo/certificados"
+        "verification_url": "https://auco.ai/verify/?code=63L6FU8XV2"
     },
     {
         "title": "ETL and ELT in Python",

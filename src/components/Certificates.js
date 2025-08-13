@@ -24,7 +24,10 @@ const getCertificateFilename = (title, organization, date) => {
     'Generative AI: Introduction and Applications': 'coursera_ibm_generative_ai_intro_2024.pdf',
     'Prompt Engineering for ChatGPT': 'coursera_ibm_prompt_engineering_2024.pdf',
     'Artificial Intelligence (AI) Essentials': 'coursera_ibm_ai_essentials_2024.pdf',
-    
+
+    // Credly
+    "Artificial Intelligence Essentials V2" : 'credly_coursera_ibm_ai_essentials_2024.pdf',
+
     // Coursera - Imperial College London
     'Mathematics for Machine Learning: Linear Algebra': 'coursera_imperial_linear_algebra_2023.pdf',
     

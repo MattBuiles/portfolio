@@ -110,9 +110,16 @@ const Hero = () => {
           <div className="hero-visual">
             <div className="hero-image-container animate-float">
               <div className="hero-image">
-                <div className="image-placeholder">
-                  <Icon name="user-circle" size="5x" />
-                </div>
+                <img 
+                  src="/images/profile.jpg" 
+                  alt="Mateo Builes - Ingeniero de Sistemas e Informática"
+                  className="profile-photo"
+                  onError={(e) => {
+                    // Fallback al placeholder SVG si la imagen no se encuentra
+                    e.target.src = '/images/profile-placeholder.svg';
+                    e.target.onerror = null; // Evitar loop infinito
+                  }}
+                />
                 <div className="image-decoration"></div>
               </div>
             </div>
