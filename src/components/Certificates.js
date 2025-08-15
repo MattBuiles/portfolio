@@ -347,7 +347,7 @@ const Certificates = () => {
                       if (filename) {
                         // Crear enlace de descarga real
                         const link = document.createElement('a');
-                        link.href = `/certificates/${filename}`;
+                        link.href = `./certificates/${filename}`;
                         link.download = filename;
                         link.style.display = 'none';
                         
@@ -390,7 +390,7 @@ const Certificates = () => {
                 onClick={() => {
                   // Crear elemento de descarga para el CV completo
                   const link = document.createElement('a');
-                  link.href = '/certificates/CV_Completo.pdf';
+                  link.href = './certificates/CV_Completo.pdf';
                   link.download = 'CV_Completo.pdf';
                   document.body.appendChild(link);
                   link.click();

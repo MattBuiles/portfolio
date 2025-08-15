@@ -2,12 +2,16 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
+// Determinar si estamos en producción
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = {
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     clean: true, // Limpia el directorio dist antes de cada build
+    publicPath: isProduction ? '/portfolio/' : '/',
   },
   module: {
     rules: [

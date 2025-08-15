@@ -5,7 +5,7 @@
   "main": "src/app.js",
   "scripts": {
     "start": "webpack serve --mode development",
-    "build": "webpack --mode production",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
     "deploy": "npm run build && echo 'Build completed! Ready for GitHub Pages deployment.'"
   },
   "keywords": [
@@ -17,6 +17,7 @@
   ],
   "author": "Mateo Builes Duque",
   "license": "MIT",
+  "homepage": "https://mattbuiles.github.io/portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
     "react": "^17.0.2",
@@ -28,6 +29,7 @@
     "@babel/preset-react": "^7.16.0",
     "babel-loader": "^8.2.3",
     "copy-webpack-plugin": "^13.0.1",
+    "cross-env": "^10.0.0",
     "css-loader": "^7.1.2",
     "html-webpack-plugin": "^5.6.3",
     "puppeteer": "^24.16.0",
