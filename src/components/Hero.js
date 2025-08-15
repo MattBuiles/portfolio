@@ -111,7 +111,7 @@ const Hero = () => {
             <div className="hero-image-container animate-float">
               <div className="hero-image">
                 <img 
-                  src="./images/profile.JPG" 
+                  src="./images/profile.jpg" 
                   alt="Mateo Builes - Ingeniero de Sistemas e Informática"
                   className="profile-photo"
                   onError={(e) => {
