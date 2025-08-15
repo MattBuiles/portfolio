@@ -1,0 +1,68 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradiente legendario oscuro -->
+    <linearGradient id="legendaryBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f54;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#1e1b4b;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#374151;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#444053;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradiente dorado para la M -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffd700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ffb700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ff9500;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Efecto de brillo legendario -->
+    <filter id="legendaryGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feColorMatrix in="coloredBlur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 1"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fondo legendario -->
+  <rect width="32" height="32" rx="8" fill="url(#legendaryBg)"/>
+  
+  <!-- Borde dorado -->
+  <rect width="30" height="30" x="1" y="1" rx="7" fill="none" stroke="url(#goldGradient)" stroke-width="0.8" opacity="0.6"/>
+  
+  <!-- Letra M legendaria -->
+  <path d="M7 23 L7 9 L10.5 9 L16 18.5 L21.5 9 L25 9 L25 23 L22 23 L22 14 L18.5 21 L13.5 21 L10 14 L10 23 Z" 
+        fill="url(#goldGradient)" 
+        filter="url(#legendaryGlow)"
+        opacity="0.95"/>
+  
+  <!-- Elementos de IA/Tech legendarios -->
+  <!-- Nodos de red neuronal -->
+  <circle cx="9" cy="11" r="1.5" fill="#ffd700" opacity="0.9" filter="url(#legendaryGlow)"/>
+  <circle cx="23" cy="11" r="1.5" fill="#ffd700" opacity="0.9" filter="url(#legendaryGlow)"/>
+  <circle cx="16" cy="25" r="1.8" fill="#ffd700" opacity="1" filter="url(#legendaryGlow)"/>
+  <circle cx="13" cy="7" r="0.8" fill="#ffb700" opacity="0.7"/>
+  <circle cx="19" cy="7" r="0.8" fill="#ffb700" opacity="0.7"/>
+  
+  <!-- Conexiones neuronales legendarias -->
+  <path d="M9.8 11.5 Q16 13.5 22.2 11.5" stroke="#ffd700" stroke-width="1.2" fill="none" opacity="0.8" filter="url(#legendaryGlow)"/>
+  <path d="M15 24 Q13 20 11 16" stroke="#ffb700" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M17 24 Q19 20 21 16" stroke="#ffb700" stroke-width="1" fill="none" opacity="0.6"/>
+  <path d="M13 8 Q16 10 19 8" stroke="#ffd700" stroke-width="0.8" fill="none" opacity="0.5"/>
+  
+  <!-- Partículas de energía -->
+  <circle cx="6" cy="6" r="0.5" fill="#ffd700" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="26" cy="6" r="0.5" fill="#ffd700" opacity="0.8">
+    <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="6" cy="26" r="0.5" fill="#ffd700" opacity="0.8">
+    <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="26" cy="26" r="0.5" fill="#ffd700" opacity="0.8">
+    <animate attributeName="opacity" values="0.9;0.3;0.9" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
