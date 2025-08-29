@@ -39,7 +39,7 @@ const Contact = () => {
       icon: 'linkedin',
       label: 'LinkedIn',
       value: '/in/mateobuiles',
-      link: 'https://linkedin.com/in/mateobuiles',
+      link: 'https://linkedin.com/in/mateo-builes-73453531b',
       color: '#0077b5'
     }
   ];
@@ -54,19 +54,19 @@ const Contact = () => {
     {
       icon: 'linkedin',
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/mateobuiles',
+      url: 'https://linkedin.com/in/mateo-builes-73453531b',
       color: '#0077b5'
     },
     {
       icon: 'twitter',
-      name: 'Twitter',
-      url: 'https://twitter.com/mateobuiles',
+      name: 'X',
+      url: 'https://x.com/MateB53',
       color: '#1da1f2'
     },
     {
       icon: 'instagram',
       name: 'Instagram',
-      url: 'https://instagram.com/mateobuiles',
+      url: 'https://instagram.com/mateb53',
       color: '#e4405f'
     }
   ];

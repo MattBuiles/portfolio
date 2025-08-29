@@ -24,6 +24,50 @@
   z-index: 1;
 }
 
+/* Flow strip (replaces stats) */
+.certificates-flow {
+  --speed: 35s;
+  margin: 48px 0 16px;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.flow-track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: flowScroll var(--speed) linear infinite;
+}
+
+.certificates-flow:hover .flow-track { animation-play-state: paused; }
+
+.flow-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--color-card-background);
+  border: 1px solid var(--chip-color, var(--color-border));
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+.flow-chip.category {
+  background: color-mix(in srgb, var(--chip-color) 12%, transparent);
+  border-color: var(--chip-color);
+  color: var(--chip-color);
+}
+
+.flow-chip i { color: currentColor; }
+
+@keyframes flowScroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 /* Stats Overview */
 .certificates-stats {
   display: grid;

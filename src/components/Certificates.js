@@ -131,48 +131,31 @@ const Certificates = () => {
       <div className="container">
         <h2 className="section-title animate-fade-in-up">Certificaciones & Credenciales</h2>
         
-        {/* Stats Overview */}
-        <div className="certificates-stats animate-fade-in-up">
-          <div className="stat-card">
-            <div className="stat-icon">
-              <Icon name="certificate" />
+        {/* Flow strip replacing stats */}
+        {(() => {
+          const categoryItems = categories
+            .filter(c => c.value !== 'all')
+            .map(c => ({ label: c.label, icon: c.icon, color: getCategoryColor(c.value), type: 'category' }));
+          const issuers = Array.from(new Set(certificatesData.map(c => c.issuing_organization)));
+          const issuerItems = issuers.map(name => ({ label: name, icon: 'building', color: 'var(--color-border)', type: 'issuer' }));
+          const flowItems = [...categoryItems, ...issuerItems];
+          return (
+            <div className="certificates-flow animate-fade-in-up" aria-label="Flujo de certificaciones">
+              <div className="flow-track">
+                {[...flowItems, ...flowItems].map((item, idx) => (
+                  <span
+                    key={idx}
+                    className={`flow-chip ${item.type}`}
+                    style={{ '--chip-color': item.color }}
+                  >
+                    <Icon name={item.icon} />
+                    {item.label}
+                  </span>
+                ))}
+              </div>
             </div>
-            <div className="stat-content">
-              <span className="stat-number">{certificatesData.length}</span>
-              <span className="stat-label">Certificaciones Totales</span>
-            </div>
-          </div>
-          
-          <div className="stat-card">
-            <div className="stat-icon">
-              <Icon name="calendar" />
-            </div>
-            <div className="stat-content">
-              <span className="stat-number">{Math.max(...certificatesData.map(cert => new Date(cert.date_issued).getFullYear()))}</span>
-              <span className="stat-label">Última Certificación</span>
-            </div>
-          </div>
-          
-          <div className="stat-card">
-            <div className="stat-icon">
-              <Icon name="layer-group" />
-            </div>
-            <div className="stat-content">
-              <span className="stat-number">{categories.length - 1}</span>
-              <span className="stat-label">Categorías Diferentes</span>
-            </div>
-          </div>
-          
-          <div className="stat-card">
-            <div className="stat-icon">
-              <Icon name="chart-line" />
-            </div>
-            <div className="stat-content">
-              <span className="stat-number">{Math.round((certificatesData.filter(cert => cert.date_issued >= '2024-01-01').length / certificatesData.length) * 100)}%</span>
-              <span className="stat-label">Certificaciones Recientes</span>
-            </div>
-          </div>
-        </div>
+          );
+        })()}
 
         {/* Category Filter */}
         <div className="certificates-filter animate-fade-in-up">
