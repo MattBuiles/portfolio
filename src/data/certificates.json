@@ -185,5 +185,16 @@
         "category": "AI/ML",
         "duration": "4 horas",
         "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/d16b8b4a25a072346797e75f2df923520e5f0af0"
+    },
+    {
+        "title": "Introduction to Data Quality with Great Expectations",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-08-19",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["Data Quality", "Great Expectations", "Data Validation", "Testing", "Python"],
+        "icon": "database",
+        "category": "Data Science",
+        "duration": "4 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/67238300eb1bf465d5e901d92d46ee1b87013627"
     }
 ]

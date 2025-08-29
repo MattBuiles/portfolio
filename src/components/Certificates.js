@@ -13,6 +13,7 @@ const getCertificateFilename = (title, organization, date) => {
     'Supervised Learning with scikit-learn': 'datacamp_supervised_learning_scikit_2025.pdf',
     'Introduction to MLflow': 'datacamp_introduction_mlflow_2025.pdf',
     'ETL and ELT in Python': 'datacamp_etl_elt_python_2025.pdf',
+    'Introduction to Data Quality with Great Expectations' : 'datacamp_introduction_great_expectations_2025.pdf',
     
     // Coursera - University of Michigan
     'Programming for Everybody (Getting Started with Python)': 'coursera_umich_python_getting_started_2022.pdf',
