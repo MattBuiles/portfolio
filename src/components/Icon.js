@@ -20,7 +20,7 @@ const Icon = ({ name, className = '', size = '1x', ...props }) => {
   };
   
   // Íconos que requieren la clase 'fab' (marcas)
-  const brandIcons = ['github', 'linkedin-in', 'x-twitter', 'linkedin', 'twitter'];
+  const brandIcons = ['github', 'linkedin-in', 'x-twitter', 'linkedin', 'twitter', 'instagram'];
   
   const mappedName = iconMap[name] || name;
   const iconPrefix = brandIcons.includes(mappedName) ? 'fab' : 'fas';
