@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,6 +137,16 @@
             color: #666;
         }
 
+        .profile-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #333;
+            margin: 0 auto 15px;
+            display: block;
+        }
+
         .projects-list {
             font-size: 11px;
         }
@@ -175,175 +185,283 @@
 </head>
 <body>
     <div class="header">
+        <img src="../images/profile.jpg" alt="Mateo Builes Duque" class="profile-photo">
         <div class="name">Mateo Builes Duque</div>
         <div class="contact-info">
-            Estudiante de Ingeniería de Sistemas e Informática<br>
-            Universidad Nacional de Colombia - Medellín<br>
-            matebuilesd@gmail.com | Medellín, Colombia<br>
+            Systems and Computer Engineering Student<br>
+            National University of Colombia - Medellín<br>
+            matebuilesd@gmail.com | +57 312 2390597 | Medellín, Colombia<br>
             LinkedIn: linkedin.com/in/mateo-builes-73453531b | GitHub: github.com/MattBuiles
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Perfil Profesional</div>
+        <div class="section-title">Professional Profile</div>
         <div class="description">
-            Estudiante de Ingeniería de Sistemas e Informática con especialización en Inteligencia Artificial, Machine Learning y Data Science. Experiencia en desarrollo full stack con enfoque en aplicaciones web que integran modelos de ML. Colaborador activo en investigación biológica aplicando tecnología para análisis de datos. Monitor académico con habilidades de enseñanza y capacidad de trabajo interdisciplinario. Apasionado por la innovación tecnológica y la resolución de problemas complejos.
+            Systems and Computer Engineering student specializing in AI Agents, Large Language Models, and Machine Learning. Expert in developing autonomous intelligent systems using LangGraph state machines, LangChain orchestration, and RAG architectures. Proven experience building production-ready AI agents with multi-step reasoning, self-reflection, and tool-calling capabilities. Full-stack developer with a focus on web applications integrating LLM-powered agents and ML models. Active collaborator in biological research using technology for data analysis and structural bioinformatics. Academic mentor with strong teaching skills and interdisciplinary collaboration. Passionate about technological innovation and solving complex problems through autonomous AI systems.
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Educación</div>
+        <div class="section-title">Education</div>
         <div class="subsection clearfix">
-            <div class="degree-title">Ingeniería de Sistemas e Informática</div>
-            <div class="date">2022 - Presente</div>
-            <div class="institution">Universidad Nacional de Colombia - Medellín</div>
+            <div class="degree-title">B.S. in Systems and Computer Engineering</div>
+            <div class="date">2022 - Present</div>
+            <div class="institution">National University of Colombia - Medellín</div>
             <div class="description">
-                Especialización en Inteligencia Artificial, Machine Learning y Data Science. Participación activa en proyectos de investigación y desarrollo tecnológico.
+                Specialization in Artificial Intelligence, Machine Learning, and Data Science. Active participation in research and technology development projects.
             </div>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Experiencia Profesional</div>
+        <div class="section-title">Professional Experience</div>
         
         <div class="subsection clearfix">
-            <div class="job-title">Monitor Académico - Simulación de Sistemas</div>
-            <div class="date">2025 - Presente</div>
-            <div class="company">Universidad Nacional de Colombia - Medellín</div>
+            <div class="job-title">AI Agents Research Group Member - LLM Development</div>
+            <div class="date">2025 - Present</div>
+            <div class="company">National University of Colombia - Medellín</div>
             <ul class="responsibilities">
-                <li>Apoyo académico a estudiantes en conceptos de simulación y modelado de sistemas complejos</li>
-                <li>Desarrollo de materiales didácticos y ejercicios prácticos interactivos</li>
-                <li>Facilitación de sesiones de tutoría y resolución de problemas técnicos</li>
+                <li>Developed autonomous intelligent agents using LangGraph state machines and workflow orchestration</li>
+                <li>Implemented advanced agent patterns: ReAct (Reasoning + Acting), multi-step planning, and self-reflection loops</li>
+                <li>Built production systems with LangChain for tool-calling, RAG pipelines, and multi-agent collaboration</li>
+                <li>Explored advanced techniques: memory persistence, conditional routing, human-in-the-loop workflows</li>
+                <li>Collaborated on research projects applying agents in education, healthcare, accounting, and productivity</li>
             </ul>
         </div>
 
         <div class="subsection clearfix">
-            <div class="job-title">Colaborador en Desarrollo de Aplicaciones</div>
-            <div class="date">2024 - Presente</div>
-            <div class="company">Laboratorio de Prospección y Desarrollo de Biomoléculas - Grupo de Investigación de Biología Funcional</div>
+            <div class="job-title">Academic Mentor - Systems Simulation</div>
+            <div class="date">2025 - Present</div>
+            <div class="company">National University of Colombia - Medellín</div>
             <ul class="responsibilities">
-                <li>Desarrollo y refactorización de aplicaciones para investigación biológica</li>
-                <li>Implementación de soluciones tecnológicas para análisis de datos biológicos</li>
-                <li>Trabajo interdisciplinario combinando conocimientos de biología y tecnología</li>
+                <li>Supported students in simulation and modeling of complex systems</li>
+                <li>Developed interactive teaching materials and practical exercises</li>
+                <li>Facilitated tutoring sessions and technical problem-solving</li>
             </ul>
         </div>
 
         <div class="subsection clearfix">
-            <div class="job-title">Desarrollador Full Stack</div>
-            <div class="date">2021 - Presente</div>
-            <div class="company">Proyectos Independientes</div>
+            <div class="job-title">Application Developer - Biological Research</div>
+            <div class="date">2024 - Present</div>
+            <div class="company">Biomolecule Prospection and Development Lab - Functional Biology Research Group</div>
             <ul class="responsibilities">
-                <li>Desarrollo de aplicaciones web utilizando React, Node.js y Python</li>
-                <li>Implementación de modelos de Machine Learning en aplicaciones web</li>
-                <li>Creación de dashboards interactivos para visualización de datos</li>
+                <li>Developed and refactored applications for biological research and structural bioinformatics</li>
+                <li>Created interactive 3D protein structure visualizer for research and teaching purposes</li>
+                <li>Implemented technological solutions for biological data analysis and molecular visualization</li>
+                <li>Interdisciplinary work combining biology, chemistry, and technology expertise</li>
             </ul>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Competencias Técnicas</div>
+        <div class="section-title">Featured Projects</div>
+        <div class="projects-list">
+            <div class="project-item">
+                <div class="project-title">AI Accounting Agent - Autonomous Business Accounting System</div>
+                <div class="description">
+                    Intelligent accounting assistant powered by LangGraph autonomous agent with state machine architecture. Implements ReAct pattern for multi-step planning, self-reflection, and automatic error correction. Features autonomous task decomposition, tool orchestration (SQL + semantic search), and persistent memory. Combines FAISS vector database for document retrieval with SQLite for structured data.
+                </div>
+                <div class="project-tech">Tech: LangGraph (StateGraph), Google Gemini 2.5-Flash, FAISS, SQLite, Streamlit, RAG, ReAct Pattern</div>
+                <div class="description" style="font-size: 10px;">Demo: mattbuiles-ia-contable-app-ivkcyc.streamlit.app | GitHub: github.com/MattBuiles/IA_Contable</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Interactive 3D Protein Visualizer with AI Assistant - Structural Bioinformatics Tool</div>
+                <div class="description">
+                    Web-based interactive tool for visualizing and analyzing protein structures in 3D with integrated LangGraph AI agent for assistance and consultation. Features intelligent query answering about protein structures, residue analysis, and molecular properties. Combines traditional molecular visualization (PDB loading, interactive selection, customizable representations) with RAG-powered conversational interface for educational and research support. Developed for the Functional Biology Research Group.
+                </div>
+                <div class="project-tech">Tech: LangGraph (Assistant Agent), JavaScript (ES6+), NGL Viewer, RAG, LangChain, HTML5/CSS3</div>
+                <div class="description" style="font-size: 10px;">Used by: Biomolecule Prospection Lab - UNAL Medellín</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Catch the Snitch - Quidditch Betting System</div>
+                <div class="description">
+                    Full-stack web app simulating a betting system for Quidditch matches (Harry Potter-inspired). Real-time simulation, user management, and admin panel.
+                </div>
+                <div class="project-tech">Tech: React 19, TypeScript, Node.js, Express, SQLite, WebSockets, JWT</div>
+                <div class="description" style="font-size: 10px;">GitHub: github.com/MattBuiles/centro_apuestas_quidditch</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Tuberculosis Detection with Deep Learning</div>
+                <div class="description">
+                    AI-assisted diagnostic system classifying chest X-rays for Tuberculosis using Transfer Learning and CNNs. Focus on high sensitivity to minimize false negatives.
+                </div>
+                <div class="project-tech">Tech: PyTorch, TensorFlow, MLflow, ResNet18, Vision Transformers</div>
+                <div class="description" style="font-size: 10px;">GitHub: github.com/MattBuiles/Deteccion_de_Tuberculosis_con_DeepLearning</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Medical AI Dashboard - XGBoost Literature Classification (2nd Place National Contest)</div>
+                <div class="description">
+                    Dashboard for automatic classification of medical literature into 4 categories using XGBoost. Real-time API, interactive visualizations, 3,565 real samples.
+                </div>
+                <div class="project-tech">Tech: XGBoost, Flask, Next.js, Python, TypeScript, Vercel</div>
+                <div class="description" style="font-size: 10px;">Demo: clasificacion-biomedica.vercel.app | GitHub: github.com/MattBuiles/ai-data-challenge</div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">Quotation Management System</div>
+                <div class="description">
+                    Web platform for managing quotes, clients, and documents. Supports creation, versioning, and visualization of project/service quotes.
+                </div>
+                <div class="project-tech">Tech: Flask, Python, HTML/CSS, SQLite, SQLAlchemy</div>
+                <div class="description" style="font-size: 10px;">Demo: cotizacionsoftware.onrender.com | GitHub: github.com/MattBuiles/CotizacionSoftware</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
         <div class="skills-grid">
             <div class="skill-category">
-                <div class="skill-category-title">Lenguajes de Programación</div>
-                • Python<br>
-                • JavaScript<br>
-                • R<br>
-                • SQL<br>
-                • Shell/Bash
+                <div class="skill-category-title">AI Agents & LLMs</div>
+                • LangGraph (StateGraph, Workflows)<br>
+                • LangChain (Orchestration, Tools)<br>
+                • RAG (Retrieval-Augmented Generation)<br>
+                • OpenAI API, Google Gemini<br>
+                • Multi-Agent Systems & ReAct Pattern<br>
+                • Tool Calling, Self-Reflection, Memory
             </div>
             <div class="skill-category">
-                <div class="skill-category-title">Frameworks & Librerías</div>
-                • React, Node.js<br>
-                • TensorFlow, Scikit-learn<br>
-                • FastAPI, Flask<br>
-                • Pandas, NumPy<br>
-                • D3.js, Plotly
+                <div class="skill-category-title">Machine Learning & Deep Learning</div>
+                • Scikit-learn, XGBoost<br>
+                • TensorFlow, PyTorch<br>
+                • Hugging Face Transformers<br>
+                • FAISS (Vector Search)<br>
+                • Computer Vision (CNNs, ViT)
             </div>
             <div class="skill-category">
-                <div class="skill-category-title">Tecnologías & Herramientas</div>
-                • Git, Docker<br>
-                • MongoDB, PostgreSQL<br>
-                • AWS, Google Cloud<br>
-                • MLflow, MLOps<br>
-                • Linux, Windows
+                <div class="skill-category-title">Programming & Development</div>
+                • Python (Expert)<br>
+                • JavaScript / TypeScript<br>
+                • SQL, R<br>
+                • FastAPI, Flask, Streamlit<br>
+                • React, Node.js, Next.js
+            </div>
+        </div>
+        <div class="skills-grid" style="margin-top: 15px;">
+            <div class="skill-category">
+                <div class="skill-category-title">MLOps & DevOps</div>
+                • Docker, DVC<br>
+                • MLflow, Weights & Biases<br>
+                • CI/CD (GitHub Actions)<br>
+                • Git, Linux, AWS
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">Data Engineering</div>
+                • SQLite, PostgreSQL, MongoDB<br>
+                • ETL/ELT Pipelines<br>
+                • Vector Databases (FAISS, Pinecone)<br>
+                • Document Processing (PDF, Excel)
+            </div>
+            <div class="skill-category">
+                <div class="skill-category-title">Web & Cloud</div>
+                • Streamlit, Gradio<br>
+                • WebSockets, JWT<br>
+                • Vercel, Render<br>
+                • AWS, Google Cloud
             </div>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Certificaciones Profesionales</div>
+        <div class="section-title">Professional Certifications</div>
         <div class="certificates-grid">
             <div class="certificate-item">
-                <div class="cert-title">Bootcamp de IA Nivel Intermedio</div>
+                <div class="cert-title">CI/CD for Machine Learning</div>
+                <div class="cert-org">DataCamp</div>
+                <div class="cert-date">November 2025</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Monitoring Machine Learning in Python</div>
+                <div class="cert-org">DataCamp</div>
+                <div class="cert-date">November 2025</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Introduction to Data Versioning with DVC</div>
+                <div class="cert-org">DataCamp</div>
+                <div class="cert-date">October 2025</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Introduction to Docker</div>
+                <div class="cert-org">DataCamp</div>
+                <div class="cert-date">October 2025</div>
+            </div>
+            <div class="certificate-item">
+                <div class="cert-title">Intermediate AI Bootcamp</div>
                 <div class="cert-org">MinTIC Colombia - IU Training</div>
-                <div class="cert-date">Agosto 2025 (159 horas)</div>
+                <div class="cert-date">August 2025 (159 hours)</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">Supervised Learning with scikit-learn</div>
                 <div class="cert-org">DataCamp</div>
-                <div class="cert-date">Abril 2025</div>
+                <div class="cert-date">April 2025</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">MLOps Deployment and Life Cycling</div>
                 <div class="cert-org">DataCamp</div>
-                <div class="cert-date">Mayo 2025</div>
+                <div class="cert-date">May 2025</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">ETL and ELT in Python</div>
                 <div class="cert-org">DataCamp</div>
-                <div class="cert-date">Junio 2025</div>
+                <div class="cert-date">June 2025</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">Introduction to MLflow</div>
                 <div class="cert-org">DataCamp</div>
-                <div class="cert-date">Junio 2025</div>
+                <div class="cert-date">June 2025</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">Generative AI: Prompt Engineering</div>
                 <div class="cert-org">IBM - Coursera</div>
-                <div class="cert-date">Diciembre 2024</div>
+                <div class="cert-date">December 2024</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">AI Essentials</div>
                 <div class="cert-org">IBM - Coursera</div>
-                <div class="cert-date">Diciembre 2024</div>
+                <div class="cert-date">December 2024</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">Data Science in Python</div>
                 <div class="cert-org">University of Michigan - Coursera</div>
-                <div class="cert-date">Septiembre 2023</div>
+                <div class="cert-date">September 2023</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">Mathematics for ML: Linear Algebra</div>
                 <div class="cert-org">Imperial College London - Coursera</div>
-                <div class="cert-date">Mayo 2023</div>
+                <div class="cert-date">May 2023</div>
             </div>
             <div class="certificate-item">
                 <div class="cert-title">Problem Solving & Decision Making</div>
                 <div class="cert-org">UC Irvine - Coursera</div>
-                <div class="cert-date">Enero 2025</div>
+                <div class="cert-date">January 2025</div>
             </div>
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Áreas de Interés e Investigación</div>
+        <div class="section-title">Research Interests</div>
         <div class="description">
-            <strong>Inteligencia Artificial:</strong> Desarrollo de modelos predictivos y sistemas inteligentes<br>
-            <strong>Machine Learning:</strong> Algoritmos de aprendizaje supervisado y no supervisado<br>
-            <strong>Data Science:</strong> Análisis de datos, visualización y extracción de insights<br>
-            <strong>Computer Vision:</strong> Procesamiento de imágenes y reconocimiento de patrones<br>
-            <strong>NLP:</strong> Procesamiento de lenguaje natural y análisis de sentimientos<br>
-            <strong>Bioinformática:</strong> Aplicación de tecnología en investigación biológica<br>
-            <strong>MLOps:</strong> Despliegue y gestión del ciclo de vida de modelos ML
+            <strong>AI Agents & Autonomous Systems:</strong> LangGraph state machines, multi-agent architectures, ReAct pattern, tool-calling, self-reflection, conditional routing, human-in-the-loop workflows<br>
+            <strong>Large Language Models:</strong> RAG systems, prompt engineering, LLM integration, embeddings, fine-tuning, chain-of-thought reasoning<br>
+            <strong>Machine Learning:</strong> Supervised, unsupervised, and ensemble methods, predictive modeling, transfer learning<br>
+            <strong>Computer Vision:</strong> Image processing, pattern recognition, transfer learning with CNNs and Vision Transformers<br>
+            <strong>NLP:</strong> Text analysis, semantic search, document understanding, information extraction<br>
+            <strong>MLOps:</strong> Model deployment, monitoring, lifecycle management, experiment tracking<br>
+            <strong>Bioinformatics:</strong> Structural bioinformatics, molecular visualization, AI applications in biology and healthcare, medical diagnostics<br>
+            <strong>Data Engineering:</strong> ETL/ELT pipelines, vector databases, document processing, DVC, Docker, CI/CD for ML
         </div>
     </div>
 
     <div class="section">
-        <div class="section-title">Idiomas</div>
+        <div class="section-title">Languages</div>
         <div class="description">
-            <strong>Español:</strong> Nativo<br>
-            <strong>Inglés:</strong> Intermedio-Avanzado (Comprensión técnica y académica)
+            <strong>Spanish:</strong> Native<br>
+            <strong>English:</strong> Intermediate–Advanced (Technical and academic proficiency)
         </div>
     </div>
 </body>
