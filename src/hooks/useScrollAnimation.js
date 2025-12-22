@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useScrollAnimation = () => {
+const useScrollAnimation = (dependencies = []) => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -32,7 +32,7 @@ const useScrollAnimation = () => {
         observer.unobserve(el);
       });
     };
-  }, []);
+  }, dependencies);
 };
 
 export default useScrollAnimation;
