@@ -7,6 +7,14 @@ import './Certificates.css';
 const getCertificateFilename = (title, organization, date) => {
   const fileMap = {
     // DataCamp certificates
+    'Monitoring Machine Learning in Python': 'datacamp_monitoring_ml_python_2025.pdf',
+    'Monitoring Machine Learning Concepts': 'datacamp_monitoring_ml_concepts_2025.pdf',
+    'AWS Academy Graduate - Cloud Foundations': 'aws_academy_cloud_foundations_2025.pdf',
+    'CI/CD for Machine Learning': 'datacamp_ci_cd_machine_learning_2025.pdf',
+    'Full Stack Development': 'fullstack_certificate_2025.png',
+    'Machine Learning Engineer': 'datacamp_machine_learning_engineer_2025.pdf',
+    'Introduction to Docker': 'datacamp_introduction_docker_2025.pdf',
+    'Introduction to Data Versioning with DVC': 'datacamp_introduction_dvc_2025.pdf',
     'Introduction to Shell': 'datacamp_introduction_to_shell_2025.pdf',
     'MLOps Concepts': 'datacamp_mlops_concepts_2025.pdf',
     'MLOps Deployment and Life Cycling': 'datacamp_mlops_deployment_2025.pdf',
@@ -77,10 +85,11 @@ const getVerificationUrl = (certificate) => {
 };
 
 const Certificates = () => {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('featured');
   const [selectedCertificate, setSelectedCertificate] = useState(null);
 
   const categories = [
+    { value: 'featured', label: 'Destacados', icon: 'star', count: 5 },
     { value: 'all', label: 'Todos', icon: 'certificate', count: certificatesData.length },
     { value: 'AI/ML', label: 'IA & ML', icon: 'brain', count: certificatesData.filter(cert => cert.category === 'AI/ML').length },
     { value: 'Data Science', label: 'Data Science', icon: 'chart-line', count: certificatesData.filter(cert => cert.category === 'Data Science').length },
@@ -89,12 +98,28 @@ const Certificates = () => {
     { value: 'Soft Skills', label: 'Habilidades Blandas', icon: 'users', count: certificatesData.filter(cert => cert.category === 'Soft Skills').length }
   ];
 
-  const filteredCertificates = selectedCategory === 'all' 
-    ? certificatesData 
-    : certificatesData.filter(cert => cert.category === selectedCategory);
+  let filteredCertificates;
+  if (selectedCategory === 'featured') {
+    const featuredTitles = [
+      "Machine Learning Engineer",
+      "AWS Academy Graduate - Cloud Foundations",
+      "Bootcamp de Inteligencia Artificial Nivel Intermedio",
+      "Full Stack Open",
+      "Monitoring Machine Learning in Python"
+    ];
+    filteredCertificates = certificatesData.filter(cert => featuredTitles.includes(cert.title));
+  } else if (selectedCategory === 'all') {
+    filteredCertificates = [...certificatesData];
+  } else {
+    filteredCertificates = certificatesData.filter(cert => cert.category === selectedCategory);
+  }
+
+  // Ordenar por fecha de emisión (más reciente primero)
+  filteredCertificates.sort((a, b) => new Date(b.date_issued) - new Date(a.date_issued));
 
   const getCategoryColor = (category) => {
     const colors = {
+      'featured': '#FFD700',
       'AI/ML': '#667eea',
       'Data Science': '#f093fb',
       'Cloud/DevOps': '#4facfe',

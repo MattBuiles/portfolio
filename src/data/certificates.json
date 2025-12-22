@@ -1,5 +1,100 @@
 [
     {
+        "title": "Monitoring Machine Learning in Python",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-10-24",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["ML Monitoring", "Python", "Data Drift", "Model Performance"],
+        "icon": "chart-line",
+        "category": "AI/ML",
+        "duration": "3 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/80819dd3fcf591ff441cbc56acb5d8f03459ad85"
+    },
+    {
+        "title": "Monitoring Machine Learning Concepts",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-09-11",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["ML Monitoring", "Concepts", "Model Drift", "Performance Metrics"],
+        "icon": "lightbulb",
+        "category": "AI/ML",
+        "duration": "2 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/194d6b6e4d759951c43e99af19cdc4016ffeeedf"
+    },
+    {
+        "title": "AWS Academy Graduate - Cloud Foundations",
+        "issuing_organization": "AWS Academy",
+        "date_issued": "2025-10-08",
+        "credential_id": "Credly Badge",
+        "skills": ["AWS", "Cloud Computing", "Cloud Foundations", "Cloud Security"],
+        "icon": "cloud",
+        "category": "Cloud/DevOps",
+        "duration": "20 horas",
+        "verification_url": "https://www.credly.com/go/LwmROv6W"
+    },
+    {
+        "title": "CI/CD for Machine Learning",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-12-22",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["CI/CD", "Machine Learning", "DevOps", "Automation", "MLOps"],
+        "icon": "sync",
+        "category": "Cloud/DevOps",
+        "duration": "5 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/09f5be6735341038f6d7aafe0ae367440cd70927"
+    },
+    {
+        "title": "Full Stack Open",
+        "issuing_organization": "University of Helsinki & Houston Inc.",
+        "date_issued": "2025",
+        "credential_id": "Certificate of Completion",
+        "skills": [
+            "Full Stack Development",
+            "JavaScript",
+            "React",
+            "Node.js",
+            "Web Development",
+            "Frontend Development",
+            "Backend Development"
+        ],
+        "icon": "layer-group",
+        "category": "Programming",
+        "verification_url": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/965f1cd80ccc38ccb9db3430f9ba540d"
+    },
+    {
+        "title": "Machine Learning Engineer",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-12-22",
+        "credential_id": "DataCamp Track Certificate",
+        "skills": ["Machine Learning", "Python", "Data Science", "Model Deployment", "Feature Engineering"],
+        "icon": "user-cog",
+        "category": "AI/ML",
+        "duration": "43 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/track/ede667d27ff9ec2a7ab05884f6919344e27ef135"
+    },
+    {
+        "title": "Introduction to Docker",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-11-10",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["Docker", "Containers", "DevOps", "Virtualization"],
+        "icon": "docker",
+        "category": "Cloud/DevOps",
+        "duration": "4 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/9ae89aded646bc9ca12d03669d7b4e50fde44638"
+    },
+    {
+        "title": "Introduction to Data Versioning with DVC",
+        "issuing_organization": "DataCamp",
+        "date_issued": "2025-09-01",
+        "credential_id": "DataCamp Certificate",
+        "skills": ["DVC", "Data Versioning", "MLOps", "Git"],
+        "icon": "code-branch",
+        "category": "Cloud/DevOps",
+        "duration": "3 horas",
+        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/8861aafb2b95058f468d622e7826cb4c620ed02c"
+    },
+    {
         "title": "Introduction to Shell",
         "issuing_organization": "DataCamp",
         "date_issued": "2025-04-21",
