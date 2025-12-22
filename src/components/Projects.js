@@ -76,15 +76,17 @@ const Projects = () => {
                     )}
                   </div>
                   <div className="featured-actions">
-                    <a 
-                      href={project.demoUrl} 
-                      className="btn btn-primary btn-sm"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <Icon name="external-link" />
-                      Demo
-                    </a>
+                    {project.demoUrl && project.demoUrl !== '#' && (
+                      <a 
+                        href={project.demoUrl} 
+                        className="btn btn-primary btn-sm"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Icon name="external-link" />
+                        Demo
+                      </a>
+                    )}
                     <a 
                       href={project.githubUrl} 
                       className="btn btn-secondary btn-sm"
@@ -131,15 +133,17 @@ const Projects = () => {
                 </div>
                 <div className="project-overlay">
                   <div className="overlay-actions">
-                    <a 
-                      href={project.demoUrl} 
-                      className="overlay-btn"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <Icon name="external-link" />
-                    </a>
+                    {project.demoUrl && project.demoUrl !== '#' && (
+                      <a 
+                        href={project.demoUrl} 
+                        className="overlay-btn"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <Icon name="external-link" />
+                      </a>
+                    )}
                     <a 
                       href={project.githubUrl} 
                       className="overlay-btn"
@@ -215,15 +219,17 @@ const Projects = () => {
                   </div>
                   
                   <div className="modal-actions">
-                    <a 
-                      href={selectedProject.demoUrl} 
-                      className="btn btn-primary"
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                    >
-                      <Icon name="external-link" />
-                      Ver Demo
-                    </a>
+                    {selectedProject.demoUrl && selectedProject.demoUrl !== '#' && (
+                      <a 
+                        href={selectedProject.demoUrl} 
+                        className="btn btn-primary"
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                      >
+                        <Icon name="external-link" />
+                        Ver Demo
+                      </a>
+                    )}
                     <a 
                       href={selectedProject.githubUrl} 
                       className="btn btn-secondary"

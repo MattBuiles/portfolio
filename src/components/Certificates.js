@@ -11,7 +11,7 @@ const getCertificateFilename = (title, organization, date) => {
     'Monitoring Machine Learning Concepts': 'datacamp_monitoring_ml_concepts_2025.pdf',
     'AWS Academy Graduate - Cloud Foundations': 'aws_academy_cloud_foundations_2025.pdf',
     'CI/CD for Machine Learning': 'datacamp_ci_cd_machine_learning_2025.pdf',
-    'Full Stack Development': 'fullstack_certificate_2025.png',
+    'Full Stack Open': 'fullstack_certificate_2025.png',
     'Machine Learning Engineer': 'datacamp_machine_learning_engineer_2025.pdf',
     'Introduction to Docker': 'datacamp_introduction_docker_2025.pdf',
     'Introduction to Data Versioning with DVC': 'datacamp_introduction_dvc_2025.pdf',
