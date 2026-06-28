@@ -1,381 +1,222 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import strings from '../i18n/strings';
 import Icon from './Icon';
 import './Contact.css';
 
+const SOCIALS = [
+  { icon: 'github', name: 'GitHub', url: 'https://github.com/MattBuiles' },
+  { icon: 'linkedin', name: 'LinkedIn', url: 'https://linkedin.com/in/mateo-builes-73453531b' },
+  { icon: 'twitter', name: 'X', url: 'https://x.com/MateB53' },
+  { icon: 'instagram', name: 'Instagram', url: 'https://instagram.com/mateb53' },
+];
+
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [formStatus, setFormStatus] = useState('idle'); // idle, sending, success, error
+  const { lang } = useLanguage();
+  const t = strings[lang].contact;
+  const errors_t = t.form.errors;
+
+  const [data, setData] = useState({ name: '', email: '', subject: '', message: '' });
+  const [status, setStatus] = useState('idle');
   const [errors, setErrors] = useState({});
-  const formRef = useRef(null);
 
-  const contactInfo = [
-    {
-      icon: 'envelope',
-      label: 'Email',
-      value: 'matebuilesd@gmail.com',
-      link: 'mailto:matebuilesd@gmail.com',
-      color: '#ea4335'
-    },
-    {
-      icon: 'phone',
-      label: 'Teléfono',
-      value: '+57 312 239 0597',
-      link: 'tel:+573122390597',
-      color: '#34a853'
-    },
-    {
-      icon: 'map-marker-alt',
-      label: 'Ubicación',
-      value: 'Medellín, Colombia',
-      link: 'https://maps.google.com/?q=Medellín,Colombia',
-      color: '#4285f4'
-    },
-    {
-      icon: 'linkedin',
-      label: 'LinkedIn',
-      value: '/in/mateobuiles',
-      link: 'https://linkedin.com/in/mateo-builes-73453531b',
-      color: '#0077b5'
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: 'github',
-      name: 'GitHub',
-      url: 'https://github.com/MattBuiles',
-      color: '#333'
-    },
-    {
-      icon: 'linkedin',
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/mateo-builes-73453531b',
-      color: '#0077b5'
-    },
-    {
-      icon: 'twitter',
-      name: 'X',
-      url: 'https://x.com/MateB53',
-      color: '#1da1f2'
-    },
-    {
-      icon: 'instagram',
-      name: 'Instagram',
-      url: 'https://instagram.com/mateb53',
-      color: '#e4405f'
-    }
-  ];
-
-  const validateForm = () => {
-    const newErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'El nombre es requerido';
-    } else if (formData.name.trim().length < 2) {
-      newErrors.name = 'El nombre debe tener al menos 2 caracteres';
-    }
-
-    if (!formData.email.trim()) {
-      newErrors.email = 'El email es requerido';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Por favor ingresa un email válido';
-    }
-
-    if (!formData.subject.trim()) {
-      newErrors.subject = 'El asunto es requerido';
-    } else if (formData.subject.trim().length < 5) {
-      newErrors.subject = 'El asunto debe tener al menos 5 caracteres';
-    }
-
-    if (!formData.message.trim()) {
-      newErrors.message = 'El mensaje es requerido';
-    } else if (formData.message.trim().length < 10) {
-      newErrors.message = 'El mensaje debe tener al menos 10 caracteres';
-    }
-
-    setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+  const validate = (d) => {
+    const e = {};
+    if (!d.name.trim()) e.name = errors_t.required;
+    else if (d.name.trim().length < 2) e.name = errors_t.minName;
+    if (!d.email.trim()) e.email = errors_t.required;
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.email)) e.email = errors_t.email;
+    if (!d.subject.trim()) e.subject = errors_t.required;
+    else if (d.subject.trim().length < 5) e.subject = errors_t.minSubject;
+    if (!d.message.trim()) e.message = errors_t.required;
+    else if (d.message.trim().length < 10) e.message = errors_t.minMessage;
+    return e;
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-
-    // Limpiar error del campo cuando el usuario empiece a escribir
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
+    setData((d) => ({ ...d, [name]: value }));
+    if (errors[name]) setErrors((er) => ({ ...er, [name]: '' }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    if (!validateForm()) {
-      return;
-    }
+    const errs = validate(data);
+    setErrors(errs);
+    if (Object.keys(errs).length > 0) return;
 
-    setFormStatus('sending');
-
+    setStatus('sending');
     try {
-      // Simular envío de formulario (aquí integrarías con tu backend o servicio de email)
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      setFormStatus('success');
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-
-      // Resetear estado después de 3 segundos
-      setTimeout(() => {
-        setFormStatus('idle');
-      }, 3000);
-
-    } catch (error) {
-      setFormStatus('error');
-      setTimeout(() => {
-        setFormStatus('idle');
-      }, 3000);
+      await new Promise((r) => setTimeout(r, 1500));
+      setStatus('success');
+      setData({ name: '', email: '', subject: '', message: '' });
+      setTimeout(() => setStatus('idle'), 4000);
+    } catch {
+      setStatus('error');
+      setTimeout(() => setStatus('idle'), 4000);
     }
-  };
-
-  const handleContactClick = (link) => {
-    window.open(link, '_blank', 'noopener noreferrer');
   };
 
   return (
-    <section id="contact" className="section contact">
+    <section id="contact" className="section contact section-alt">
       <div className="container">
-        <h2 className="section-title animate-fade-in-up">¡Conectemos!</h2>
-        <p className="section-description animate-fade-in-up">
-          ¿Tienes un proyecto en mente o quieres colaborar? Me encantaría escuchar de ti.
-          Estoy siempre abierto a nuevas oportunidades y desafíos interesantes.
-        </p>
+        <header className="section-header reveal">
+          <span className="section-num">{t.sectionNum}</span>
+          <span className="kicker">{t.kicker}</span>
+          <h2>
+            {t.titleStart} <em className="contact__h-em">{t.titleEm}</em>?
+          </h2>
+          <p className="lede">{t.lede}</p>
+        </header>
 
-        <div className="contact-content">
-          {/* Información de Contacto */}
-          <div className="contact-info animate-fade-in-left">
-            <div className="info-header">
-              <h3>Información de Contacto</h3>
-              <p>No dudes en contactarme a través de cualquiera de estos medios</p>
-            </div>
-
-            <div className="contact-methods">
-              {contactInfo.map((info, index) => (
-                <div 
-                  key={index} 
-                  className="contact-method"
-                  onClick={() => handleContactClick(info.link)}
-                  style={{ '--contact-color': info.color }}
-                >
-                  <div className="method-icon">
-                    <Icon name={info.icon} />
-                  </div>
-                  <div className="method-content">
-                    <span className="method-label">{info.label}</span>
-                    <span className="method-value">{info.value}</span>
-                  </div>
-                  <Icon name="external-link" className="external-icon" />
-                </div>
-              ))}
-            </div>
-
-            <div className="social-links">
-              <h4>Sígueme en Redes Sociales</h4>
-              <div className="social-grid">
-                {socialLinks.map((social, index) => (
+        <div className="contact__grid">
+          <aside className="contact__side reveal">
+            <h3 className="about__sub">{t.directChannels}</h3>
+            <ul className="contact__channels">
+              {t.info.map((info) => (
+                <li key={info.label}>
                   <a
-                    key={index}
-                    href={social.url}
+                    href={info.link}
+                    target={info.link.startsWith('http') ? '_blank' : undefined}
+                    rel={info.link.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="contact__channel"
+                  >
+                    <Icon name={info.icon} size={18} className="contact__channel-icon" />
+                    <span className="contact__channel-body">
+                      <span className="contact__channel-label">{info.label}</span>
+                      <span className="contact__channel-value">{info.value}</span>
+                    </span>
+                    <Icon name="external-link" size={14} className="contact__channel-arrow" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <h3 className="about__sub contact__side-sub">{t.socials}</h3>
+            <ul className="contact__socials">
+              {SOCIALS.map((s) => (
+                <li key={s.name}>
+                  <a
+                    href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="social-link"
-                    style={{ '--social-color': social.color }}
-                    title={social.name}
+                    className="contact__social"
+                    aria-label={s.name}
+                    title={s.name}
                   >
-                    <Icon name={social.icon} />
-                    <span>{social.name}</span>
+                    <Icon name={s.icon} size={18} />
                   </a>
-                ))}
+                </li>
+              ))}
+            </ul>
+
+            <div className="contact__availability">
+              <span className="contact__availability-dot" aria-hidden="true" />
+              <div>
+                <strong>{t.availabilityTitle}</strong>
+                <p>{t.availabilityText}</p>
               </div>
             </div>
+          </aside>
 
-            <div className="availability-status">
-              <div className="status-indicator">
-                <div className="status-dot"></div>
-                <span>Disponible para proyectos</span>
-              </div>
-              <p>Actualmente acepto nuevos proyectos y oportunidades laborales</p>
-            </div>
-          </div>
-
-          {/* Formulario de Contacto */}
-          <div className="contact-form-container animate-fade-in-right">
-            <div className="form-header">
-              <h3>Envíame un Mensaje</h3>
-              <p>Completa el formulario y te responderé lo antes posible</p>
-            </div>
-
-            <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
-              <div className="form-row">
-                <div className="form-group">
-                  <label htmlFor="name">
-                    <Icon name="user" />
-                    Nombre Completo
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={errors.name ? 'error' : ''}
-                    placeholder="Tu nombre completo"
-                    disabled={formStatus === 'sending'}
-                  />
-                  {errors.name && <span className="error-message">{errors.name}</span>}
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="email">
-                    <Icon name="envelope" />
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={errors.email ? 'error' : ''}
-                    placeholder="tu@email.com"
-                    disabled={formStatus === 'sending'}
-                  />
-                  {errors.email && <span className="error-message">{errors.email}</span>}
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="subject">
-                  <Icon name="tag" />
-                  Asunto
-                </label>
+          <form className="contact__form reveal reveal-delay-1" onSubmit={handleSubmit} noValidate>
+            <div className="contact__form-row">
+              <div className="contact__field">
+                <label htmlFor="contact-name">{t.form.name}</label>
                 <input
+                  id="contact-name"
+                  name="name"
                   type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
+                  value={data.name}
                   onChange={handleChange}
-                  className={errors.subject ? 'error' : ''}
-                  placeholder="¿De qué quieres hablar?"
-                  disabled={formStatus === 'sending'}
+                  className={errors.name ? 'is-error' : ''}
+                  placeholder={t.form.namePh}
+                  disabled={status === 'sending'}
                 />
-                {errors.subject && <span className="error-message">{errors.subject}</span>}
+                {errors.name && <span className="contact__field-error">{errors.name}</span>}
               </div>
 
-              <div className="form-group">
-                <label htmlFor="message">
-                  <Icon name="comment" />
-                  Mensaje
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
+              <div className="contact__field">
+                <label htmlFor="contact-email">{t.form.email}</label>
+                <input
+                  id="contact-email"
+                  name="email"
+                  type="email"
+                  value={data.email}
                   onChange={handleChange}
-                  className={errors.message ? 'error' : ''}
-                  placeholder="Cuéntame sobre tu proyecto, idea o cualquier cosa que quieras compartir..."
-                  rows="6"
-                  disabled={formStatus === 'sending'}
-                ></textarea>
-                {errors.message && <span className="error-message">{errors.message}</span>}
-              </div>
-
-              <button 
-                type="submit" 
-                className={`submit-btn ${formStatus}`}
-                disabled={formStatus === 'sending'}
-              >
-                {formStatus === 'sending' && (
-                  <div className="spinner"></div>
-                )}
-                {formStatus === 'idle' && (
-                  <>
-                    <Icon name="paper-plane" />
-                    Enviar Mensaje
-                  </>
-                )}
-                {formStatus === 'success' && (
-                  <>
-                    <Icon name="check-circle" />
-                    ¡Enviado Exitosamente!
-                  </>
-                )}
-                {formStatus === 'error' && (
-                  <>
-                    <Icon name="exclamation-circle" />
-                    Error al Enviar
-                  </>
-                )}
-              </button>
-
-              {formStatus === 'success' && (
-                <div className="form-message success">
-                  <Icon name="check-circle" />
-                  <div>
-                    <strong>¡Mensaje enviado!</strong>
-                    <p>Gracias por contactarme. Te responderé pronto.</p>
-                  </div>
-                </div>
-              )}
-
-              {formStatus === 'error' && (
-                <div className="form-message error">
-                  <Icon name="exclamation-triangle" />
-                  <div>
-                    <strong>Error al enviar</strong>
-                    <p>Por favor intenta nuevamente o contáctame directamente.</p>
-                  </div>
-                </div>
-              )}
-            </form>
-          </div>
-        </div>
-
-        {/* Call to Action */}
-        <div className="contact-cta animate-fade-in-up">
-          <div className="cta-content">
-            <Icon name="rocket" className="cta-icon" />
-            <h3>¿Listo para comenzar un proyecto juntos?</h3>
-            <p>Ya sea que tengas una idea clara o simplemente quieras explorar posibilidades, estoy aquí para ayudarte a convertir tu visión en realidad.</p>
-            <div className="cta-stats">
-              <div className="stat">
-                <strong>24h</strong>
-                <span>Tiempo de respuesta</span>
-              </div>
-              <div className="stat">
-                <strong>100%</strong>
-                <span>Satisfacción del cliente</span>
-              </div>
-              <div className="stat">
-                <strong>24/7</strong>
-                <span>Disponibilidad</span>
+                  className={errors.email ? 'is-error' : ''}
+                  placeholder={t.form.emailPh}
+                  disabled={status === 'sending'}
+                />
+                {errors.email && <span className="contact__field-error">{errors.email}</span>}
               </div>
             </div>
-          </div>
+
+            <div className="contact__field">
+              <label htmlFor="contact-subject">{t.form.subject}</label>
+              <input
+                id="contact-subject"
+                name="subject"
+                type="text"
+                value={data.subject}
+                onChange={handleChange}
+                className={errors.subject ? 'is-error' : ''}
+                placeholder={t.form.subjectPh}
+                disabled={status === 'sending'}
+              />
+              {errors.subject && <span className="contact__field-error">{errors.subject}</span>}
+            </div>
+
+            <div className="contact__field">
+              <label htmlFor="contact-message">{t.form.message}</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="6"
+                value={data.message}
+                onChange={handleChange}
+                className={errors.message ? 'is-error' : ''}
+                placeholder={t.form.messagePh}
+                disabled={status === 'sending'}
+              />
+              {errors.message && <span className="contact__field-error">{errors.message}</span>}
+            </div>
+
+            <button
+              type="submit"
+              className={`btn btn-primary contact__submit contact__submit--${status}`}
+              disabled={status === 'sending'}
+            >
+              {status === 'sending' ? (
+                <>
+                  <span className="contact__spinner" aria-hidden="true" />
+                  {t.form.sending}
+                </>
+              ) : status === 'success' ? (
+                <>
+                  <Icon name="check-circle" size={18} />
+                  {t.form.success}
+                </>
+              ) : status === 'error' ? (
+                <>
+                  <Icon name="exclamation-circle" size={18} />
+                  {t.form.retry}
+                </>
+              ) : (
+                <>
+                  <Icon name="paper-plane" size={18} />
+                  {t.form.send}
+                </>
+              )}
+            </button>
+
+            {status === 'success' && (
+              <p className="contact__feedback contact__feedback--ok">{t.form.feedbackOk}</p>
+            )}
+            {status === 'error' && (
+              <p className="contact__feedback contact__feedback--err">{t.form.feedbackErr}</p>
+            )}
+          </form>
         </div>
       </div>
     </section>

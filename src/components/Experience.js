@@ -1,100 +1,61 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useLanguage, pick } from '../contexts/LanguageContext';
+import strings from '../i18n/strings';
 import Icon from './Icon';
 import experienceData from '../data/experience.json';
 import './Experience.css';
 
 const Experience = () => {
-  const [selectedExperience, setSelectedExperience] = useState(0);
-
-  const getTypeColor = (type) => {
-    const colors = {
-      education: '#667eea',
-      research: '#f093fb',
-      teaching: '#4facfe',
-      development: '#43e97b'
-    };
-    return colors[type] || '#667eea';
-  };
+  const { lang } = useLanguage();
+  const t = strings[lang].experience;
 
   return (
-    <section id="experience" className="section experience">
+    <section id="experience" className="section experience section-alt">
       <div className="container">
-        <h2 className="section-title animate-fade-in-up">Experiencia</h2>
-        
-        <div className="experience-content">
-          {/* Timeline Navigation */}
-          <div className="experience-timeline animate-fade-in-left">
-            <div className="timeline-line"></div>
-            {experienceData.map((item, index) => (
-              <div 
-                key={index}
-                className={`timeline-item ${selectedExperience === index ? 'active' : ''}`}
-                onClick={() => setSelectedExperience(index)}
-                style={{ '--accent-color': getTypeColor(item.type) }}
-              >
-                <div className="timeline-dot">
-                  <Icon name={item.icon} />
-                </div>
-                <div className="timeline-content">
-                  <h4 className="timeline-title">{item.jobTitle}</h4>
-                  <p className="timeline-company">{item.company}</p>
-                  <span className="timeline-duration">{item.duration}</span>
-                </div>
+        <header className="section-header reveal">
+          <span className="section-num">{t.sectionNum}</span>
+          <span className="kicker">{t.kicker}</span>
+          <h2>
+            {t.titleStart} <em className="exp__h-em">{t.titleEm}</em>.
+          </h2>
+          <p className="lede">{t.lede}</p>
+        </header>
+
+        <ol className="exp__timeline reveal">
+          {experienceData.map((item, index) => (
+            <li key={`${pick(item.company, lang)}-${index}`} className="exp__item">
+              <div className="exp__rail">
+                <span className="exp__dot">
+                  <Icon name={item.icon} size={14} />
+                </span>
               </div>
-            ))}
-          </div>
 
-          {/* Experience Details */}
-          <div className="experience-details animate-fade-in-right">
-            {experienceData[selectedExperience] && (
-              <div className="experience-card">
-                <div className="experience-header">
-                  <div 
-                    className="experience-icon"
-                    style={{ '--accent-color': getTypeColor(experienceData[selectedExperience].type) }}
-                  >
-                    <Icon name={experienceData[selectedExperience].icon} />
-                  </div>
-                  <div className="experience-info">
-                    <h3 className="experience-title">
-                      {experienceData[selectedExperience].jobTitle}
-                    </h3>
-                    <p className="experience-company">
-                      {experienceData[selectedExperience].company}
-                    </p>
-                    <span className="experience-duration">
-                      {experienceData[selectedExperience].duration}
+              <article className="exp__card">
+                <header className="exp__card-head">
+                  <div>
+                    <span className={`exp__type exp__type--${item.type}`}>
+                      {t.typeLabels[item.type] ?? item.type}
                     </span>
+                    <h3 className="exp__title">{pick(item.jobTitle, lang)}</h3>
+                    <p className="exp__company">{pick(item.company, lang)}</p>
                   </div>
-                </div>
+                  <span className="exp__duration">{pick(item.duration, lang)}</span>
+                </header>
 
-                <div className="experience-body">
-                  <h4>Responsabilidades y Logros:</h4>
-                  <ul className="responsibilities-list">
-                    {experienceData[selectedExperience].responsibilities.map((responsibility, index) => (
-                      <li key={index} className="responsibility-item">
-                        <Icon name="check-circle" className="check-icon" />
-                        <span>{responsibility}</span>
+                {item.responsibilities?.length > 0 && (
+                  <ul className="exp__responsibilities">
+                    {item.responsibilities.map((r, i) => (
+                      <li key={i}>
+                        <span className="exp__bullet" aria-hidden="true" />
+                        <span>{pick(r, lang)}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
-
-                <div className="experience-type">
-                  <span 
-                    className="type-badge"
-                    style={{ '--accent-color': getTypeColor(experienceData[selectedExperience].type) }}
-                  >
-                    {experienceData[selectedExperience].type === 'education' && 'Educación'}
-                    {experienceData[selectedExperience].type === 'research' && 'Investigación'}
-                    {experienceData[selectedExperience].type === 'teaching' && 'Docencia'}
-                    {experienceData[selectedExperience].type === 'development' && 'Desarrollo'}
-                  </span>
-                </div>
-              </div>
-            )}
-          </div>
-        </div>
+                )}
+              </article>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

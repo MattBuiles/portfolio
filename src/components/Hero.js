@@ -1,157 +1,141 @@
 import React, { useState, useEffect } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import strings from '../i18n/strings';
 import Icon from './Icon';
 import './Hero.css';
 
 const Hero = () => {
+  const { lang } = useLanguage();
+  const t = strings[lang].hero;
   const [currentRole, setCurrentRole] = useState(0);
-  
-  const roles = [
-    "Estudiante de Ingeniería de Sistemas e Informática",
-    "Especialista en IA y Machine Learning",
-    "Colaborador en Investigación Biológica",
-    "Desarrollador Full Stack",
-    "Data Scientist"
-  ];
+
+  useEffect(() => {
+    setCurrentRole(0);
+  }, [lang]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentRole((prev) => (prev + 1) % roles.length);
-    }, 3000);
-
+      setCurrentRole((prev) => (prev + 1) % t.roles.length);
+    }, 3200);
     return () => clearInterval(interval);
-  }, [roles.length]);
+  }, [t.roles.length]);
 
-  const scrollToSection = (sectionId) => {
-    const element = document.querySelector(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollTo = (id) => {
+    document.querySelector(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section id="home" className="hero">
-      <div className="hero-background">
-        <div className="hero-particles"></div>
-        <div className="hero-gradient"></div>
-      </div>
-      
-      <div className="container">
-        <div className="hero-content">
-          <div className="hero-text">
-            <div className="hero-greeting animate-fade-in-up">
-              <span className="greeting-text">¡Hola! Soy</span>
-            </div>
-            
-            <h1 className="hero-name animate-fade-in-up">
-              <span className="name-highlight">Mateo Builes Duque</span>
-            </h1>
-            
-            <div className="hero-role animate-fade-in-up">
-              <span className="role-prefix">Soy </span>
-              <span className="role-text" key={currentRole}>
-                {roles[currentRole]}
-              </span>
-            </div>
-            
-            <p className="hero-description animate-fade-in-up">
-              Apasionado por la <strong>Inteligencia Artificial</strong>, <strong>Machine Learning</strong> y 
-              <strong> Data Science</strong>. Estudiante de Ingeniería de Sistemas en la Universidad Nacional de Colombia, 
-              con experiencia en investigación y desarrollo de aplicaciones tecnológicas innovadoras.
-            </p>
-            
-            <div className="hero-stats animate-fade-in-up">
-              <div className="stat">
-                <span className="stat-number">3+</span>
-                <span className="stat-label">Años de experiencia</span>
-              </div>
-              <div className="stat">
-                <span className="stat-number">15+</span>
-                <span className="stat-label">Proyectos completados</span>
-              </div>
-              <div className="stat">
-                <span className="stat-number">8+</span>
-                <span className="stat-label">Certificaciones</span>
-              </div>
-            </div>
-            
-            <div className="hero-actions animate-fade-in-up">
-              <button 
-                className="btn btn-primary"
-                onClick={() => scrollToSection('#projects')}
-              >
-                <Icon name="folder-open" />
-                Ver Proyectos
-              </button>
-              <button 
-                className="btn btn-secondary"
-                onClick={() => scrollToSection('#contact')}
-              >
-                <Icon name="envelope" />
-                Contactarme
-              </button>
-            </div>
-            
-            <div className="hero-social animate-fade-in-up">
-              <a href="https://github.com/MattBuiles" className="social-link" target="_blank" rel="noopener noreferrer">
-                <Icon name="github" />
-              </a>
-              <a href="https://linkedin.com/in/mateo-builes-73453531b" className="social-link" target="_blank" rel="noopener noreferrer">
-                <Icon name="linkedin" />
-              </a>
-              <a href="mailto:matebuilesd@gmail.com" className="social-link">
-                <Icon name="envelope" />
-              </a>
-              <a href="https://x.com/MateB53" className="social-link" target="_blank" rel="noopener noreferrer">
-                <Icon name="twitter" />
-              </a>
-            </div>
+      <div className="hero__grid container-wide">
+        <div className="hero__text">
+          <span className="kicker hero__kicker">{t.kicker}</span>
+
+          <h1 className="hero__title">
+            {t.title1}
+            <br />
+            <em className="hero__title-em">{t.titleEm}</em>
+            <span className="hero__title-dot">{t.titleDot}</span>
+          </h1>
+
+          <p className="lede hero__lede">{t.lede}</p>
+
+          <div className="hero__role">
+            <span className="hero__role-prefix">{t.currentlyPrefix}</span>
+            <span className="hero__role-text" key={`${lang}-${currentRole}`}>
+              {t.roles[currentRole]}
+            </span>
           </div>
-          
-          <div className="hero-visual">
-            <div className="hero-image-container animate-float">
-              <div className="hero-image">
-                <img 
-                  src="./images/profile.jpg" 
-                  alt="Mateo Builes - Ingeniero de Sistemas e Informática"
-                  className="profile-photo"
-                  onError={(e) => {
-                    // Fallback al placeholder SVG si la imagen no se encuentra
-                    e.target.src = './images/profile-placeholder.svg';
-                    e.target.onerror = null; // Evitar loop infinito
-                  }}
-                />
-                <div className="image-decoration"></div>
-              </div>
-            </div>
-            
-            <div className="tech-stack">
-              <div className="tech-item animate-pulse">
-                <Icon name="code" />
-                <span>Python</span>
-              </div>
-              <div className="tech-item animate-pulse">
-                <Icon name="atom" />
-                <span>React</span>
-              </div>
-              <div className="tech-item animate-pulse">
-                <Icon name="brain" />
-                <span>AI/ML</span>
-              </div>
-              <div className="tech-item animate-pulse">
-                <Icon name="database" />
-                <span>Data</span>
-              </div>
-            </div>
+
+          <div className="hero__actions">
+            <button type="button" className="btn btn-primary" onClick={() => scrollTo('#projects')}>
+              <Icon name="folder-open" size={18} />
+              {t.viewProjects}
+            </button>
+            <button type="button" className="btn btn-secondary" onClick={() => scrollTo('#contact')}>
+              <Icon name="paper-plane" size={18} />
+              {t.contactMe}
+            </button>
           </div>
+
+          <ul className="hero__social">
+            <li>
+              <a href="https://github.com/MattBuiles" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <Icon name="github" size={18} />
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/mateo-builes-73453531b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <Icon name="linkedin" size={18} />
+              </a>
+            </li>
+            <li>
+              <a href="mailto:matebuilesd@gmail.com" aria-label="Email">
+                <Icon name="envelope" size={18} />
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/MateB53" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">
+                <Icon name="twitter" size={18} />
+              </a>
+            </li>
+          </ul>
         </div>
-        
-        <div className="scroll-indicator" onClick={() => scrollToSection('#about')}>
-          <div className="scroll-arrow">
-            <Icon name="arrow-down" />
+
+        <div className="hero__portrait">
+          <div className="hero__portrait-frame">
+            <img
+              src="./images/profile.jpg"
+              alt="Mateo Builes"
+              className="hero__portrait-img"
+              onError={(e) => {
+                e.target.src = './images/profile-placeholder.svg';
+                e.target.onerror = null;
+              }}
+            />
+            <span className="hero__portrait-mark" aria-hidden="true">
+              <span className="hero__portrait-mark-line" />
+              <span className="hero__portrait-mark-label">2026</span>
+            </span>
           </div>
-          <span className="scroll-text">Scroll para más</span>
+
+          <dl className="hero__stats">
+            <div className="hero__stat">
+              <dt>{t.stat.experience}</dt>
+              <dd>
+                <span className="hero__stat-num">3</span>
+                <span className="hero__stat-plus">+</span>
+              </dd>
+              <span className="hero__stat-unit">{t.stat.experienceUnit}</span>
+            </div>
+            <div className="hero__stat">
+              <dt>{t.stat.projects}</dt>
+              <dd>
+                <span className="hero__stat-num">15</span>
+                <span className="hero__stat-plus">+</span>
+              </dd>
+              <span className="hero__stat-unit">{t.stat.projectsUnit}</span>
+            </div>
+            <div className="hero__stat">
+              <dt>{t.stat.certifications}</dt>
+              <dd>
+                <span className="hero__stat-num">12</span>
+                <span className="hero__stat-plus">+</span>
+              </dd>
+              <span className="hero__stat-unit">{t.stat.certificationsUnit}</span>
+            </div>
+          </dl>
         </div>
       </div>
+
+      <button
+        type="button"
+        className="hero__scroll"
+        onClick={() => scrollTo('#about')}
+        aria-label={t.scroll}
+      >
+        <span>{t.scroll}</span>
+        <Icon name="arrow-down" size={14} />
+      </button>
     </section>
   );
 };

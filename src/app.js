@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ThemeProvider } from './contexts/ThemeContext';
+import { LanguageProvider } from './contexts/LanguageContext';
 import useScrollAnimation from './hooks/useScrollAnimation';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -20,19 +21,21 @@ const App = () => {
 
     return (
         <ThemeProvider>
+            <LanguageProvider>
             <div className="app">
                 <Header />
                 <main>
                     <Hero />
                     <About />
                     <Skills />
-                    <Experience />
                     <Projects />
+                    <Experience />
                     <Certificates />
                     <Contact />
                 </main>
                 <Footer />
             </div>
+            </LanguageProvider>
         </ThemeProvider>
     );
 };

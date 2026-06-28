@@ -1,109 +1,94 @@
 import React, { useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import strings from '../i18n/strings';
 import Icon from './Icon';
 import skillsData from '../data/skills.json';
 import './Skills.css';
 
 const Skills = () => {
-  const [selectedCategory, setSelectedCategory] = useState(0);
+  const { lang } = useLanguage();
+  const t = strings[lang].skills;
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const technical = skillsData.technical ?? [];
+  const soft = skillsData.soft ?? [];
+  const current = technical[activeIndex];
+
+  const scrollToCerts = () => {
+    document.querySelector('#certificates')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
-    <section id="skills" className="section skills">
+    <section id="skills" className="section skills section-alt">
       <div className="container">
-        <h2 className="section-title animate-fade-in-up">Habilidades Técnicas</h2>
-        
-        <div className="skills-content">
-          {/* Technical Skills */}
-          <div className="technical-skills animate-fade-in-left">
-            <div className="skills-categories">
-              {skillsData.technical.map((category, index) => (
-                <button
-                  key={index}
-                  className={`category-btn ${selectedCategory === index ? 'active' : ''}`}
-                  onClick={() => setSelectedCategory(index)}
-                >
-                  {category.category}
-                </button>
-              ))}
-            </div>
+        <header className="section-header reveal">
+          <span className="section-num">{t.sectionNum}</span>
+          <span className="kicker">{t.kicker}</span>
+          <h2>
+            {t.titleStart} <em className="skills__h-em">{t.titleEm}</em>.
+          </h2>
+          <p className="lede">{t.lede}</p>
+        </header>
 
-            <div className="skills-grid">
-              {skillsData.technical[selectedCategory]?.skills.map((skill, index) => (
-                <div key={index} className="skill-card">
-                  <div className="skill-header">
-                    <Icon name={skill.icon} className="skill-icon" />
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-percentage">{skill.level}%</span>
-                  </div>
-                  <div className="skill-bar">
-                    <div 
-                      className="skill-progress"
-                      style={{ '--skill-level': `${skill.level}%` }}
-                    ></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Soft Skills */}
-          <div className="soft-skills animate-fade-in-right">
-            <h3>Habilidades Blandas</h3>
-            <div className="soft-skills-container">
-              {skillsData.soft.map((skill, index) => (
-                <div key={index} className="soft-skill-item">
-                  <div className="soft-skill-info">
-                    <span className="soft-skill-name">{skill.name}</span>
-                    <span className="soft-skill-level">{skill.level}%</span>
-                  </div>
-                  <div className="circular-progress">
-                    <svg className="progress-ring" width="80" height="80">
-                      <circle
-                        className="progress-ring-circle"
-                        stroke="var(--border)"
-                        strokeWidth="6"
-                        fill="transparent"
-                        r="35"
-                        cx="40"
-                        cy="40"
-                      />
-                      <circle
-                        className="progress-ring-progress"
-                        stroke="var(--primary)"
-                        strokeWidth="6"
-                        fill="transparent"
-                        r="35"
-                        cx="40"
-                        cy="40"
-                        style={{
-                          strokeDasharray: `${2 * Math.PI * 35}`,
-                          strokeDashoffset: `${2 * Math.PI * 35 * (1 - skill.level / 100)}`
-                        }}
-                      />
-                    </svg>
-                    <div className="progress-text">{skill.level}%</div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="skills__nav reveal">
+          {technical.map((category, index) => (
+            <button
+              key={category.category}
+              type="button"
+              className={`skills__tab ${activeIndex === index ? 'is-active' : ''}`}
+              onClick={() => setActiveIndex(index)}
+            >
+              <span className="skills__tab-num">{String(index + 1).padStart(2, '0')}</span>
+              <span className="skills__tab-label">{category.category}</span>
+            </button>
+          ))}
         </div>
 
-        {/* Certifications Preview */}
-        <div className="skills-footer animate-fade-in-up">
-          <div className="certification-preview">
-            <h3>Certificaciones & Logros</h3>
-            <p>Certificaciones especializadas en IA, ML y Data Science</p>
-            <button 
-              className="btn btn-secondary"
-              onClick={() => {
-                const certificates = document.querySelector('#certificates');
-                if (certificates) certificates.scrollIntoView({ behavior: 'smooth' });
-              }}
-            >
-              <Icon name="certificate" />
-              Ver Certificados
-            </button>
+        <div className="skills__panel reveal reveal-delay-1">
+          {current?.skills?.map((skill) => (
+            <article key={skill.name} className="skills__item">
+              <div className="skills__item-head">
+                <Icon name={skill.icon} size={18} className="skills__item-icon" />
+                <h4 className="skills__item-name">{skill.name}</h4>
+                <span className="skills__item-level tabular-nums">{skill.level}%</span>
+              </div>
+              <div className="skills__bar" aria-hidden="true">
+                <div className="skills__bar-fill" style={{ width: `${skill.level}%` }} />
+              </div>
+            </article>
+          ))}
+        </div>
+
+        <div className="skills__soft reveal">
+          <header className="skills__soft-head">
+            <span className="kicker">{t.softKicker}</span>
+            <h3>{t.softTitle}</h3>
+          </header>
+
+          <ul className="skills__soft-list">
+            {soft.map((skill) => (
+              <li key={skill.name} className="skills__soft-item">
+                <div className="skills__soft-row">
+                  <span className="skills__soft-name">{skill.name}</span>
+                  <span className="skills__soft-level tabular-nums">{skill.level}%</span>
+                </div>
+                <div className="skills__bar skills__bar--soft" aria-hidden="true">
+                  <div className="skills__bar-fill" style={{ width: `${skill.level}%` }} />
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="skills__cta reveal">
+          <div>
+            <h3>{t.ctaTitle}</h3>
+            <p>{t.ctaText}</p>
           </div>
+          <button type="button" className="btn btn-secondary" onClick={scrollToCerts}>
+            <Icon name="certificate" size={18} />
+            {t.ctaBtn}
+          </button>
         </div>
       </div>
     </section>

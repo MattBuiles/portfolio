@@ -6,32 +6,24 @@ const useScrollAnimation = (dependencies = []) => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('animate-visible');
-            // Una vez que se activa la animación, podemos dejar de observar este elemento
+            entry.target.classList.add('is-visible');
             observer.unobserve(entry.target);
           }
         });
       },
       {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px',
       }
     );
 
-    // Observar todos los elementos con clases de animación
-    const animatedElements = document.querySelectorAll(
-      '.animate-fade-in-up, .animate-fade-in-left, .animate-fade-in-right, .animate-slide-up'
-    );
-
-    animatedElements.forEach((el) => {
-      observer.observe(el);
-    });
+    const elements = document.querySelectorAll('.reveal');
+    elements.forEach((el) => observer.observe(el));
 
     return () => {
-      animatedElements.forEach((el) => {
-        observer.unobserve(el);
-      });
+      elements.forEach((el) => observer.unobserve(el));
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, dependencies);
 };
 

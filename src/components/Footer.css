@@ -1,0 +1,107 @@
+/* ============================================
+   Footer — editorial
+   ============================================ */
+
+.ftr {
+  margin-top: var(--s-16);
+  padding: var(--s-16) 0 var(--s-10);
+  border-top: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+
+.ftr__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-6);
+  flex-wrap: wrap;
+  padding-bottom: var(--s-10);
+  border-bottom: 1px solid var(--border);
+  margin-bottom: var(--s-6);
+}
+
+.ftr__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+}
+
+.ftr__mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  background: var(--fg);
+  color: var(--bg);
+  border-radius: var(--r);
+}
+
+.ftr__name {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--fg);
+}
+
+.ftr__role {
+  margin-top: 2px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--fg-muted);
+  letter-spacing: 0.04em;
+}
+
+.ftr__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+.ftr__links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: var(--s-2) var(--s-4);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--fg-muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--r-full);
+  transition: all var(--dur) var(--ease);
+}
+
+.ftr__links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+}
+
+.ftr__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--fg-subtle);
+  letter-spacing: 0.04em;
+}
+
+.ftr__tech {
+  font-family: var(--font-mono);
+  color: var(--fg-subtle);
+}
+
+@media (max-width: 600px) {
+  .ftr { padding: var(--s-10) 0 var(--s-6); }
+  .ftr__top { flex-direction: column; align-items: flex-start; }
+}

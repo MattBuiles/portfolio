@@ -1,415 +1,297 @@
-import React, { useState } from 'react';
+import React, { useMemo, useState } from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import strings from '../i18n/strings';
 import Icon from './Icon';
 import certificatesData from '../data/certificates.json';
 import './Certificates.css';
 
-// Mapeo de títulos de certificados a nombres de archivos PDF
-const getCertificateFilename = (title, organization, date) => {
-  const fileMap = {
-    // DataCamp certificates
-    'Monitoring Machine Learning in Python': 'datacamp_monitoring_ml_python_2025.pdf',
-    'Monitoring Machine Learning Concepts': 'datacamp_monitoring_ml_concepts_2025.pdf',
-    'AWS Academy Graduate - Cloud Foundations': 'aws_academy_cloud_foundations_2025.pdf',
-    'CI/CD for Machine Learning': 'datacamp_ci_cd_machine_learning_2025.pdf',
-    'Full Stack Open': 'fullstack_certificate_2025.png',
-    'Machine Learning Engineer': 'datacamp_machine_learning_engineer_2025.pdf',
-    'Introduction to Docker': 'datacamp_introduction_docker_2025.pdf',
-    'Introduction to Data Versioning with DVC': 'datacamp_introduction_dvc_2025.pdf',
-    'Introduction to Shell': 'datacamp_introduction_to_shell_2025.pdf',
-    'MLOps Concepts': 'datacamp_mlops_concepts_2025.pdf',
-    'MLOps Deployment and Life Cycling': 'datacamp_mlops_deployment_2025.pdf',
-    'Supervised Learning with scikit-learn': 'datacamp_supervised_learning_scikit_2025.pdf',
-    'Introduction to MLflow': 'datacamp_introduction_mlflow_2025.pdf',
-    'ETL and ELT in Python': 'datacamp_etl_elt_python_2025.pdf',
-    'Introduction to Data Quality with Great Expectations' : 'datacamp_introduction_great_expectations_2025.pdf',
-    
-    // Coursera - University of Michigan
-    'Programming for Everybody (Getting Started with Python)': 'coursera_umich_python_getting_started_2022.pdf',
-    'Python Data Structures': 'coursera_umich_python_data_structures_2022.pdf',
-    'Introduction to Data Science in Python': 'coursera_umich_data_science_python_2023.pdf',
-    
-    // Coursera - IBM
-    'Introduction to Artificial Intelligence (AI)': 'coursera_ibm_ai_introduction_2024.pdf',
-    'Generative AI: Introduction and Applications': 'coursera_ibm_generative_ai_intro_2024.pdf',
-    'Prompt Engineering for ChatGPT': 'coursera_ibm_prompt_engineering_2024.pdf',
-    'Artificial Intelligence (AI) Essentials': 'coursera_ibm_ai_essentials_2024.pdf',
-
-    // Credly
-    "Artificial Intelligence Essentials V2" : 'credly_coursera_ibm_ai_essentials_2024.pdf',
-
-    // Coursera - Imperial College London
-    'Mathematics for Machine Learning: Linear Algebra': 'coursera_imperial_linear_algebra_2023.pdf',
-    
-    // Coursera - University of California, Irvine
-    'Problem Solving Using Computational Thinking': 'coursera_uci_problem_solving_2025.pdf',
-    
-    // MinTIC
-    'IA para todos: Bootcamp intermedio en Inteligencia Artificial': 'mintic_ai_bootcamp_intermedio_2025.pdf',
-    
-    // Platzi
-    'Introducción a la Nube con Azure': 'platzi_introduccion_nube_2025.pdf'
-  };
-  
-  return fileMap[title] || null;
+const CERT_FILES = {
+  'Monitoring Machine Learning in Python': 'datacamp_monitoring_ml_python_2025.pdf',
+  'Monitoring Machine Learning Concepts': 'datacamp_monitoring_ml_concepts_2025.pdf',
+  'AWS Academy Graduate - Cloud Foundations': 'aws_academy_cloud_foundations_2025.pdf',
+  'CI/CD for Machine Learning': 'datacamp_ci_cd_machine_learning_2025.pdf',
+  'Full Stack Open': 'fullstack_certificate_2025.png',
+  'Machine Learning Engineer': 'datacamp_machine_learning_engineer_2025.pdf',
+  'Introduction to Docker': 'datacamp_introduction_docker_2025.pdf',
+  'Introduction to Data Versioning with DVC': 'datacamp_introduction_dvc_2025.pdf',
+  'Introduction to Shell': 'datacamp_introduction_to_shell_2025.pdf',
+  'MLOps Concepts': 'datacamp_mlops_concepts_2025.pdf',
+  'MLOps Deployment and Life Cycling': 'datacamp_mlops_deployment_2025.pdf',
+  'Supervised Learning with scikit-learn': 'datacamp_supervised_learning_scikit_2025.pdf',
+  'Introduction to MLflow': 'datacamp_introduction_mlflow_2025.pdf',
+  'ETL and ELT in Python': 'datacamp_etl_elt_python_2025.pdf',
+  'Introduction to Data Quality with Great Expectations': 'datacamp_introduction_great_expectations_2025.pdf',
+  'Programming for Everybody (Getting Started with Python)': 'coursera_umich_python_getting_started_2022.pdf',
+  'Python Data Structures': 'coursera_umich_python_data_structures_2022.pdf',
+  'Introduction to Data Science in Python': 'coursera_umich_data_science_python_2023.pdf',
+  'Introduction to Artificial Intelligence (AI)': 'coursera_ibm_ai_introduction_2024.pdf',
+  'Generative AI: Introduction and Applications': 'coursera_ibm_generative_ai_intro_2024.pdf',
+  'Prompt Engineering for ChatGPT': 'coursera_ibm_prompt_engineering_2024.pdf',
+  'Artificial Intelligence (AI) Essentials': 'coursera_ibm_ai_essentials_2024.pdf',
+  'Artificial Intelligence Essentials V2': 'credly_coursera_ibm_ai_essentials_2024.pdf',
+  'Mathematics for Machine Learning: Linear Algebra': 'coursera_imperial_linear_algebra_2023.pdf',
+  'Problem Solving Using Computational Thinking': 'coursera_uci_problem_solving_2025.pdf',
+  'Bootcamp de Inteligencia Artificial Nivel Intermedio': 'mintic_ai_bootcamp_intermedio_2025.png',
+  'Introducción a la Nube con Azure': 'platzi_introduccion_nube_2025.pdf',
+  'Building with the Claude API': 'anthropic_building_claude_api_2026.pdf',
+  'Claude Code in Action': 'anthropic_claude_code_in_action_2026.pdf',
+  'Introduction to agent skills': 'anthropic_intro_agent_skills_2026.pdf',
+  'Introduction to Model Context Protocol': 'anthropic_intro_mcp_2026.pdf',
 };
 
-// Función para obtener URL de verificación desde los datos del certificado
+const FEATURED_TITLES = new Set([
+  'Machine Learning Engineer',
+  'AWS Academy Graduate - Cloud Foundations',
+  'Bootcamp de Inteligencia Artificial Nivel Intermedio',
+  'Full Stack Open',
+  'Building with the Claude API',
+  'Claude Code in Action',
+]);
+
 const getVerificationUrl = (certificate) => {
-  // Primera prioridad: URL específica en los datos del certificado
-  if (certificate.verification_url) {
-    return certificate.verification_url;
-  }
-  
-  // Segunda prioridad: URL desde credential_url
-  if (certificate.credential_url) {
-    return certificate.credential_url;
-  }
-  
-  // Tercera prioridad: URLs generales por organización como fallback
-  const org = certificate.issuing_organization.toLowerCase();
-  
-  if (org.includes('datacamp')) {
-    return 'https://www.datacamp.com/profile/matebuilesd';
-  } else if (org.includes('coursera')) {
-    return 'https://www.coursera.org/user/matebuilesd';
-  } else if (org.includes('ibm')) {
-    return 'https://www.credly.com/users/mateo-builes-duque/badges';
-  } else if (org.includes('platzi')) {
-    return 'https://platzi.com/p/mateobui/';
-  } else if (org.includes('mintic') || org.includes('ministerio')) {
-    return 'https://www.mintrabajo.gov.co/empleo-y-pensiones/empleo/certificados';
-  }
-  
-  // No hay URL disponible
+  if (certificate.verification_url) return certificate.verification_url;
+  if (certificate.credential_url) return certificate.credential_url;
+
+  const org = (certificate.issuing_organization ?? '').toLowerCase();
+  if (org.includes('anthropic')) return null;
+  if (org.includes('datacamp')) return 'https://www.datacamp.com/profile/matebuilesd';
+  if (org.includes('coursera')) return 'https://www.coursera.org/user/matebuilesd';
+  if (org.includes('ibm')) return 'https://www.credly.com/users/mateo-builes-duque/badges';
+  if (org.includes('platzi')) return 'https://platzi.com/p/mateobui/';
   return null;
 };
 
-const Certificates = () => {
-  const [selectedCategory, setSelectedCategory] = useState('featured');
-  const [selectedCertificate, setSelectedCertificate] = useState(null);
+const formatDate = (iso, lang) =>
+  new Date(iso).toLocaleDateString(lang === 'es' ? 'es-ES' : 'en-US', {
+    year: 'numeric', month: 'long', day: 'numeric',
+  });
 
-  const categories = [
-    { value: 'featured', label: 'Destacados', icon: 'star', count: 5 },
-    { value: 'all', label: 'Todos', icon: 'certificate', count: certificatesData.length },
-    { value: 'AI/ML', label: 'IA & ML', icon: 'brain', count: certificatesData.filter(cert => cert.category === 'AI/ML').length },
-    { value: 'Data Science', label: 'Data Science', icon: 'chart-line', count: certificatesData.filter(cert => cert.category === 'Data Science').length },
-    { value: 'Cloud/DevOps', label: 'Cloud & DevOps', icon: 'cloud', count: certificatesData.filter(cert => cert.category === 'Cloud/DevOps').length },
-    { value: 'Programming', label: 'Programación', icon: 'code', count: certificatesData.filter(cert => cert.category === 'Programming').length },
-    { value: 'Soft Skills', label: 'Habilidades Blandas', icon: 'users', count: certificatesData.filter(cert => cert.category === 'Soft Skills').length }
-  ];
-
-  let filteredCertificates;
-  if (selectedCategory === 'featured') {
-    const featuredTitles = [
-      "Machine Learning Engineer",
-      "AWS Academy Graduate - Cloud Foundations",
-      "Bootcamp de Inteligencia Artificial Nivel Intermedio",
-      "Full Stack Open",
-      "Monitoring Machine Learning in Python"
-    ];
-    filteredCertificates = certificatesData.filter(cert => featuredTitles.includes(cert.title));
-  } else if (selectedCategory === 'all') {
-    filteredCertificates = [...certificatesData];
-  } else {
-    filteredCertificates = certificatesData.filter(cert => cert.category === selectedCategory);
+const timeAgo = (iso, lang) => {
+  const d = new Date(iso);
+  const days = Math.ceil(Math.abs(Date.now() - d.getTime()) / (1000 * 60 * 60 * 24));
+  if (lang === 'es') {
+    if (days < 30) return `Hace ${days} días`;
+    if (days < 365) return `Hace ${Math.floor(days / 30)} meses`;
+    return `Hace ${Math.floor(days / 365)} años`;
   }
+  if (days < 30) return `${days} days ago`;
+  if (days < 365) return `${Math.floor(days / 30)} months ago`;
+  return `${Math.floor(days / 365)} years ago`;
+};
 
-  // Ordenar por fecha de emisión (más reciente primero)
-  filteredCertificates.sort((a, b) => new Date(b.date_issued) - new Date(a.date_issued));
+const Certificates = () => {
+  const { lang } = useLanguage();
+  const t = strings[lang].certificates;
+  const [filter, setFilter] = useState('featured');
+  const [open, setOpen] = useState(null);
 
-  const getCategoryColor = (category) => {
-    const colors = {
-      'featured': '#FFD700',
-      'AI/ML': '#667eea',
-      'Data Science': '#f093fb',
-      'Cloud/DevOps': '#4facfe',
-      'Programming': '#43e97b',
-      'Web Development': '#38ef7d',
-      'Analytics': '#ff6b6b',
-      'Management': '#feca57'
-    };
-    return colors[category] || '#667eea';
+  const categories = useMemo(() => {
+    const all = certificatesData.length;
+    const groups = {};
+    for (const c of certificatesData) {
+      groups[c.category] = (groups[c.category] ?? 0) + 1;
+    }
+    return [
+      { value: 'featured', label: t.filterFeatured, count: FEATURED_TITLES.size },
+      { value: 'all', label: t.filterAll, count: all },
+      ...Object.entries(groups).map(([cat, count]) => ({ value: cat, label: cat, count })),
+    ];
+  }, [t]);
+
+  const items = useMemo(() => {
+    let list;
+    if (filter === 'featured') list = certificatesData.filter((c) => FEATURED_TITLES.has(c.title));
+    else if (filter === 'all') list = [...certificatesData];
+    else list = certificatesData.filter((c) => c.category === filter);
+    return list.sort((a, b) => new Date(b.date_issued) - new Date(a.date_issued));
+  }, [filter]);
+
+  const downloadFile = (title) => {
+    const filename = CERT_FILES[title];
+    if (!filename) {
+      alert(lang === 'es' ? `PDF no disponible para: ${title}` : `PDF not available for: ${title}`);
+      return;
+    }
+    const link = document.createElement('a');
+    link.href = `./certificates/${filename}`;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
-  const formatDate = (dateString) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('es-ES', { 
-      year: 'numeric', 
-      month: 'long', 
-      day: 'numeric' 
-    });
-  };
-
-  const getTimeAgo = (dateString) => {
-    const date = new Date(dateString);
-    const now = new Date();
-    const diffTime = Math.abs(now - date);
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    
-    if (diffDays < 30) return `Hace ${diffDays} días`;
-    if (diffDays < 365) return `Hace ${Math.floor(diffDays / 30)} meses`;
-    return `Hace ${Math.floor(diffDays / 365)} años`;
+  const scrollToContact = () => {
+    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section id="certificates" className="section certificates">
       <div className="container">
-        <h2 className="section-title animate-fade-in-up">Certificaciones & Credenciales</h2>
-        
-        {/* Flow strip replacing stats */}
-        {(() => {
-          const categoryItems = categories
-            .filter(c => c.value !== 'all')
-            .map(c => ({ label: c.label, icon: c.icon, color: getCategoryColor(c.value), type: 'category' }));
-          const issuers = Array.from(new Set(certificatesData.map(c => c.issuing_organization)));
-          const issuerItems = issuers.map(name => ({ label: name, icon: 'building', color: 'var(--color-border)', type: 'issuer' }));
-          const flowItems = [...categoryItems, ...issuerItems];
-          return (
-            <div className="certificates-flow animate-fade-in-up" aria-label="Flujo de certificaciones">
-              <div className="flow-track">
-                {[...flowItems, ...flowItems].map((item, idx) => (
-                  <span
-                    key={idx}
-                    className={`flow-chip ${item.type}`}
-                    style={{ '--chip-color': item.color }}
-                  >
-                    <Icon name={item.icon} />
-                    {item.label}
-                  </span>
-                ))}
-              </div>
-            </div>
-          );
-        })()}
+        <header className="section-header reveal">
+          <span className="section-num">{t.sectionNum}</span>
+          <span className="kicker">{t.kicker}</span>
+          <h2>
+            {t.titleStart} <em className="certs__h-em">{t.titleEm}</em>.
+          </h2>
+          <p className="lede">{t.lede}</p>
+        </header>
 
-        {/* Category Filter */}
-        <div className="certificates-filter animate-fade-in-up">
-          <div className="filter-tabs">
-            {categories.map((category) => (
-              <button
-                key={category.value}
-                className={`filter-tab ${selectedCategory === category.value ? 'active' : ''}`}
-                onClick={() => setSelectedCategory(category.value)}
-                style={{ '--category-color': getCategoryColor(category.value) }}
-              >
-                <Icon name={category.icon} />
-                <span className="tab-label">{category.label}</span>
-                <span className="tab-count">{category.count}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Certificates Grid */}
-        <div className="certificates-grid animate-fade-in-up">
-          {filteredCertificates.map((certificate, index) => (
-            <div 
-              key={index} 
-              className="certificate-card"
-              style={{ '--category-color': getCategoryColor(certificate.category) }}
-              onClick={() => setSelectedCertificate(certificate)}
+        <div className="certs__filters reveal">
+          {categories.map((c) => (
+            <button
+              key={c.value}
+              type="button"
+              className={`certs__filter ${filter === c.value ? 'is-active' : ''}`}
+              onClick={() => setFilter(c.value)}
             >
-              <div className="certificate-header">
-                <div className="certificate-icon">
-                  <Icon name={certificate.icon} />
-                </div>
-                <div className="certificate-meta">
-                  <span className="certificate-category">{certificate.category}</span>
-                  <span className="certificate-date">{getTimeAgo(certificate.date_issued)}</span>
-                </div>
-              </div>
-              
-              <div className="certificate-content">
-                <h3 className="certificate-title">{certificate.title}</h3>
-                <p className="certificate-issuer">
-                  <Icon name="building" />
-                  {certificate.issuing_organization}
-                </p>
-                <p className="certificate-id">
-                  <Icon name="id-badge" />
-                  ID: {certificate.credential_id}
-                </p>
-              </div>
-              
-              <div className="certificate-skills">
-                {certificate.skills && certificate.skills.slice(0, 3).map((skill, skillIndex) => (
-                  <span key={skillIndex} className="skill-badge">{skill}</span>
-                ))}
-                {certificate.skills && certificate.skills.length > 3 && (
-                  <span className="skills-more">+{certificate.skills.length - 3}</span>
-                )}
-              </div>
-              
-              <div className="certificate-footer">
-                <div className="certificate-verify">
-                  <Icon name="check-circle" />
-                  <span>Verificado</span>
-                </div>
-                <div className="certificate-expand">
-                  <Icon name="expand" />
-                </div>
-              </div>
-            </div>
+              {c.label}
+              <span className="certs__filter-count">{c.count}</span>
+            </button>
           ))}
         </div>
 
-        {/* Certificate Modal */}
-        {selectedCertificate && (
-          <div className="certificate-modal" onClick={() => setSelectedCertificate(null)}>
-            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-              <div className="modal-header">
-                <div className="modal-title-section">
-                  <div 
-                    className="modal-icon"
-                    style={{ '--category-color': getCategoryColor(selectedCertificate.category) }}
-                  >
-                    <Icon name={selectedCertificate.icon} />
-                  </div>
-                  <div>
-                    <h3 className="modal-title">{selectedCertificate.title}</h3>
-                    <p className="modal-issuer">{selectedCertificate.issuing_organization}</p>
-                  </div>
-                </div>
-                <button 
-                  className="modal-close"
-                  onClick={() => setSelectedCertificate(null)}
+        <ul className="certs__grid reveal reveal-delay-1">
+          {items.map((cert, i) => {
+            const hasFile = Boolean(CERT_FILES[cert.title]);
+            return (
+              <li key={`${cert.title}-${i}`} className="certs__card">
+                <button
+                  type="button"
+                  className="certs__card-btn"
+                  onClick={() => setOpen(cert)}
+                  aria-label={`Detalle de ${cert.title}`}
                 >
-                  <Icon name="times" />
+                  <header className="certs__card-head">
+                    <span className="certs__card-icon">
+                      <Icon name={cert.icon} size={20} />
+                    </span>
+                    <span className="certs__card-meta">
+                      <span className="badge badge-accent">{cert.category}</span>
+                      <span className="certs__card-date">{timeAgo(cert.date_issued, lang)}</span>
+                    </span>
+                  </header>
+
+                  <h3 className="certs__card-title">{cert.title}</h3>
+
+                  <p className="certs__card-issuer">{cert.issuing_organization}</p>
+
+                  {cert.skills?.length > 0 && (
+                    <ul className="certs__card-skills">
+                      {cert.skills.slice(0, 3).map((s) => (
+                        <li key={s}>{s}</li>
+                      ))}
+                      {cert.skills.length > 3 && (
+                        <li className="certs__card-skill-more">+{cert.skills.length - 3}</li>
+                      )}
+                    </ul>
+                  )}
+
+                  <footer className="certs__card-footer">
+                    <span className="certs__card-verify">
+                      <Icon name="check-circle" size={14} />
+                      {hasFile ? t.pdfAvailable : t.verifiable}
+                    </span>
+                    <span className="certs__card-expand">
+                      <Icon name="external-link" size={14} />
+                    </span>
+                  </footer>
                 </button>
-              </div>
-              
-              <div className="modal-body">
-                <div className="modal-info-grid">
-                  <div className="info-item">
-                    <Icon name="calendar" className="info-icon" />
-                    <div>
-                      <span className="info-label">Fecha de Emisión</span>
-                      <span className="info-value">{formatDate(selectedCertificate.date_issued)}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="info-item">
-                    <Icon name="id-badge" className="info-icon" />
-                    <div>
-                      <span className="info-label">ID de Credencial</span>
-                      <span className="info-value">{selectedCertificate.credential_id}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="info-item">
-                    <Icon name="tag" className="info-icon" />
-                    <div>
-                      <span className="info-label">Categoría</span>
-                      <span className="info-value">{selectedCertificate.category}</span>
-                    </div>
-                  </div>
-                  
-                  <div className="info-item">
-                    <Icon name="clock" className="info-icon" />
-                    <div>
-                      <span className="info-label">Obtenido</span>
-                      <span className="info-value">{getTimeAgo(selectedCertificate.date_issued)}</span>
-                    </div>
-                  </div>
+              </li>
+            );
+          })}
+        </ul>
+
+        {open && (
+          <div className="projects__modal" role="dialog" aria-modal="true" onClick={() => setOpen(null)}>
+            <div className="projects__modal-card" onClick={(e) => e.stopPropagation()}>
+              <header className="projects__modal-head">
+                <span className="kicker">{open.category}</span>
+                <h3>{open.title}</h3>
+                <button
+                  type="button"
+                  className="projects__modal-close"
+                  onClick={() => setOpen(null)}
+                  aria-label="Cerrar"
+                >
+                  <Icon name="times" size={18} />
+                </button>
+              </header>
+
+              <p className="certs__modal-issuer">{open.issuing_organization}</p>
+
+              <div className="certs__modal-info">
+                <div>
+                  <span className="about__sub">{t.modal.date}</span>
+                  <p>{formatDate(open.date_issued, lang)}</p>
                 </div>
-                
-                <div className="modal-skills">
-                  <h4>Habilidades Validadas</h4>
-                  <div className="skills-grid">
-                    {selectedCertificate.skills && selectedCertificate.skills.map((skill, index) => (
-                      <span 
-                        key={index} 
-                        className="skill-tag"
-                        style={{ '--category-color': getCategoryColor(selectedCertificate.category) }}
-                      >
-                        {skill}
-                      </span>
+                <div>
+                  <span className="about__sub">{t.modal.credential}</span>
+                  <p>{open.credential_id}</p>
+                </div>
+                {open.duration && (
+                  <div>
+                    <span className="about__sub">{t.modal.duration}</span>
+                    <p>{open.duration}</p>
+                  </div>
+                )}
+              </div>
+
+              {open.skills?.length > 0 && (
+                <section className="projects__modal-section">
+                  <h4 className="about__sub">{t.modal.skills}</h4>
+                  <ul className="projects__tags projects__tags--full">
+                    {open.skills.map((s) => (
+                      <li key={s} className="projects__tag">{s}</li>
                     ))}
-                  </div>
-                </div>
-                
-                <div className="modal-actions">
-                  <button 
+                  </ul>
+                </section>
+              )}
+
+              <footer className="projects__modal-actions">
+                {getVerificationUrl(open) && (
+                  <a
+                    href={getVerificationUrl(open)}
                     className="btn btn-primary"
-                    onClick={() => {
-                      const verificationUrl = getVerificationUrl(selectedCertificate);
-                      if (verificationUrl) {
-                        window.open(verificationUrl, '_blank');
-                      } else {
-                        alert('URL de verificación no disponible para este certificado. Por favor, contacta directamente con la institución emisora.');
-                      }
-                    }}
-                    title="Abrir página de verificación en una nueva pestaña"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
-                    <Icon name="external-link" />
-                    Verificar Credencial
-                  </button>
-                  <button 
+                    <Icon name="external-link" size={16} />
+                    {t.modal.verify}
+                  </a>
+                )}
+                {CERT_FILES[open.title] && (
+                  <button
+                    type="button"
                     className="btn btn-secondary"
-                    onClick={() => {
-                      const filename = getCertificateFilename(
-                        selectedCertificate.title, 
-                        selectedCertificate.issuing_organization, 
-                        selectedCertificate.date_issued
-                      );
-                      
-                      if (filename) {
-                        // Crear enlace de descarga real
-                        const link = document.createElement('a');
-                        link.href = `./certificates/${filename}`;
-                        link.download = filename;
-                        link.style.display = 'none';
-                        
-                        // Agregar al DOM, hacer clic, y remover
-                        document.body.appendChild(link);
-                        link.click();
-                        document.body.removeChild(link);
-                      } else {
-                        alert(`Certificado no disponible para descarga.\nTítulo: ${selectedCertificate.title}`);
-                      }
-                    }}
+                    onClick={() => downloadFile(open.title)}
                   >
-                    <Icon name="download" />
-                    Descargar Certificado
+                    <Icon name="download" size={16} />
+                    {t.modal.downloadPdf}
                   </button>
-                </div>
-              </div>
+                )}
+              </footer>
             </div>
           </div>
         )}
 
-        {/* Call to Action */}
-        <div className="certificates-cta animate-fade-in-up">
-          <div className="cta-content">
-            <h3>¿Interesado en mi Desarrollo Profesional?</h3>
-            <p>Siempre estoy aprendiendo nuevas tecnologías y obteniendo certificaciones relevantes para mantenerme actualizado en el campo de la IA y Data Science.</p>
-            <div className="cta-actions">
-              <button 
-                className="btn btn-primary"
-                onClick={() => {
-                  const contact = document.querySelector('#contact');
-                  if (contact) contact.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                <Icon name="envelope" />
-                Contactarme
-              </button>
-              <button 
-                className="btn btn-secondary"
-                onClick={() => {
-                  // Crear elemento de descarga para el CV completo
-                  const link = document.createElement('a');
-                  link.href = './certificates/CV_Completo.pdf';
-                  link.download = 'CV_Completo.pdf';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
-              >
-                <Icon name="download" />
-                Descargar CV Completo
-              </button>
-            </div>
+        <div className="certs__cta reveal">
+          <div>
+            <h3>{t.ctaTitle}</h3>
+            <p>{t.ctaText}</p>
+          </div>
+          <div className="certs__cta-actions">
+            <button type="button" className="btn btn-primary" onClick={scrollToContact}>
+              <Icon name="envelope" size={16} />
+              {t.ctaContact}
+            </button>
+            <a
+              href="./certificates/CV_Completo.pdf"
+              download="CV_Completo.pdf"
+              className="btn btn-secondary"
+            >
+              <Icon name="download" size={16} />
+              {t.ctaCv}
+            </a>
           </div>
         </div>
       </div>

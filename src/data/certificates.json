@@ -1,295 +1,497 @@
 [
-    {
-        "title": "Monitoring Machine Learning in Python",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-10-24",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["ML Monitoring", "Python", "Data Drift", "Model Performance"],
-        "icon": "chart-line",
-        "category": "AI/ML",
-        "duration": "3 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/80819dd3fcf591ff441cbc56acb5d8f03459ad85"
-    },
-    {
-        "title": "Monitoring Machine Learning Concepts",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-09-11",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["ML Monitoring", "Concepts", "Model Drift", "Performance Metrics"],
-        "icon": "lightbulb",
-        "category": "AI/ML",
-        "duration": "2 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/194d6b6e4d759951c43e99af19cdc4016ffeeedf"
-    },
-    {
-        "title": "AWS Academy Graduate - Cloud Foundations",
-        "issuing_organization": "AWS Academy",
-        "date_issued": "2025-10-08",
-        "credential_id": "Credly Badge",
-        "skills": ["AWS", "Cloud Computing", "Cloud Foundations", "Cloud Security"],
-        "icon": "cloud",
-        "category": "Cloud/DevOps",
-        "duration": "20 horas",
-        "verification_url": "https://www.credly.com/go/LwmROv6W"
-    },
-    {
-        "title": "CI/CD for Machine Learning",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-12-22",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["CI/CD", "Machine Learning", "DevOps", "Automation", "MLOps"],
-        "icon": "sync",
-        "category": "Cloud/DevOps",
-        "duration": "5 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/09f5be6735341038f6d7aafe0ae367440cd70927"
-    },
-    {
-        "title": "Full Stack Open",
-        "issuing_organization": "University of Helsinki & Houston Inc.",
-        "date_issued": "2025",
-        "credential_id": "Certificate of Completion",
-        "skills": [
-            "Full Stack Development",
-            "JavaScript",
-            "React",
-            "Node.js",
-            "Web Development",
-            "Frontend Development",
-            "Backend Development"
-        ],
-        "icon": "layer-group",
-        "category": "Programming",
-        "verification_url": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/965f1cd80ccc38ccb9db3430f9ba540d"
-    },
-    {
-        "title": "Machine Learning Engineer",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-12-22",
-        "credential_id": "DataCamp Track Certificate",
-        "skills": ["Machine Learning", "Python", "Data Science", "Model Deployment", "Feature Engineering"],
-        "icon": "user-cog",
-        "category": "AI/ML",
-        "duration": "43 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/track/ede667d27ff9ec2a7ab05884f6919344e27ef135"
-    },
-    {
-        "title": "Introduction to Docker",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-11-10",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["Docker", "Containers", "DevOps", "Virtualization"],
-        "icon": "docker",
-        "category": "Cloud/DevOps",
-        "duration": "4 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/9ae89aded646bc9ca12d03669d7b4e50fde44638"
-    },
-    {
-        "title": "Introduction to Data Versioning with DVC",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-09-01",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["DVC", "Data Versioning", "MLOps", "Git"],
-        "icon": "code-branch",
-        "category": "Cloud/DevOps",
-        "duration": "3 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/8861aafb2b95058f468d622e7826cb4c620ed02c"
-    },
-    {
-        "title": "Introduction to Shell",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-04-21",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["Shell", "Command Line", "Terminal", "Linux"],
-        "icon": "terminal",
-        "category": "Programming",
-        "duration": "4 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/bc532b34f79a918be2869ca821ef9875bd256a90"
-    },
-    {
-        "title": "MLOps Concepts",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-04-20",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["MLOps", "Machine Learning Operations", "DevOps", "Model Deployment"],
-        "icon": "cogs",
-        "category": "AI/ML",
-        "duration": "2 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/eabb3349305a06308f13211e89d8efd55e5fe7f1"
-    },
-    {
-        "title": "MLOps Deployment and Life Cycling",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-05-28",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["MLOps", "Model Deployment", "Life Cycle Management", "Production ML"],
-        "icon": "sync",
-        "category": "AI/ML",
-        "duration": "4 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/fa42cddb73f42700de285c3d65d965021844784e"
-    },
-    {
-        "title": "Supervised Learning with scikit-learn",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-04-19",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["Scikit-learn", "Supervised Learning", "Python", "Machine Learning"],
-        "icon": "brain",
-        "category": "AI/ML",
-        "duration": "4 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/ccb0187acd0937b4caf7639f117c76686cd2bf81"
-    },
-    {
-        "title": "Cómo resolver problemas y tomar decisiones con eficacia",
-        "issuing_organization": "University of California, Irvine - Coursera",
-        "date_issued": "2025-01-02",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Problem Solving", "Decision Making", "Critical Thinking", "Leadership"],
-        "icon": "lightbulb",
-        "category": "Soft Skills",
-        "instructor": "Rob Stone, PMP, M.Ed.",
-        "verification_url": "https://coursera.org/share/2b6443fd1aa45ac96504e4e07a482c58"
-    },
-    {
-        "title": "Generative AI: Introduction and Applications",
-        "issuing_organization": "IBM - Coursera",
-        "date_issued": "2024-12-30",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Generative AI", "Artificial Intelligence", "AI Applications", "IBM Watson"],
-        "icon": "brain",
-        "category": "AI/ML",
-        "instructor": "Gabal, Skills Network",
-        "verification_url": "https://coursera.org/share/a5771e5fb137e1a24cbadfdf625a40cb"
-    },
-    {
-        "title": "Introduction to Artificial Intelligence (AI)",
-        "issuing_organization": "IBM - Coursera",
-        "date_issued": "2024-12-29",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Artificial Intelligence", "Machine Learning", "AI Fundamentals", "IBM Watson"],
-        "icon": "brain",
-        "category": "AI/ML",
-        "instructor": "Rav Ahuja, Global Program Director, Skills Network",
-        "verification_url": "https://coursera.org/share/ae805ea8c44724a07b07b2cb16fa3463"
-    },
-    {
-        "title": "Introduction to Data Science in Python",
-        "issuing_organization": "University of Michigan - Coursera",
-        "date_issued": "2023-09-27",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Python", "Data Science", "Pandas", "NumPy", "Data Analysis"],
-        "icon": "chart-line",
-        "category": "Data Science",
-        "instructor": "Christopher Brooks, Associate Professor of Information",
-        "verification_url": "https://coursera.org/share/39ad918537ac3fff2e7e371f4785dc43"
-    },
-    {
-        "title": "Mathematics for Machine Learning: Linear Algebra",
-        "issuing_organization": "Imperial College London - Coursera",
-        "date_issued": "2023-05-27",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Linear Algebra", "Mathematics", "Machine Learning", "Vectors", "Matrices"],
-        "icon": "calculator",
-        "category": "AI/ML",
-        "instructor": "David Dye, Samuel J Cooper, A. Freddie Page",
-        "verification_url": "https://coursera.org/share/a6bca58e38296bf77c21cd2c9d955f21"
-    },
-    {
-        "title": "Programming for Everybody (Getting Started with Python)",
-        "issuing_organization": "University of Michigan - Coursera",
-        "date_issued": "2022-10-10",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Python", "Programming Fundamentals", "Data Types", "Control Structures"],
-        "icon": "code",
-        "category": "Programming",
-        "instructor": "Charles Severance, Clinical Professor",
-        "verification_url": "https://coursera.org/share/ddcbc4bae90e41b7d80ae1e3045927f3"
-    },
-    {
-        "title": "Python Data Structures",
-        "issuing_organization": "University of Michigan - Coursera",
-        "date_issued": "2022-12-10",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Python", "Data Structures", "Lists", "Dictionaries", "Tuples"],
-        "icon": "code",
-        "category": "Programming",
-        "instructor": "Charles Severance, Clinical Professor",
-        "verification_url": "https://coursera.org/share/9a19e261078e27ebe295ad3cd8ed0942"
-    },
-    {
-        "title": "Generative AI: Prompt Engineering Basics",
-        "issuing_organization": "IBM - Coursera",
-        "date_issued": "2024-12-31",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Prompt Engineering", "Generative AI", "AI Prompting", "ChatGPT"],
-        "icon": "comments",
-        "category": "AI/ML",
-        "instructor": "Antonio Cangiano, Rav Ahuja",
-        "verification_url": "https://coursera.org/share/7e2bd8517262a368b44f141c909d176f"
-    },
-    {
-        "title": "Introducción a la Nube",
-        "issuing_organization": "Platzi",
-        "date_issued": "2025-04-12",
-        "credential_id": "Platzi Certificate",
-        "skills": ["Cloud Computing", "AWS", "Azure", "Google Cloud", "Infraestructura"],
-        "icon": "cloud",
-        "category": "Cloud/DevOps",
-        "duration": "20 horas",
-        "verification_url": "https://platzi.com/p/mateobui/"
-    },
-    {
-        "title": "Artificial Intelligence Essentials V2",
-        "issuing_organization": "IBM - Coursera",
-        "date_issued": "2024-12-29",
-        "credential_id": "Coursera Certificate",
-        "skills": ["Artificial Intelligence", "AI Fundamentals", "Machine Learning", "Deep Learning"],
-        "icon": "brain",
-        "category": "AI/ML",
-        "verification_url": "https://www.credly.com/badges/334b1fe5-740a-459a-9dbf-493063bf2fa2/public_url"
-    },
-    {
-        "title": "Bootcamp de Inteligencia Artificial Nivel Intermedio",
-        "issuing_organization": "Ministerio TIC Colombia - IU Training",
-        "date_issued": "2025-08-01",
-        "credential_id": "MinTIC Certificate",
-        "skills": ["Inteligencia Artificial", "Machine Learning", "Deep Learning", "Python", "TensorFlow"],
-        "icon": "graduation-cap",
-        "category": "AI/ML",
-        "duration": "159 horas",
-        "document_id": "1017922057",
-        "verification_url": "https://auco.ai/verify/?code=63L6FU8XV2"
-    },
-    {
-        "title": "ETL and ELT in Python",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-06-20",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["ETL", "ELT", "Python", "Data Pipeline", "Data Engineering"],
-        "icon": "database",
-        "category": "Data Science",
-        "duration": "4 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/4ef611017e520676279210615619b62066427280"
-    },
-    {
-        "title": "Introduction to MLflow",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-06-08",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["MLflow", "Machine Learning", "Model Tracking", "Experiment Management"],
-        "icon": "chart-bar",
-        "category": "AI/ML",
-        "duration": "4 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/d16b8b4a25a072346797e75f2df923520e5f0af0"
-    },
-    {
-        "title": "Introduction to Data Quality with Great Expectations",
-        "issuing_organization": "DataCamp",
-        "date_issued": "2025-08-19",
-        "credential_id": "DataCamp Certificate",
-        "skills": ["Data Quality", "Great Expectations", "Data Validation", "Testing", "Python"],
-        "icon": "database",
-        "category": "Data Science",
-        "duration": "4 horas",
-        "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/67238300eb1bf465d5e901d92d46ee1b87013627"
-    }
+  {
+    "title": "Introduction to Model Context Protocol",
+    "issuing_organization": "Anthropic Education",
+    "date_issued": "2026-06-13",
+    "credential_id": "Anthropic · 8oho27p2qb35",
+    "skills": [
+      "MCP",
+      "Tool Connectors",
+      "Claude Integrations",
+      "Open Standards"
+    ],
+    "icon": "plug",
+    "category": "AI/ML",
+    "duration": "3 horas",
+    "verification_url": "https://verify.skilljar.com/c/8oho27p2qb35",
+    "featured": true
+  },
+  {
+    "title": "Introduction to agent skills",
+    "issuing_organization": "Anthropic Education",
+    "date_issued": "2026-06-07",
+    "credential_id": "Anthropic · 55ot2n3m6kfc",
+    "skills": [
+      "Agent Skills",
+      "Composability",
+      "Claude Agents",
+      "Tool Use"
+    ],
+    "icon": "robot",
+    "category": "AI/ML",
+    "duration": "3 horas",
+    "verification_url": "https://verify.skilljar.com/c/55ot2n3m6kfc",
+    "featured": true
+  },
+  {
+    "title": "Claude Code in Action",
+    "issuing_organization": "Anthropic Education",
+    "date_issued": "2026-06-13",
+    "credential_id": "Anthropic · dv48uyxv3joc",
+    "skills": [
+      "Claude Code",
+      "AI-assisted Development",
+      "Workflows",
+      "Productivity"
+    ],
+    "icon": "terminal",
+    "category": "AI/ML",
+    "duration": "5 horas",
+    "verification_url": "https://verify.skilljar.com/c/dv48uyxv3joc",
+    "featured": true
+  },
+  {
+    "title": "Building with the Claude API",
+    "issuing_organization": "Anthropic Education",
+    "date_issued": "2026-06-11",
+    "credential_id": "Anthropic · cgafogkxi5qa",
+    "skills": [
+      "Claude API",
+      "Prompt Design",
+      "Tool Use",
+      "Production LLM"
+    ],
+    "icon": "code",
+    "category": "AI/ML",
+    "duration": "6 horas",
+    "verification_url": "https://verify.skilljar.com/c/cgafogkxi5qa",
+    "featured": true
+  },
+  {
+    "title": "Monitoring Machine Learning in Python",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-10-24",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "ML Monitoring",
+      "Python",
+      "Data Drift",
+      "Model Performance"
+    ],
+    "icon": "chart-line",
+    "category": "AI/ML",
+    "duration": "3 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/80819dd3fcf591ff441cbc56acb5d8f03459ad85"
+  },
+  {
+    "title": "Monitoring Machine Learning Concepts",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-09-11",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "ML Monitoring",
+      "Concepts",
+      "Model Drift",
+      "Performance Metrics"
+    ],
+    "icon": "lightbulb",
+    "category": "AI/ML",
+    "duration": "2 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/194d6b6e4d759951c43e99af19cdc4016ffeeedf"
+  },
+  {
+    "title": "AWS Academy Graduate - Cloud Foundations",
+    "issuing_organization": "AWS Academy",
+    "date_issued": "2025-10-08",
+    "credential_id": "Credly Badge",
+    "skills": [
+      "AWS",
+      "Cloud Computing",
+      "Cloud Foundations",
+      "Cloud Security"
+    ],
+    "icon": "cloud",
+    "category": "Cloud/DevOps",
+    "duration": "20 horas",
+    "verification_url": "https://www.credly.com/go/LwmROv6W"
+  },
+  {
+    "title": "CI/CD for Machine Learning",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-12-22",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "CI/CD",
+      "Machine Learning",
+      "DevOps",
+      "Automation",
+      "MLOps"
+    ],
+    "icon": "sync",
+    "category": "Cloud/DevOps",
+    "duration": "5 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/09f5be6735341038f6d7aafe0ae367440cd70927"
+  },
+  {
+    "title": "Full Stack Open",
+    "issuing_organization": "University of Helsinki & Houston Inc.",
+    "date_issued": "2025",
+    "credential_id": "Certificate of Completion",
+    "skills": [
+      "Full Stack Development",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Web Development",
+      "Frontend Development",
+      "Backend Development"
+    ],
+    "icon": "layer-group",
+    "category": "Programming",
+    "verification_url": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/965f1cd80ccc38ccb9db3430f9ba540d"
+  },
+  {
+    "title": "Machine Learning Engineer",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-12-22",
+    "credential_id": "DataCamp Track Certificate",
+    "skills": [
+      "Machine Learning",
+      "Python",
+      "Data Science",
+      "Model Deployment",
+      "Feature Engineering"
+    ],
+    "icon": "user-cog",
+    "category": "AI/ML",
+    "duration": "43 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/track/ede667d27ff9ec2a7ab05884f6919344e27ef135"
+  },
+  {
+    "title": "Introduction to Docker",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-11-10",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "Docker",
+      "Containers",
+      "DevOps",
+      "Virtualization"
+    ],
+    "icon": "docker",
+    "category": "Cloud/DevOps",
+    "duration": "4 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/9ae89aded646bc9ca12d03669d7b4e50fde44638"
+  },
+  {
+    "title": "Introduction to Data Versioning with DVC",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-09-01",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "DVC",
+      "Data Versioning",
+      "MLOps",
+      "Git"
+    ],
+    "icon": "code-branch",
+    "category": "Cloud/DevOps",
+    "duration": "3 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/8861aafb2b95058f468d622e7826cb4c620ed02c"
+  },
+  {
+    "title": "Introduction to Shell",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-04-21",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "Shell",
+      "Command Line",
+      "Terminal",
+      "Linux"
+    ],
+    "icon": "terminal",
+    "category": "Programming",
+    "duration": "4 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/bc532b34f79a918be2869ca821ef9875bd256a90"
+  },
+  {
+    "title": "MLOps Concepts",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-04-20",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "MLOps",
+      "Machine Learning Operations",
+      "DevOps",
+      "Model Deployment"
+    ],
+    "icon": "cogs",
+    "category": "AI/ML",
+    "duration": "2 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/eabb3349305a06308f13211e89d8efd55e5fe7f1"
+  },
+  {
+    "title": "MLOps Deployment and Life Cycling",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-05-28",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "MLOps",
+      "Model Deployment",
+      "Life Cycle Management",
+      "Production ML"
+    ],
+    "icon": "sync",
+    "category": "AI/ML",
+    "duration": "4 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/fa42cddb73f42700de285c3d65d965021844784e"
+  },
+  {
+    "title": "Supervised Learning with scikit-learn",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-04-19",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "Scikit-learn",
+      "Supervised Learning",
+      "Python",
+      "Machine Learning"
+    ],
+    "icon": "brain",
+    "category": "AI/ML",
+    "duration": "4 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/ccb0187acd0937b4caf7639f117c76686cd2bf81"
+  },
+  {
+    "title": "Cómo resolver problemas y tomar decisiones con eficacia",
+    "issuing_organization": "University of California, Irvine - Coursera",
+    "date_issued": "2025-01-02",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Problem Solving",
+      "Decision Making",
+      "Critical Thinking",
+      "Leadership"
+    ],
+    "icon": "lightbulb",
+    "category": "Soft Skills",
+    "instructor": "Rob Stone, PMP, M.Ed.",
+    "verification_url": "https://coursera.org/share/2b6443fd1aa45ac96504e4e07a482c58"
+  },
+  {
+    "title": "Generative AI: Introduction and Applications",
+    "issuing_organization": "IBM - Coursera",
+    "date_issued": "2024-12-30",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Generative AI",
+      "Artificial Intelligence",
+      "AI Applications",
+      "IBM Watson"
+    ],
+    "icon": "brain",
+    "category": "AI/ML",
+    "instructor": "Gabal, Skills Network",
+    "verification_url": "https://coursera.org/share/a5771e5fb137e1a24cbadfdf625a40cb"
+  },
+  {
+    "title": "Introduction to Artificial Intelligence (AI)",
+    "issuing_organization": "IBM - Coursera",
+    "date_issued": "2024-12-29",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "AI Fundamentals",
+      "IBM Watson"
+    ],
+    "icon": "brain",
+    "category": "AI/ML",
+    "instructor": "Rav Ahuja, Global Program Director, Skills Network",
+    "verification_url": "https://coursera.org/share/ae805ea8c44724a07b07b2cb16fa3463"
+  },
+  {
+    "title": "Introduction to Data Science in Python",
+    "issuing_organization": "University of Michigan - Coursera",
+    "date_issued": "2023-09-27",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Python",
+      "Data Science",
+      "Pandas",
+      "NumPy",
+      "Data Analysis"
+    ],
+    "icon": "chart-line",
+    "category": "Data Science",
+    "instructor": "Christopher Brooks, Associate Professor of Information",
+    "verification_url": "https://coursera.org/share/39ad918537ac3fff2e7e371f4785dc43"
+  },
+  {
+    "title": "Mathematics for Machine Learning: Linear Algebra",
+    "issuing_organization": "Imperial College London - Coursera",
+    "date_issued": "2023-05-27",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Linear Algebra",
+      "Mathematics",
+      "Machine Learning",
+      "Vectors",
+      "Matrices"
+    ],
+    "icon": "calculator",
+    "category": "AI/ML",
+    "instructor": "David Dye, Samuel J Cooper, A. Freddie Page",
+    "verification_url": "https://coursera.org/share/a6bca58e38296bf77c21cd2c9d955f21"
+  },
+  {
+    "title": "Programming for Everybody (Getting Started with Python)",
+    "issuing_organization": "University of Michigan - Coursera",
+    "date_issued": "2022-10-10",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Python",
+      "Programming Fundamentals",
+      "Data Types",
+      "Control Structures"
+    ],
+    "icon": "code",
+    "category": "Programming",
+    "instructor": "Charles Severance, Clinical Professor",
+    "verification_url": "https://coursera.org/share/ddcbc4bae90e41b7d80ae1e3045927f3"
+  },
+  {
+    "title": "Python Data Structures",
+    "issuing_organization": "University of Michigan - Coursera",
+    "date_issued": "2022-12-10",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Python",
+      "Data Structures",
+      "Lists",
+      "Dictionaries",
+      "Tuples"
+    ],
+    "icon": "code",
+    "category": "Programming",
+    "instructor": "Charles Severance, Clinical Professor",
+    "verification_url": "https://coursera.org/share/9a19e261078e27ebe295ad3cd8ed0942"
+  },
+  {
+    "title": "Generative AI: Prompt Engineering Basics",
+    "issuing_organization": "IBM - Coursera",
+    "date_issued": "2024-12-31",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Prompt Engineering",
+      "Generative AI",
+      "AI Prompting",
+      "ChatGPT"
+    ],
+    "icon": "comments",
+    "category": "AI/ML",
+    "instructor": "Antonio Cangiano, Rav Ahuja",
+    "verification_url": "https://coursera.org/share/7e2bd8517262a368b44f141c909d176f"
+  },
+  {
+    "title": "Introducción a la Nube",
+    "issuing_organization": "Platzi",
+    "date_issued": "2025-04-12",
+    "credential_id": "Platzi Certificate",
+    "skills": [
+      "Cloud Computing",
+      "AWS",
+      "Azure",
+      "Google Cloud",
+      "Infraestructura"
+    ],
+    "icon": "cloud",
+    "category": "Cloud/DevOps",
+    "duration": "20 horas",
+    "verification_url": "https://platzi.com/p/mateobui/"
+  },
+  {
+    "title": "Artificial Intelligence Essentials V2",
+    "issuing_organization": "IBM - Coursera",
+    "date_issued": "2024-12-29",
+    "credential_id": "Coursera Certificate",
+    "skills": [
+      "Artificial Intelligence",
+      "AI Fundamentals",
+      "Machine Learning",
+      "Deep Learning"
+    ],
+    "icon": "brain",
+    "category": "AI/ML",
+    "verification_url": "https://www.credly.com/badges/334b1fe5-740a-459a-9dbf-493063bf2fa2/public_url"
+  },
+  {
+    "title": "Bootcamp de Inteligencia Artificial Nivel Intermedio",
+    "issuing_organization": "Ministerio TIC Colombia - IU Training",
+    "date_issued": "2025-08-01",
+    "credential_id": "MinTIC Certificate",
+    "skills": [
+      "Inteligencia Artificial",
+      "Machine Learning",
+      "Deep Learning",
+      "Python",
+      "TensorFlow"
+    ],
+    "icon": "graduation-cap",
+    "category": "AI/ML",
+    "duration": "159 horas",
+    "document_id": "1017922057",
+    "verification_url": "https://auco.ai/verify/?code=63L6FU8XV2"
+  },
+  {
+    "title": "ETL and ELT in Python",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-06-20",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "ETL",
+      "ELT",
+      "Python",
+      "Data Pipeline",
+      "Data Engineering"
+    ],
+    "icon": "database",
+    "category": "Data Science",
+    "duration": "4 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/4ef611017e520676279210615619b62066427280"
+  },
+  {
+    "title": "Introduction to MLflow",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-06-08",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "MLflow",
+      "Machine Learning",
+      "Model Tracking",
+      "Experiment Management"
+    ],
+    "icon": "chart-bar",
+    "category": "AI/ML",
+    "duration": "4 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/d16b8b4a25a072346797e75f2df923520e5f0af0"
+  },
+  {
+    "title": "Introduction to Data Quality with Great Expectations",
+    "issuing_organization": "DataCamp",
+    "date_issued": "2025-08-19",
+    "credential_id": "DataCamp Certificate",
+    "skills": [
+      "Data Quality",
+      "Great Expectations",
+      "Data Validation",
+      "Testing",
+      "Python"
+    ],
+    "icon": "database",
+    "category": "Data Science",
+    "duration": "4 horas",
+    "verification_url": "https://www.datacamp.com/completed/statement-of-accomplishment/course/67238300eb1bf465d5e901d92d46ee1b87013627"
+  }
 ]

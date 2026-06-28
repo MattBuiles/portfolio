@@ -1,48 +1,116 @@
 [
     {
-        "jobTitle": "Estudiante de Ingeniería de Sistemas e Informática",
-        "company": "Universidad Nacional de Colombia - Medellín",
-        "duration": "2022 - Presente",
+        "jobTitle": { "en": "AI Engineer", "es": "AI Engineer" },
+        "company": { "en": "ReshapeX (Reshape Automation)", "es": "ReshapeX (Reshape Automation)" },
+        "duration": { "en": "January 2026 - Present", "es": "Enero 2026 - Presente" },
         "responsibilities": [
-            "Enfoque en Inteligencia Artificial, Machine Learning y Data Science.",
-            "Desarrollo de proyectos académicos utilizando Python, R y frameworks de ML.",
-            "Participación en proyectos de investigación y desarrollo tecnológico."
+            {
+                "en": "Building the knowledge grounding layer for industrial AI: ingesting ERP, PDFs and product documentation into verified knowledge graphs.",
+                "es": "Construcción de la capa de knowledge grounding para AI industrial: ingestión de ERP, PDFs y documentación de producto en grafos de conocimiento verificados."
+            },
+            {
+                "en": "Building MCP (Model Context Protocol) servers that expose catalog, compatibility rules and verified data to our own industrial agents and all kinds of client integrations.",
+                "es": "Desarrollo de servidores MCP (Model Context Protocol) que exponen catálogo, reglas de compatibilidad y datos verificados a nuestros propios agents industriales y a todo tipo de integraciones cliente."
+            },
+            {
+                "en": "Designing tool harnesses that gate LLM responses and route uncertain queries to experts based on confidence thresholds.",
+                "es": "Diseño de tool harnesses que gate-an respuestas de LLM y enrutan consultas inciertas a expertos según umbrales de confianza."
+            },
+            {
+                "en": "Implementing automated evals to sustain a ≥99.9% pass rate on product queries.",
+                "es": "Implementación de evals automatizados para sostener un pass rate ≥99.9% en queries de producto."
+            },
+            {
+                "en": "Agent builder: building custom agents for RFP, quoting and technical support for industrial distributors.",
+                "es": "Agent builder: construcción de agents personalizados de RFP, cotización y soporte técnico para distribuidores industriales."
+            }
+        ],
+        "type": "development",
+        "icon": "robot"
+    },
+    {
+        "jobTitle": { "en": "Systems & Computing Engineering Student", "es": "Estudiante de Ingeniería de Sistemas e Informática" },
+        "company": { "en": "Universidad Nacional de Colombia - Medellín", "es": "Universidad Nacional de Colombia - Medellín" },
+        "duration": { "en": "2022 - Present", "es": "2022 - Presente" },
+        "responsibilities": [
+            {
+                "en": "Focused on Artificial Intelligence, Machine Learning and Data Science.",
+                "es": "Enfoque en Inteligencia Artificial, Machine Learning y Data Science."
+            },
+            {
+                "en": "Building academic projects with Python, R and ML frameworks.",
+                "es": "Desarrollo de proyectos académicos utilizando Python, R y frameworks de ML."
+            },
+            {
+                "en": "Participating in research projects and technology development.",
+                "es": "Participación en proyectos de investigación y desarrollo tecnológico."
+            }
         ],
         "type": "education",
         "icon": "graduation-cap"
     },
     {
-        "jobTitle": "Colaborador en Desarrollo de Aplicaciones",
-        "company": "Laboratorio de Prospección y Desarrollo de Biomoléculas - Grupo de Investigación de Biología Funcional",
-        "duration": "2024 - Presente",
+        "jobTitle": { "en": "Teaching Assistant - Systems Simulation", "es": "Monitor Académico - Simulación de Sistemas" },
+        "company": { "en": "Universidad Nacional de Colombia - Medellín", "es": "Universidad Nacional de Colombia - Medellín" },
+        "duration": { "en": "2025 - 2026", "es": "2025 - 2026" },
         "responsibilities": [
-            "Apoyo en el desarrollo y refactor de aplicaciones para investigación biológica.",
-            "Implementación de soluciones tecnológicas para análisis de datos biológicos.",
-            "Trabajo interdisciplinario combinando biología y tecnología."
-        ],
-        "type": "research",
-        "icon": "flask"
-    },
-    {
-        "jobTitle": "Monitor Académico - Simulación de Sistemas",
-        "company": "Universidad Nacional de Colombia - Medellín",
-        "duration": "2025 - Presente",
-        "responsibilities": [
-            "Apoyo académico a estudiantes en conceptos de simulación y modelado.",
-            "Desarrollo de materiales didácticos y ejercicios prácticos.",
-            "Facilitación de sesiones de tutoría y resolución de problemas."
+            {
+                "en": "Academic support for students in simulation and modeling concepts.",
+                "es": "Apoyo académico a estudiantes en conceptos de simulación y modelado."
+            },
+            {
+                "en": "Building didactic materials and practical exercises.",
+                "es": "Desarrollo de materiales didácticos y ejercicios prácticos."
+            },
+            {
+                "en": "Running tutoring sessions and problem-solving labs.",
+                "es": "Facilitación de sesiones de tutoría y resolución de problemas."
+            }
         ],
         "type": "teaching",
         "icon": "chalkboard-teacher"
     },
     {
-        "jobTitle": "Desarrollador Full Stack",
-        "company": "Proyectos Independientes",
-        "duration": "2021 - Presente",
+        "jobTitle": { "en": "Application Development Collaborator", "es": "Colaborador en Desarrollo de Aplicaciones" },
+        "company": {
+            "en": "Biomolecule Prospecting and Development Lab - Functional Biology Research Group",
+            "es": "Laboratorio de Prospección y Desarrollo de Biomoléculas - Grupo de Investigación de Biología Funcional"
+        },
+        "duration": { "en": "2024 - 2026", "es": "2024 - 2026" },
         "responsibilities": [
-            "Desarrollo de aplicaciones web utilizando React, Node.js y Python.",
-            "Implementación de modelos de Machine Learning en aplicaciones web.",
-            "Creación de dashboards interactivos para visualización de datos."
+            {
+                "en": "Supporting development and refactoring of biology research applications.",
+                "es": "Apoyo en el desarrollo y refactor de aplicaciones para investigación biológica."
+            },
+            {
+                "en": "Building tech solutions for biological data analysis.",
+                "es": "Implementación de soluciones tecnológicas para análisis de datos biológicos."
+            },
+            {
+                "en": "Interdisciplinary work combining biology and software.",
+                "es": "Trabajo interdisciplinario combinando biología y tecnología."
+            }
+        ],
+        "type": "research",
+        "icon": "flask"
+    },
+    {
+        "jobTitle": { "en": "Full Stack Developer", "es": "Desarrollador Full Stack" },
+        "company": { "en": "Independent projects", "es": "Proyectos Independientes" },
+        "duration": { "en": "2021 - Present", "es": "2021 - Presente" },
+        "responsibilities": [
+            {
+                "en": "Building web applications with React, Node.js and Python.",
+                "es": "Desarrollo de aplicaciones web utilizando React, Node.js y Python."
+            },
+            {
+                "en": "Embedding ML models into web applications.",
+                "es": "Implementación de modelos de Machine Learning en aplicaciones web."
+            },
+            {
+                "en": "Building interactive dashboards for data visualization.",
+                "es": "Creación de dashboards interactivos para visualización de datos."
+            }
         ],
         "type": "development",
         "icon": "code"

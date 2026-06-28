@@ -1,141 +1,89 @@
 import React from 'react';
+import { useLanguage } from '../contexts/LanguageContext';
+import strings from '../i18n/strings';
 import Icon from './Icon';
-import './About-new.css';
+import './About.css';
+
+const INTEREST_ICONS = ['robot', 'brain', 'chart-line', 'project-diagram', 'eye', 'comment', 'flask', 'code'];
+const VALUE_ICONS = ['lightbulb', 'rocket', 'comments', 'fire'];
 
 const About = () => {
-  const personalInfo = [
-    { label: 'Universidad', value: 'Universidad Nacional de Colombia - Medellín', icon: 'university' },
-    { label: 'Carrera', value: 'Ingeniería de Sistemas e Informática', icon: 'graduation-cap' },
-    { label: 'Especialización', value: 'IA, ML y Data Science', icon: 'brain' },
-    { label: 'Ubicación', value: 'Medellín, Colombia', icon: 'map-marker-alt' },
-    { label: 'Email', value: 'matebuilesd@gmail.com', icon: 'envelope' },
-    { label: 'Estado', value: 'Disponible para proyectos', icon: 'check-circle' }
-  ];
+  const { lang } = useLanguage();
+  const t = strings[lang].about;
 
-  const interests = [
-    { name: 'Inteligencia Artificial', icon: 'robot', color: '#667eea' },
-    { name: 'Machine Learning', icon: 'brain', color: '#764ba2' },
-    { name: 'Data Science', icon: 'chart-line', color: '#f093fb' },
-    { name: 'Deep Learning', icon: 'project-diagram', color: '#4facfe' },
-    { name: 'Computer Vision', icon: 'eye', color: '#43e97b' },
-    { name: 'NLP', icon: 'language', color: '#38ef7d' },
-    { name: 'Investigación', icon: 'flask', color: '#ff6b6b' },
-    { name: 'Desarrollo Web', icon: 'code', color: '#feca57' }
-  ];
-
-  const values = [
-    {
-      title: 'Innovación',
-      description: 'Busco constantemente nuevas formas de resolver problemas complejos usando tecnología.',
-      icon: 'lightbulb'
-    },
-    {
-      title: 'Aprendizaje Continuo',
-      description: 'Me mantengo actualizado con las últimas tendencias en IA y tecnología.',
-      icon: 'book-open'
-    },
-    {
-      title: 'Colaboración',
-      description: 'Creo en el poder del trabajo en equipo para lograr resultados excepcionales.',
-      icon: 'users'
-    },
-    {
-      title: 'Impacto Social',
-      description: 'Utilizo la tecnología para crear soluciones que generen un impacto positivo.',
-      icon: 'heart'
-    }
-  ];
+  const scrollToContact = () => {
+    document.querySelector('#contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
 
   return (
     <section id="about" className="section about">
       <div className="container">
-        <h2 className="section-title animate-fade-in-up">Sobre Mí</h2>
-        
-        <div className="about-content">
-          <div className="about-intro animate-fade-in-left">
-            <div className="intro-text">
-              <p className="lead">
-                Soy un estudiante apasionado de <strong>Ingeniería de Sistemas</strong> en la Universidad Nacional de Colombia, 
-                con un enfoque especializado en <strong>Inteligencia Artificial</strong>, <strong>Machine Learning</strong> y 
-                <strong>Data Science</strong>.
-              </p>
-              
-              <p>
-                Mi experiencia incluye participación activa en el <strong>grupo de investigación de Biología Funcional</strong>, 
-                donde he colaborado en el desarrollo de aplicativos innovadores que combinan biología y tecnología. 
-                También he servido como <strong>monitor académico</strong> para la materia de Simulación de Sistemas, 
-                ayudando a otros estudiantes a comprender conceptos complejos.
-              </p>
-              
-              <p>
-                Mi pasión por la tecnología va más allá del aula. Me dedico al <strong>desarrollo full stack</strong> 
-                y disfruto creando soluciones que integren algoritmos de IA con interfaces de usuario intuitivas. 
-                Busco constantemente oportunidades para aplicar mis conocimientos en proyectos que generen un impacto real.
-              </p>
-            </div>
-            
-            <div className="personal-info">
-              <h3>Información Personal</h3>
-              <div className="info-grid">
-                {personalInfo.map((info, index) => (
-                  <div key={index} className="info-item">
-                    <Icon name={info.icon} className="info-icon" />
-                    <div className="info-content">
-                      <span className="info-label">{info.label}</span>
-                      <span className="info-value">{info.value}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          
-          <div className="about-highlights animate-fade-in-right">
-            <div className="interests-section">
-              <h3>Áreas de Interés</h3>
-              <div className="interests-grid">
-                {interests.map((interest, index) => (
-                  <div 
-                    key={index} 
-                    className="interest-item"
-                    style={{ '--accent-color': interest.color }}
-                  >
-                    <Icon name={interest.icon} className="interest-icon" />
-                    <span>{interest.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div className="values-section">
-              <h3>Mis Valores</h3>
-              <div className="values-grid">
-                {values.map((value, index) => (
-                  <div key={index} className="value-item">
-                    <div className="value-icon">
-                      <Icon name={value.icon} />
-                    </div>
-                    <div className="value-content">
-                      <h4>{value.title}</h4>
-                      <p>{value.description}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+        <header className="section-header about__header reveal">
+          <span className="section-num">{t.sectionNum}</span>
+          <span className="kicker">{t.kicker}</span>
+          <h2>
+            {t.titleStart} <em className="about__h-em">{t.titleEm}</em>.
+          </h2>
+          <p className="lede">{t.lede}</p>
+        </header>
+
+        <div className="about__grid">
+          <article className="about__story reveal">
+            {t.paragraphs.map((p, i) => (
+              <p key={i} dangerouslySetInnerHTML={{ __html: p }} />
+            ))}
+          </article>
+
+          <aside className="about__info reveal reveal-delay-1">
+            <h3 className="about__sub">{t.infoTitle}</h3>
+            <dl className="about__info-list">
+              {t.info.map((info) => (
+                <div key={info.label} className="about__info-row">
+                  <dt>{info.label}</dt>
+                  <dd>{info.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </aside>
         </div>
-        
-        <div className="about-cta animate-fade-in-up">
-          <p className="cta-text">
-            ¿Interesado en colaborar en proyectos de IA o Data Science?
-          </p>
-          <button className="btn btn-primary" onClick={() => {
-            const contact = document.querySelector('#contact');
-            if (contact) contact.scrollIntoView({ behavior: 'smooth' });
-          }}>
-            <Icon name="paper-plane" />
-            ¡Hablemos!
+
+        <div className="about__lower">
+          <section className="about__interests reveal">
+            <h3 className="about__sub">{t.interestsTitle}</h3>
+            <ul className="about__interests-list">
+              {t.interests.map((name, i) => (
+                <li key={name} className="about__interest">
+                  <Icon name={INTEREST_ICONS[i] || 'tag'} size={16} className="about__interest-icon" />
+                  <span>{name}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="about__values reveal reveal-delay-1">
+            <h3 className="about__sub">{t.valuesTitle}</h3>
+            <ol className="about__values-list">
+              {t.values.map((value, i) => (
+                <li key={value.title} className="about__value">
+                  <span className="about__value-num">{String(i + 1).padStart(2, '0')}</span>
+                  <div className="about__value-body">
+                    <div className="about__value-head">
+                      <Icon name={VALUE_ICONS[i] || 'lightbulb'} size={16} className="about__value-icon" />
+                      <h4>{value.title}</h4>
+                    </div>
+                    <p>{value.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        </div>
+
+        <div className="about__cta reveal">
+          <p className="about__cta-text">{t.ctaText}</p>
+          <button type="button" className="btn btn-primary" onClick={scrollToContact}>
+            <Icon name="paper-plane" size={18} />
+            {t.ctaBtn}
           </button>
         </div>
       </div>

@@ -20,6 +20,7 @@
   "homepage": "https://mattbuiles.github.io/portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
+    "lucide-react": "^1.21.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
