@@ -1,101 +1,187 @@
 [
-    {
-        "title": "DinoRAG - Autonomous Multi-Agent RAG for Dinosaurs",
-        "description": "Sistema RAG Autónomo con agentes especializados para responder preguntas sobre dinosaurios usando un corpus de 100+ documentos científicos. Incluye clasificación, recuperación, generación y validación automática con LangChain y Groq.",
-        "demoUrl": "https://mattbuiles-dinorag-autonomous-multi-agent-ui-dinosaurios-xg9fl5.streamlit.app/",
-        "githubUrl": "https://github.com/MattBuiles/DinoRAG-Autonomous-Multi-Agent-RAG-for-Dinosaurs",
-        "technologies": ["Python", "LangChain", "FAISS", "Groq (Llama-3)", "Streamlit", "RAG"],
-        "image": "assets/images/dinorag.png",
-        "category": "AI/ML",
-        "featured": true,
-        "status": "completed"
-    },
-    {
-        "title": "Routine Schemer",
-        "description": "Plataforma Profesional de Planificación Integral de Entrenamientos. Una aplicación web completa para diseñar, estructurar y gestionar programas de entrenamiento, enfocada en profesionales del fitness y atletas serios. Completamente migrado a Supabase: Backend PostgreSQL con autenticación, RLS security, y real-time sync.",
-        "demoUrl": "",
-        "githubUrl": "https://github.com/MattBuiles/routine-schemer",
-        "technologies": ["Next.js 15", "React 19", "TypeScript", "Tailwind CSS 4", "Zustand", "Supabase", "PostgreSQL"],
-        "image": "assets/images/routine-schemer.png",
-        "category": "Web Development",
-        "featured": true,
-        "status": "completed"
-    },
-    {
-        "title": "AI Accounting Agent - Autonomous Business Accounting System",
-        "description": "Intelligent accounting assistant powered by LangGraph autonomous agent with state machine architecture. Implements ReAct pattern for multi-step planning, self-reflection, and automatic error correction. Features autonomous task decomposition, tool orchestration (SQL + semantic search), and persistent memory. Combines FAISS vector database for document retrieval with SQLite for structured data.",
-        "demoUrl": "https://mattbuiles-ia-contable-app-ivkcyc.streamlit.app",
-        "githubUrl": "https://github.com/MattBuiles/IA_Contable",
-        "technologies": ["LangGraph", "Google Gemini 2.5-Flash", "FAISS", "SQLite", "Streamlit", "RAG", "ReAct Pattern"],
-        "image": "assets/images/ai-accounting.png",
-        "category": "AI/ML",
-        "featured": true,
-        "status": "completed"
-    },
-    {
-        "title": "Gym App",
-        "description": "Aplicación móvil integral de fitness desarrollada en Flutter. Incluye seguimiento de rutinas, planes nutricionales, visualización de progreso con gráficos y autenticación segura con Firebase. Cuenta con un dashboard intuitivo y gestión de perfiles.",
-        "demoUrl": "",
-        "githubUrl": "https://github.com/MattBuiles/gym_app",
-        "technologies": ["Flutter", "Dart", "Firebase Auth", "Cloud Firestore", "fl_chart"],
-        "image": "assets/images/gym-app.png",
-        "category": "Mobile Development",
-        "featured": false,
-        "status": "completed"
-    },
-    {
-        "title": "Interactive 3D Protein Visualizer with AI Assistant",
-        "description": "Web-based interactive tool for visualizing and analyzing protein structures in 3D with integrated LangGraph AI agent for assistance and consultation. Features intelligent query answering about protein structures, residue analysis, and molecular properties. Combines traditional molecular visualization (PDB loading, interactive selection, customizable representations) with RAG-powered conversational interface for educational and research support.",
-        "demoUrl": "#",
-        "githubUrl": "#",
-        "technologies": ["LangGraph", "JavaScript (ES6+)", "NGL Viewer", "RAG", "LangChain", "HTML5/CSS3"],
-        "image": "assets/images/protein-visualizer.png",
-        "category": "Data Science",
-        "featured": false,
-        "status": "completed"
-    },
-    {
-        "title": "Tuberculosis Detection with Deep Learning",
-        "description": "AI-assisted diagnostic system classifying chest X-rays for Tuberculosis using Transfer Learning and CNNs. Focus on high sensitivity to minimize false negatives.",
-        "demoUrl": "#",
-        "githubUrl": "https://github.com/MattBuiles/Deteccion_de_Tuberculosis_con_DeepLearning",
-        "technologies": ["PyTorch", "TensorFlow", "MLflow", "ResNet18", "Vision Transformers"],
-        "image": "assets/images/tb-detection.png",
-        "category": "AI/ML",
-        "featured": false,
-        "status": "completed"
-    },
-    {
-        "title": "Medical AI Dashboard - XGBoost Literature Classification",
-        "description": "Dashboard for automatic classification of medical literature into 4 categories using XGBoost. Real-time API, interactive visualizations, 3,565 real samples. 2nd Place National Contest.",
-        "demoUrl": "https://clasificacion-biomedica.vercel.app",
-        "githubUrl": "https://github.com/MattBuiles/ai-data-challenge",
-        "technologies": ["XGBoost", "Flask", "Next.js", "Python", "TypeScript", "Vercel"],
-        "image": "assets/images/medical-dashboard.png",
-        "category": "Data Science",
-        "featured": false,
-        "status": "completed"
-    },
-    {
-        "title": "Catch the Snitch - Quidditch Betting System",
-        "description": "Full-stack web app simulating a betting system for Quidditch matches (Harry Potter-inspired). Real-time simulation, user management, and admin panel.",
-        "demoUrl": "#",
-        "githubUrl": "https://github.com/MattBuiles/centro_apuestas_quidditch",
-        "technologies": ["React 19", "TypeScript", "Node.js", "Express", "SQLite", "WebSockets", "JWT"],
-        "image": "assets/images/quidditch-betting.png",
-        "category": "Web Development",
-        "featured": false,
-        "status": "completed"
-    },
-    {
-        "title": "Quotation Management System",
-        "description": "Web platform for managing quotes, clients, and documents. Supports creation, versioning, and visualization of project/service quotes.",
-        "demoUrl": "https://cotizacionsoftware.onrender.com",
-        "githubUrl": "https://github.com/MattBuiles/CotizacionSoftware",
-        "technologies": ["Flask", "Python", "HTML/CSS", "SQLite", "SQLAlchemy"],
-        "image": "assets/images/quotation-system.png",
-        "category": "Web Development",
-        "featured": false,
-        "status": "completed"
-    }
+  {
+    "title": "PAE Contable — Multi-Agent Colombian Accounting",
+    "description": "Sistema multi-agente para automatizar contabilidad y compliance tributario colombiano. Backend FastAPI con supervisor LangGraph que orquesta agentes (ingest, contador, tributario) sobre un RAG híbrido (BM25 + pgvector BGE-M3 + reranker bge-v2-m3, 107 docs normativos). Genera borradores DIAN F300 (IVA), F350 (Retefuente), F110 (Renta PJ) e ICA municipal con calendario DIAN 2026. Workflows durables vía Inngest (HITL, fan-out, throttling OpenAI). Frontend Next.js 14 + MUI con uploads, trazas de pipeline en español y reportes financieros (Balance General, Estado de Resultados).",
+    "demoUrl": "https://frontend-pae-account-multiagent-sys.vercel.app",
+    "githubUrl": "https://github.com/Juanpa0128j/backend_pae_account_multiagent_system",
+    "githubFrontendUrl": "https://github.com/Juanpa0128j/frontend_pae_account_multiagent_system",
+    "technologies": [
+      "LangGraph",
+      "FastAPI",
+      "Next.js 14",
+      "TypeScript",
+      "Supabase pgvector",
+      "BGE-M3",
+      "Inngest",
+      "TanStack Query",
+      "MUI",
+      "Python"
+    ],
+    "image": "assets/images/pae-contable.png",
+    "category": "AI/ML",
+    "featured": true,
+    "status": "completed"
+  },
+  {
+    "title": "DinoRAG - Autonomous Multi-Agent RAG for Dinosaurs",
+    "description": "Sistema RAG Autónomo con agentes especializados para responder preguntas sobre dinosaurios usando un corpus de 100+ documentos científicos. Incluye clasificación, recuperación, generación y validación automática con LangChain y Groq.",
+    "demoUrl": "https://mattbuiles-dinorag-autonomous-multi-agent-ui-dinosaurios-xg9fl5.streamlit.app/",
+    "githubUrl": "https://github.com/MattBuiles/DinoRAG-Autonomous-Multi-Agent-RAG-for-Dinosaurs",
+    "technologies": [
+      "Python",
+      "LangChain",
+      "FAISS",
+      "Groq (Llama-3)",
+      "Streamlit",
+      "RAG"
+    ],
+    "image": "assets/images/dinorag.png",
+    "category": "AI/ML",
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "title": "Routine Schemer",
+    "description": "Plataforma Profesional de Planificación Integral de Entrenamientos. Una aplicación web completa para diseñar, estructurar y gestionar programas de entrenamiento, enfocada en profesionales del fitness y atletas serios. Completamente migrado a Supabase: Backend PostgreSQL con autenticación, RLS security, y real-time sync.",
+    "demoUrl": "",
+    "githubUrl": "https://github.com/MattBuiles/routine-schemer",
+    "technologies": [
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS 4",
+      "Zustand",
+      "Supabase",
+      "PostgreSQL"
+    ],
+    "image": "assets/images/routine-schemer.png",
+    "category": "Web Development",
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "title": "AI Accounting Agent - Autonomous Business Accounting System",
+    "description": "Intelligent accounting assistant powered by LangGraph autonomous agent with state machine architecture. Implements ReAct pattern for multi-step planning, self-reflection, and automatic error correction. Features autonomous task decomposition, tool orchestration (SQL + semantic search), and persistent memory. Combines FAISS vector database for document retrieval with SQLite for structured data.",
+    "demoUrl": "https://mattbuiles-ia-contable-app-ivkcyc.streamlit.app",
+    "githubUrl": "https://github.com/MattBuiles/IA_Contable",
+    "technologies": [
+      "LangGraph",
+      "Google Gemini 2.5-Flash",
+      "FAISS",
+      "SQLite",
+      "Streamlit",
+      "RAG",
+      "ReAct Pattern"
+    ],
+    "image": "assets/images/ai-accounting.png",
+    "category": "AI/ML",
+    "featured": true,
+    "status": "completed"
+  },
+  {
+    "title": "Gym App",
+    "description": "Aplicación móvil integral de fitness desarrollada en Flutter. Incluye seguimiento de rutinas, planes nutricionales, visualización de progreso con gráficos y autenticación segura con Firebase. Cuenta con un dashboard intuitivo y gestión de perfiles.",
+    "demoUrl": "",
+    "githubUrl": "https://github.com/MattBuiles/gym_app",
+    "technologies": [
+      "Flutter",
+      "Dart",
+      "Firebase Auth",
+      "Cloud Firestore",
+      "fl_chart"
+    ],
+    "image": "assets/images/gym-app.png",
+    "category": "Mobile Development",
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "title": "Interactive 3D Protein Visualizer with AI Assistant",
+    "description": "Web-based interactive tool for visualizing and analyzing protein structures in 3D with integrated LangGraph AI agent for assistance and consultation. Features intelligent query answering about protein structures, residue analysis, and molecular properties. Combines traditional molecular visualization (PDB loading, interactive selection, customizable representations) with RAG-powered conversational interface for educational and research support.",
+    "demoUrl": "#",
+    "githubUrl": "#",
+    "technologies": [
+      "LangGraph",
+      "JavaScript (ES6+)",
+      "NGL Viewer",
+      "RAG",
+      "LangChain",
+      "HTML5/CSS3"
+    ],
+    "image": "assets/images/protein-visualizer.png",
+    "category": "Data Science",
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "title": "Tuberculosis Detection with Deep Learning",
+    "description": "AI-assisted diagnostic system classifying chest X-rays for Tuberculosis using Transfer Learning and CNNs. Focus on high sensitivity to minimize false negatives.",
+    "demoUrl": "#",
+    "githubUrl": "https://github.com/MattBuiles/Deteccion_de_Tuberculosis_con_DeepLearning",
+    "technologies": [
+      "PyTorch",
+      "TensorFlow",
+      "MLflow",
+      "ResNet18",
+      "Vision Transformers"
+    ],
+    "image": "assets/images/tb-detection.png",
+    "category": "AI/ML",
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "title": "Medical AI Dashboard - XGBoost Literature Classification",
+    "description": "Dashboard for automatic classification of medical literature into 4 categories using XGBoost. Real-time API, interactive visualizations, 3,565 real samples. 2nd Place National Contest.",
+    "demoUrl": "https://clasificacion-biomedica.vercel.app",
+    "githubUrl": "https://github.com/MattBuiles/ai-data-challenge",
+    "technologies": [
+      "XGBoost",
+      "Flask",
+      "Next.js",
+      "Python",
+      "TypeScript",
+      "Vercel"
+    ],
+    "image": "assets/images/medical-dashboard.png",
+    "category": "Data Science",
+    "featured": true,
+    "status": "completed"
+  },
+  {
+    "title": "Catch the Snitch - Quidditch Betting System",
+    "description": "Full-stack web app simulating a betting system for Quidditch matches (Harry Potter-inspired). Real-time simulation, user management, and admin panel.",
+    "demoUrl": "#",
+    "githubUrl": "https://github.com/MattBuiles/centro_apuestas_quidditch",
+    "technologies": [
+      "React 19",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "SQLite",
+      "WebSockets",
+      "JWT"
+    ],
+    "image": "assets/images/quidditch-betting.png",
+    "category": "Web Development",
+    "featured": true,
+    "status": "completed"
+  },
+  {
+    "title": "Quotation Management System",
+    "description": "Web platform for managing quotes, clients, and documents. Supports creation, versioning, and visualization of project/service quotes.",
+    "demoUrl": "https://cotizacionsoftware.onrender.com",
+    "githubUrl": "https://github.com/MattBuiles/CotizacionSoftware",
+    "technologies": [
+      "Flask",
+      "Python",
+      "HTML/CSS",
+      "SQLite",
+      "SQLAlchemy"
+    ],
+    "image": "assets/images/quotation-system.png",
+    "category": "Web Development",
+    "featured": false,
+    "status": "completed"
+  }
 ]

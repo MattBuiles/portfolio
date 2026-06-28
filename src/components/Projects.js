@@ -158,7 +158,18 @@ const Projects = () => {
                     rel="noopener noreferrer"
                   >
                     <Icon name="github" size={16} />
-                    {t.modal.code}
+                    {open.githubFrontendUrl ? (lang === 'es' ? 'Backend' : 'Backend') : t.modal.code}
+                  </a>
+                )}
+                {open.githubFrontendUrl && (
+                  <a
+                    href={open.githubFrontendUrl}
+                    className="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="github" size={16} />
+                    Frontend
                   </a>
                 )}
               </footer>
