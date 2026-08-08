@@ -1,6 +1,6 @@
 /* Tokens de marca (strata) + íconos + fuentes extra.
  * main.css / responsive.css se importan al final de page.jsx (después del CSS
  * de cada sección) para replicar el orden de cascada original (webpack app.js). */
-@import "invest-ui/theme.css";
+@import "strata/theme.css";
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Fira+Code:wght@300;400;500;600&display=swap');

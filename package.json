@@ -16,7 +16,7 @@
   "homepage": "https://mattbuiles.github.io/portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
-    "invest-ui": "git+https://github.com/MattBuiles/strata-ui.git#main",
+    "strata": "git+https://github.com/MattBuiles/strata-ui.git#main",
     "lucide-react": "^1.21.0",
     "next": "^15.1.6",
     "react": "^18.3.1",
