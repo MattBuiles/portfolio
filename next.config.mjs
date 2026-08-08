@@ -4,7 +4,7 @@ const nextConfig = {
   basePath: "/portfolio",
   images: { unoptimized: true },
   trailingSlash: true,
-  transpilePackages: ["invest-ui"],
+  transpilePackages: ["strata"],
 };
 
 export default nextConfig;
