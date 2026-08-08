@@ -1,8 +1,5 @@
-// Utilidad para manejar rutas de assets en diferentes entornos
-export const getAssetPath = (path) => {
-  // En producción, GitHub Pages sirve desde /portfolio/
-  const basePath = process.env.NODE_ENV === 'production' ? '/portfolio' : '';
-  return `${basePath}${path}`;
-};
+// Rutas de assets. Con Next basePath="/portfolio", los archivos de /public se
+// sirven bajo /portfolio tanto en dev como en el export estático.
+export const getAssetPath = (path) => `/portfolio${path}`;
 
 export default getAssetPath;

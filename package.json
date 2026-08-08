@@ -1,42 +1,28 @@
 {
   "name": "portfolio-website",
-  "version": "1.0.0",
-  "description": "A personal portfolio website to showcase information, experience, projects, and certificates.",
-  "main": "src/app.js",
+  "version": "2.0.0",
+  "description": "Portfolio personal de Mateo Builes Duque (Next.js + strata design system).",
+  "private": true,
   "scripts": {
-    "start": "webpack serve --mode development",
-    "build": "cross-env NODE_ENV=production webpack --mode production",
-    "deploy": "npm run build && echo 'Build completed! Ready for GitHub Pages deployment.'"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "next build && echo 'Static export en ./out — listo para GitHub Pages.'"
   },
-  "keywords": [
-    "portfolio",
-    "website",
-    "personal",
-    "projects",
-    "certificates"
-  ],
+  "keywords": ["portfolio", "website", "personal"],
   "author": "Mateo Builes Duque",
   "license": "MIT",
   "homepage": "https://mattbuiles.github.io/portfolio",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.0.0",
+    "invest-ui": "git+https://github.com/MattBuiles/strata-ui.git#main",
     "lucide-react": "^1.21.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "next": "^15.1.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.0",
-    "@babel/preset-env": "^7.16.0",
-    "@babel/preset-react": "^7.16.0",
-    "babel-loader": "^8.2.3",
-    "copy-webpack-plugin": "^13.0.1",
-    "cross-env": "^10.0.0",
-    "css-loader": "^7.1.2",
-    "html-webpack-plugin": "^5.6.3",
-    "puppeteer": "^24.31.0",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.104.1",
-    "webpack-cli": "^6.0.1",
-    "webpack-dev-server": "^5.2.2"
+    "puppeteer": "^24.31.0"
   }
 }
