@@ -21,7 +21,7 @@
   },
   {
     "title": "LaTexIA — Handwritten Math to LaTeX",
-    "description": "Microservices system that turns a photo of a handwritten math expression into LaTeX: a preprocessing service segments each symbol (binarization, contours and skeletonization), a PyTorch CNN classifies it among 82 classes, and a FastAPI gateway serves the web interface. Built as a team; the three services run on Render's free tier, so the first load can take about a minute.",
+    "description": "Microservices system that turns a photo of a handwritten math expression into LaTeX: a preprocessing service segments each symbol (binarization, contours and skeletonization), a PyTorch CNN classifies it among 82 classes, and a FastAPI gateway serves the web interface. Built as a team (original repos in the LaTexIA organization, now unified); the three services run on Render's free tier, so the first load can take about a minute.",
     "demoUrl": "https://latexia-gateway.onrender.com",
     "technologies": [
       "Python",
@@ -35,7 +35,8 @@
     "image": "assets/images/latexia.png",
     "category": "AI/ML",
     "featured": true,
-    "status": "completed"
+    "status": "completed",
+    "githubUrl": "https://github.com/MattBuiles/latexia"
   },
   {
     "title": "PAE Contable — Multi-Agent Colombian Accounting",
