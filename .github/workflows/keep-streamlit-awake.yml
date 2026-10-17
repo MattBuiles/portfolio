@@ -1,0 +1,20 @@
+name: Mantener despiertas las demos de Streamlit
+
+on:
+  schedule:
+    - cron: '0 */8 * * *'
+  workflow_dispatch:
+
+jobs:
+  wake:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Instalar Puppeteer
+        run: npm install --no-save puppeteer@24
+      - name: Abrir las apps y despertarlas si hacen falta
+        run: node .github/scripts/keep-streamlit-awake.mjs
