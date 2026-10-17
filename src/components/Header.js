@@ -11,9 +11,10 @@ const NAV_KEYS = [
   { href: '#about', key: 'about', num: '01' },
   { href: '#skills', key: 'stack', num: '02' },
   { href: '#projects', key: 'work', num: '03' },
-  { href: '#experience', key: 'path', num: '04' },
-  { href: '#certificates', key: 'credentials', num: '05' },
-  { href: '#contact', key: 'contact', num: '06' },
+  { href: '#competitions', key: 'awards', num: '04' },
+  { href: '#experience', key: 'path', num: '05' },
+  { href: '#certificates', key: 'credentials', num: '06' },
+  { href: '#contact', key: 'contact', num: '07' },
 ];
 
 const Header = () => {
