@@ -1,5 +1,22 @@
 [
   {
+    "title": "Primer Lugar — Tech Sphere Challenge 2026 (Voice Agent Edition)",
+    "issuing_organization": "Source Meridian",
+    "date_issued": "2026-09-09",
+    "credential_id": "Credsverse · 5107202f-9394-4d97-917d-5eda282059a7",
+    "skills": [
+      "Voice Agents",
+      "RAG",
+      "Clinical NLP",
+      "Agent Safety"
+    ],
+    "icon": "trophy",
+    "category": "AI/ML",
+    "duration": "Reto Senior - Individual",
+    "verification_url": "https://credsverse.com/credentials/5107202f-9394-4d97-917d-5eda282059a7?preview=1",
+    "featured": true
+  },
+  {
     "title": "Introduction to Model Context Protocol",
     "issuing_organization": "Anthropic Education",
     "date_issued": "2026-06-13",

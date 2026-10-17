@@ -324,3 +324,38 @@
   .projects__modal-head h3 { font-size: var(--text-2xl); }
   .projects__modal-actions { flex-direction: column; }
 }
+
+/* Premio / concurso */
+.projects__award {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin-top: var(--s-2);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.projects__award--modal { margin: 0 0 var(--s-4); }
+
+/* Enlace al registro público de proyectos */
+.projects__orbit {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-5);
+  margin-top: var(--s-10);
+  padding: var(--s-6);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+
+.projects__orbit h3 { margin: 0 0 var(--s-2); }
+.projects__orbit p { margin: 0; max-width: 56ch; }
+
+@media (max-width: 600px) {
+  .projects__orbit { padding: var(--s-5); }
+  .projects__orbit .btn { width: 100%; justify-content: center; }
+}

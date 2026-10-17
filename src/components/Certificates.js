@@ -8,6 +8,7 @@ import certificatesData from '../data/certificates.json';
 import './Certificates.css';
 
 const CERT_FILES = {
+  'Primer Lugar — Tech Sphere Challenge 2026 (Voice Agent Edition)': 'tech_sphere_challenge_2026.pdf',
   'Monitoring Machine Learning in Python': 'datacamp_monitoring_ml_python_2025.pdf',
   'Monitoring Machine Learning Concepts': 'datacamp_monitoring_ml_concepts_2025.pdf',
   'AWS Academy Graduate - Cloud Foundations': 'aws_academy_cloud_foundations_2025.pdf',
@@ -42,6 +43,7 @@ const CERT_FILES = {
 };
 
 const FEATURED_TITLES = new Set([
+  'Primer Lugar — Tech Sphere Challenge 2026 (Voice Agent Edition)',
   'Machine Learning Engineer',
   'AWS Academy Graduate - Cloud Foundations',
   'Bootcamp de Inteligencia Artificial Nivel Intermedio',

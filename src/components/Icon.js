@@ -5,6 +5,7 @@ import {
   ArrowDown,
   Atom,
   Award,
+  Trophy,
   AlertCircle,
   AlertTriangle,
   BarChart3,
@@ -126,6 +127,7 @@ const LUCIDE_MAP = {
   'file-alt': FileText,
   'folder-open': FolderOpen,
   'certificate': Award,
+  'trophy': Trophy,
 
 };
 
