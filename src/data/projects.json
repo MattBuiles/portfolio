@@ -20,6 +20,24 @@
     "certificateUrl": "https://credsverse.com/credentials/5107202f-9394-4d97-917d-5eda282059a7?preview=1"
   },
   {
+    "title": "LaTexIA — Handwritten Math to LaTeX",
+    "description": "Microservices system that turns a photo of a handwritten math expression into LaTeX: a preprocessing service segments each symbol (binarization, contours and skeletonization), a PyTorch CNN classifies it among 82 classes, and a FastAPI gateway serves the web interface. Built as a team; the three services run on Render's free tier, so the first load can take about a minute.",
+    "demoUrl": "https://latexia-gateway.onrender.com",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "PyTorch",
+      "OpenCV",
+      "scikit-image",
+      "Microservices",
+      "Render"
+    ],
+    "image": "assets/images/latexia.png",
+    "category": "AI/ML",
+    "featured": true,
+    "status": "completed"
+  },
+  {
     "title": "PAE Contable — Multi-Agent Colombian Accounting",
     "description": "Sistema multi-agente para automatizar contabilidad y compliance tributario colombiano. Backend FastAPI con supervisor LangGraph que orquesta agentes (ingest, contador, tributario) sobre un RAG híbrido (BM25 + pgvector BGE-M3 + reranker bge-v2-m3, 107 docs normativos). Genera borradores DIAN F300 (IVA), F350 (Retefuente), F110 (Renta PJ) e ICA municipal con calendario DIAN 2026. Workflows durables vía Inngest (HITL, fan-out, throttling OpenAI). Frontend Next.js 14 + MUI con uploads, trazas de pipeline en español y reportes financieros (Balance General, Estado de Resultados).",
     "demoUrl": "https://frontend-pae-account-multiagent-sys.vercel.app",
@@ -191,7 +209,6 @@
     "title": "Quotation Management System",
     "description": "Web platform for managing quotes, clients, and documents. Supports creation, versioning, and visualization of project/service quotes.",
     "demoUrl": "https://cotizacion-software.vercel.app",
-    "githubUrl": "https://github.com/MattBuiles/CotizacionSoftware",
     "technologies": [
       "Flask",
       "Python",
