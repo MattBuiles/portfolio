@@ -1,5 +1,25 @@
 [
   {
+    "title": "PostOp Voice Agent — Post-surgery Follow-up",
+    "description": "Voice agent that calls patients after surgery, talks in Colombian Spanish, understands symptoms through a traceable clinical corpus (RAG) and decides when to escalate to human staff with deterministic triage. Runs entirely locally with zero credentials and zero cost. First place at the Tech Sphere Challenge 2026 (Voice Agent Edition, Senior Individual).",
+    "demoUrl": "https://youtu.be/SJMZYWM-KrA",
+    "githubUrl": "https://github.com/MattBuiles/postop-voice-agent",
+    "technologies": [
+      "Python",
+      "RAG",
+      "Voice AI",
+      "Docker",
+      "Deterministic triage",
+      "SQLite"
+    ],
+    "image": "assets/images/postop-voice-agent.png",
+    "category": "AI/ML",
+    "featured": true,
+    "status": "completed",
+    "award": "First place · Tech Sphere Challenge 2026",
+    "certificateUrl": "https://credsverse.com/credentials/5107202f-9394-4d97-917d-5eda282059a7?preview=1"
+  },
+  {
     "title": "PAE Contable — Multi-Agent Colombian Accounting",
     "description": "Sistema multi-agente para automatizar contabilidad y compliance tributario colombiano. Backend FastAPI con supervisor LangGraph que orquesta agentes (ingest, contador, tributario) sobre un RAG híbrido (BM25 + pgvector BGE-M3 + reranker bge-v2-m3, 107 docs normativos). Genera borradores DIAN F300 (IVA), F350 (Retefuente), F110 (Renta PJ) e ICA municipal con calendario DIAN 2026. Workflows durables vía Inngest (HITL, fan-out, throttling OpenAI). Frontend Next.js 14 + MUI con uploads, trazas de pipeline en español y reportes financieros (Balance General, Estado de Resultados).",
     "demoUrl": "https://frontend-pae-account-multiagent-sys.vercel.app",
@@ -42,17 +62,17 @@
   },
   {
     "title": "Routine Schemer",
-    "description": "Plataforma Profesional de Planificación Integral de Entrenamientos. Una aplicación web completa para diseñar, estructurar y gestionar programas de entrenamiento, enfocada en profesionales del fitness y atletas serios. Completamente migrado a Supabase: Backend PostgreSQL con autenticación, RLS security, y real-time sync.",
-    "demoUrl": "",
+    "description": "Interactive canvas to design training cycles: drag focus blocks onto days, resize them, add habits, notes and calendar widgets, and run several cycles at once. Everything is saved per user with Neon Postgres and Neon Auth.",
+    "demoUrl": "https://routine-schemer.vercel.app",
     "githubUrl": "https://github.com/MattBuiles/routine-schemer",
     "technologies": [
       "Next.js 15",
       "React 19",
       "TypeScript",
       "Tailwind CSS 4",
-      "Zustand",
-      "Supabase",
-      "PostgreSQL"
+      "Neon Postgres",
+      "Drizzle ORM",
+      "Neon Auth"
     ],
     "image": "assets/images/routine-schemer.png",
     "category": "Web Development",
@@ -150,8 +170,8 @@
   },
   {
     "title": "Catch the Snitch - Quidditch Betting System",
-    "description": "Full-stack web app simulating a betting system for Quidditch matches (Harry Potter-inspired). Real-time simulation, user management, and admin panel.",
-    "demoUrl": "#",
+    "description": "Full-stack web app simulating a betting system for Quidditch matches (Harry Potter-inspired). Real-time simulation, user management, and admin panel. Frontend on Vercel, API with WebSockets on Render.",
+    "demoUrl": "https://centro-apuestas-quidditch.vercel.app",
     "githubUrl": "https://github.com/MattBuiles/centro_apuestas_quidditch",
     "technologies": [
       "React 19",
@@ -170,17 +190,51 @@
   {
     "title": "Quotation Management System",
     "description": "Web platform for managing quotes, clients, and documents. Supports creation, versioning, and visualization of project/service quotes.",
-    "demoUrl": "https://cotizacionsoftware.onrender.com",
+    "demoUrl": "https://cotizacion-software.vercel.app",
     "githubUrl": "https://github.com/MattBuiles/CotizacionSoftware",
     "technologies": [
       "Flask",
       "Python",
       "HTML/CSS",
-      "SQLite",
-      "SQLAlchemy"
+      "PostgreSQL (Neon)",
+      "SQLAlchemy",
+      "Cloudinary",
+      "Vercel"
     ],
     "image": "assets/images/quotation-system.png",
     "category": "Web Development",
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "title": "Deep Learning Practices",
+    "description": "Six deep learning practices from dense networks to advanced architectures, with TensorFlow and PyTorch notebooks.",
+    "demoUrl": "",
+    "githubUrl": "https://github.com/MattBuiles/Practicas_DeepLearning",
+    "technologies": [
+      "Python",
+      "TensorFlow",
+      "PyTorch",
+      "Jupyter"
+    ],
+    "image": "assets/images/deep-learning-practices.png",
+    "category": "AI/ML",
+    "featured": false,
+    "status": "completed"
+  },
+  {
+    "title": "League of Legends Role Prediction",
+    "description": "Machine learning models that predict a player's role in ranked League of Legends matches, with experiment tracking in MLflow.",
+    "demoUrl": "",
+    "githubUrl": "https://github.com/MattBuiles/Prediccion_Roles_League_of_Legends-Machine_Learning",
+    "technologies": [
+      "Python",
+      "scikit-learn",
+      "MLflow",
+      "Jupyter"
+    ],
+    "image": "assets/images/lol-role-prediction.png",
+    "category": "Data Science",
     "featured": false,
     "status": "completed"
   }

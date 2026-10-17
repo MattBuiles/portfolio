@@ -101,7 +101,8 @@ const strings = {
       lede: 'Selection of projects where idea, execution and detail matter. Click to view more.',
       filters: { featured: 'Featured', all: 'All', 'AI/ML': 'AI & ML', 'Data Science': 'Data Science', 'Web Development': 'Web', 'Mobile Development': 'Mobile' },
       status: { completed: 'Completed', 'in-progress': 'In progress', planned: 'Planned' },
-      modal: { technologies: 'Technologies', demo: 'View demo', code: 'Code' },
+      modal: { technologies: 'Technologies', demo: 'View demo', code: 'Code', certificate: 'Certificate' },
+      orbit: { title: 'More than what is listed here', text: 'Orbit is the live registry of all my projects: their status, activity and deployments, in 3D views.', button: 'Explore all projects in Orbit' },
     },
     experience: {
       sectionNum: '04 — Path',
@@ -264,7 +265,8 @@ const strings = {
       lede: 'Selección de proyectos donde la idea, la ejecución y el detalle importan. Click para ver más.',
       filters: { featured: 'Destacados', all: 'Todos', 'AI/ML': 'IA & ML', 'Data Science': 'Data Science', 'Web Development': 'Web', 'Mobile Development': 'Mobile' },
       status: { completed: 'Completado', 'in-progress': 'En progreso', planned: 'Planeado' },
-      modal: { technologies: 'Tecnologías', demo: 'Ver demo', code: 'Código' },
+      modal: { technologies: 'Tecnologías', demo: 'Ver demo', code: 'Código', certificate: 'Certificado' },
+      orbit: { title: 'Hay más de lo que ves aquí', text: 'Orbit es el registro vivo de todos mis proyectos: su estado, actividad y despliegues, en vistas 3D.', button: 'Explorar todos los proyectos en Orbit' },
     },
     experience: {
       sectionNum: '04 — Trayectoria',

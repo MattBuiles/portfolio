@@ -80,6 +80,12 @@ const Projects = () => {
 
                   <div className="projects__row-main">
                     <h3 className="projects__row-title">{project.title}</h3>
+                    {project.award && (
+                      <span className="projects__award">
+                        <Icon name="trophy" size={14} />
+                        {project.award}
+                      </span>
+                    )}
                     <p className="projects__row-desc">{project.description}</p>
                   </div>
 
@@ -108,6 +114,22 @@ const Projects = () => {
           })}
         </ul>
 
+        <aside className="projects__orbit reveal reveal-delay-2">
+          <div>
+            <h3>{t.orbit.title}</h3>
+            <p>{t.orbit.text}</p>
+          </div>
+          <a
+            href="https://orbit-matts-projects-07f62892.vercel.app"
+            className="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon name="external-link" size={16} />
+            {t.orbit.button}
+          </a>
+        </aside>
+
         {open && (
           <div
             className="projects__modal"
@@ -129,6 +151,12 @@ const Projects = () => {
                 </button>
               </header>
 
+              {open.award && (
+                <p className="projects__award projects__award--modal">
+                  <Icon name="trophy" size={16} />
+                  {open.award}
+                </p>
+              )}
               <p className="projects__modal-desc">{open.description}</p>
 
               <section className="projects__modal-section">
@@ -161,6 +189,17 @@ const Projects = () => {
                   >
                     <Icon name="github" size={16} />
                     {open.githubFrontendUrl ? (lang === 'es' ? 'Backend' : 'Backend') : t.modal.code}
+                  </a>
+                )}
+                {open.certificateUrl && (
+                  <a
+                    href={open.certificateUrl}
+                    className="btn btn-secondary"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Icon name="certificate" size={16} />
+                    {t.modal.certificate}
                   </a>
                 )}
                 {open.githubFrontendUrl && (
