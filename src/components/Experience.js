@@ -12,7 +12,7 @@ const Experience = () => {
   const t = strings[lang].experience;
 
   return (
-    <section id="experience" className="section experience section-alt">
+    <section id="experience" className="section experience">
       <div className="container">
         <header className="section-header reveal">
           <span className="section-num">{t.sectionNum}</span>

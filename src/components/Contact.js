@@ -60,7 +60,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section contact section-alt">
+    <section id="contact" className="section contact">
       <div className="container">
         <header className="section-header reveal">
           <span className="section-num">{t.sectionNum}</span>

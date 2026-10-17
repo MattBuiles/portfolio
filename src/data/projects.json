@@ -2,7 +2,7 @@
   {
     "title": "PostOp Voice Agent — Post-surgery Follow-up",
     "description": "Voice agent that calls patients after surgery, talks in Colombian Spanish, understands symptoms through a traceable clinical corpus (RAG) and decides when to escalate to human staff with deterministic triage. Runs entirely locally with zero credentials and zero cost. First place at the Tech Sphere Challenge 2026 (Voice Agent Edition, Senior Individual).",
-    "demoUrl": "https://youtu.be/SJMZYWM-KrA",
+    "demoUrl": "",
     "githubUrl": "https://github.com/MattBuiles/postop-voice-agent",
     "technologies": [
       "Python",
