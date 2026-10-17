@@ -1,0 +1,53 @@
+[
+  {
+    "id": "tech-sphere-2026",
+    "name": "Tech Sphere Challenge 2026 — Voice Agent Edition",
+    "organizer": "Source Meridian",
+    "year": 2026,
+    "place": 1,
+    "category": "Senior · Individual",
+    "project": "PostOp Voice Agent",
+    "description": "Voice agent that follows up with patients after surgery: Colombian Spanish conversation, traceable clinical RAG and deterministic triage to escalate to human staff. It runs fully local, with no credentials and zero cost.",
+    "links": [
+      {
+        "kind": "code",
+        "label": "Code",
+        "url": "https://github.com/MattBuiles/postop-voice-agent"
+      },
+      {
+        "kind": "demo",
+        "label": "Video",
+        "url": "https://youtu.be/SJMZYWM-KrA"
+      },
+      {
+        "kind": "certificate",
+        "label": "Certificate",
+        "url": "https://credsverse.com/credentials/5107202f-9394-4d97-917d-5eda282059a7?preview=1"
+      }
+    ],
+    "image": null
+  },
+  {
+    "id": "tech-sphere-2025",
+    "name": "Tech Sphere Data + AI Challenge 2025",
+    "organizer": "Tech Sphere",
+    "year": 2025,
+    "place": 2,
+    "category": "Team",
+    "project": "Medical AI Dashboard — XGBoost literature classification",
+    "description": "Dashboard that classifies medical literature into 4 categories with XGBoost, with a real-time API and interactive visualizations over 3,565 real samples. Built as a team for the Data + AI Challenge.",
+    "links": [
+      {
+        "kind": "demo",
+        "label": "Demo",
+        "url": "https://clasificacion-biomedica.vercel.app"
+      },
+      {
+        "kind": "code",
+        "label": "Code",
+        "url": "https://github.com/MattBuiles/ai-data-challenge"
+      }
+    ],
+    "image": "/images/contests/tech-sphere-2025.jpg"
+  }
+]

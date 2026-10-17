@@ -1,0 +1,76 @@
+/* ============================================
+   Competitions — podium cards
+   ============================================ */
+
+.competitions__h-em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--accent);
+}
+
+.competitions__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+  gap: var(--s-6);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.competitions__card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+
+.competitions__photo {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center 30%;
+  border-bottom: 1px solid var(--border);
+}
+
+.competitions__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  flex: 1;
+  padding: var(--s-6);
+}
+
+.competitions__place {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  align-self: flex-start;
+  padding: var(--s-1) var(--s-3);
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: var(--r-full);
+}
+
+.competitions__place--1 { color: var(--accent-fg); background: var(--accent); }
+
+.competitions__name { margin: 0; }
+.competitions__meta { margin: 0; font-size: var(--text-sm); }
+.competitions__project { margin: 0; }
+.competitions__desc { margin: 0; flex: 1; }
+
+.competitions__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-top: var(--s-3);
+}
+
+@media (max-width: 600px) {
+  .competitions__body { padding: var(--s-5); }
+  .competitions__links .btn { flex: 1 1 100%; justify-content: center; }
+}

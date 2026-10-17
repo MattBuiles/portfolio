@@ -6,6 +6,7 @@ import Hero from "../src/components/Hero";
 import About from "../src/components/About";
 import Skills from "../src/components/Skills";
 import Projects from "../src/components/Projects";
+import Competitions from "../src/components/Competitions";
 import Experience from "../src/components/Experience";
 import Certificates from "../src/components/Certificates";
 import Contact from "../src/components/Contact";
@@ -25,6 +26,7 @@ export default function Page() {
         <About />
         <Skills />
         <Projects />
+        <Competitions />
         <Experience />
         <Certificates />
         <Contact />
