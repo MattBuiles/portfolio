@@ -18,7 +18,7 @@ const Competitions = () => {
   useScrollAnimation([lang]);
 
   return (
-    <section id="competitions" className="section competitions">
+    <section id="competitions" className="section competitions section-alt">
       <div className="container">
         <header className="section-header reveal">
           <span className="section-num">{t.sectionNum}</span>

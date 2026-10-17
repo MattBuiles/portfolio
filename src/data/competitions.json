@@ -15,17 +15,12 @@
         "url": "https://github.com/MattBuiles/postop-voice-agent"
       },
       {
-        "kind": "demo",
-        "label": "Video",
-        "url": "https://youtu.be/SJMZYWM-KrA"
-      },
-      {
         "kind": "certificate",
         "label": "Certificate",
         "url": "https://credsverse.com/credentials/5107202f-9394-4d97-917d-5eda282059a7?preview=1"
       }
     ],
-    "image": null
+    "image": "/images/contests/tech-sphere-2026.jpg"
   },
   {
     "id": "tech-sphere-2025",

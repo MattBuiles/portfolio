@@ -129,7 +129,7 @@ const Certificates = () => {
   };
 
   return (
-    <section id="certificates" className="section certificates">
+    <section id="certificates" className="section certificates section-alt">
       <div className="container">
         <header className="section-header reveal">
           <span className="section-num">{t.sectionNum}</span>
